@@ -9,10 +9,6 @@
  <h3 href="doc.paimo
 </div>
 
-
-[tg-chan]: https://t.me/nodpai
-[tg-svg]: https://img.shields.io/badge/Telegram-@nodpai-blue.svg?style=plastic
-
 #### 注意！Paimon Node仍处于公测阶段，其稳定性暂且无法保证，您可以先使用下方的测试版订阅链接，届时我们会迁移到正式版本。
 
 ## 订阅链接：
@@ -22,3 +18,8 @@
 
 **Clash：**
 ```https://pre.paimon.gq/clash.yaml```
+
+
+[tg-chan]: https://t.me/nodpai
+[tg-svg]: https://img.shields.io/badge/Telegram-@nodpai-blue.svg?style=plastic
+
