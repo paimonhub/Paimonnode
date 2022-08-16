@@ -3,6 +3,7 @@
 <div align="center">
 <h1>Paimon Node</h1>
 <h4 align="center">Free subcribe for everyone</h4>
+<h4 align="center">官网：https://paimon.gq/</h4>
 
  [![Telegram Channel][tg-svg]][tg-chan]<br>
  <h3 href="doc.paimo
