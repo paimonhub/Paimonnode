@@ -6,8 +6,9 @@
 <h4 align="center">官网：https://paimon.gq/</h4>
 
  [![Telegram Channel][tg-svg]][tg-chan]<br>
- <h3 href="doc.paimo
 </div>
+
+
 
 #### 注意！Paimon Node仍处于公测阶段，其稳定性暂且无法保证，您可以先使用下方的测试版订阅链接，届时我们会迁移到正式版本。
 
