@@ -1,0 +1,27 @@
+name: Publish Nodes
+
+on:
+  schedule:
+   - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  Fetch:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js 
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.0
+    - run: chmod 777 ./publish/libs/subconverter/*
+    - name: fetch
+      env: 
+        PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
+      run: cd ./publish && npm ci && npm run run
+    - name: Configure Git
+      run: git config pull.rebase false && git config --local user.name "GitHub Actions" && git config --local user.email "actions@github.com"
+    - run: chmod 777 ./publish/up.sh
+    - run: ./publish/up.sh
