@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  Fetch:
 
     runs-on: ubuntu-latest
 
@@ -16,7 +16,6 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.0
-        cache: 'npm'
     - run: chmod 777 ./nodefetcher/libs/subconverter/*
     - name: fetch
       env: 
