@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Fetch:
+  Publish:
 
     runs-on: ubuntu-latest
 
@@ -16,10 +16,11 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.0
-    - name: fetch
+    - name: publish
       env: 
         PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
       run: cd ./publish && npm ci && npm run run
+    - run: dir
     - name: Configure Git
       run: git config pull.rebase false && git config --local user.name "GitHub Actions" && git config --local user.email "actions@github.com"
     - run: chmod 777 ./publish/up.sh
