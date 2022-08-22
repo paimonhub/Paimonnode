@@ -5,47 +5,55 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🤔 unknown 1 TG:@nodpai (Beta), server: 104.166.135.10, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws}, udp: true}
-  - {name: 🤔 unknown 2 TG:@nodpai (Beta), server: 146.0.42.87, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws}, udp: true}
-  - {name: 🇫🇷 FR 1 TG:@nodpai (Beta), server: 146.0.42.87, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws, headers: {Host: germany-dusseldorf.mah3Hoet.com}}, udp: true}
-  - {name: 🇫🇷 FR 2 TG:@nodpai (Beta), server: germany-dusseldorf.mah3Hoet.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws, headers: {Host: germany-dusseldorf.mah3Hoet.com}}, udp: true}
-  - {name: 🇫🇷 FR 3 TG:@nodpai (Beta), server: 192.96.204.250, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws}, udp: true}
-  - {name: 中转 🇺🇸 US 1 TG:@nodpai (Beta), server: in-us-1.onebox6.org, port: 38401, type: vmess, uuid: 79386685-16da-327c-9e14-aa6d702d86bc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: YouTube-aweikeji}}, udp: true}
+  - {name: 🇺🇸 US 1 TG:@nodpai (Beta), server: us1.grpc.stream, port: 80, type: vmess, uuid: 6031b5c3-d8ba-5756-b708-f61084a2b678, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /us1, headers: {Host: us1.grpc.stream}}, udp: true}
+  - {name: 中转 🇺🇸 US 2 TG:@nodpai (Beta), server: iiiieeepppplll.zhengzhongfeizhu.xyz, port: 34002, type: trojan, password: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 3 TG:@nodpai (Beta), server: iiiieeepppplll.zhengzhongfeizhu.xyz, port: 34001, type: trojan, password: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 4 TG:@nodpai (Beta), server: iiiieeepppplll.zhengzhongfeizhu.xyz, port: 34003, type: trojan, password: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 5 TG:@nodpai (Beta), server: iiiieeepppplll.zhengzhongfeizhu.xyz, port: 34001, type: trojan, password: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 6 TG:@nodpai (Beta), server: us1.grpc.stream, port: 80, type: vmess, uuid: 6031b5c3-d8ba-5756-b708-f61084a2b678, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /us1, headers: {Host: us1.grpc.stream}}, udp: true}
+  - {name: 🇺🇸 US 7 TG:@nodpai (Beta), server: germany-dusseldorf.mah3Hoet.com, port: 443, type: vmess, uuid: aba50dd4-5484-3b05-b14a-4661caf862d5, alterId: 4, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ws, headers: {Host: germany-dusseldorf.mah3Hoet.com}}, udp: true}
+  - {name: 中转 🇺🇸 US 8 TG:@nodpai (Beta), server: iiiieeepppplll.zhengzhongfeizhu.xyz, port: 34004, type: trojan, password: 177501cc-f0c2-3cc3-b9a7-8c1e8e27655f, sni: 111-47-215-139.nhost.00cdn.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -64,12 +72,14 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -80,35 +90,41 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -124,12 +140,14 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🤔 unknown 1 TG:@nodpai (Beta)
-      - 🤔 unknown 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 1 TG:@nodpai (Beta)
-      - 🇫🇷 FR 2 TG:@nodpai (Beta)
-      - 🇫🇷 FR 3 TG:@nodpai (Beta)
-      - 中转 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 🇺🇸 US 1 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 2 TG:@nodpai (Beta)
+      - 🇺🇸 US 3 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 4 TG:@nodpai (Beta)
+      - 🇺🇸 US 5 TG:@nodpai (Beta)
+      - 🇺🇸 US 6 TG:@nodpai (Beta)
+      - 🇺🇸 US 7 TG:@nodpai (Beta)
+      - 中转 🇺🇸 US 8 TG:@nodpai (Beta)
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
