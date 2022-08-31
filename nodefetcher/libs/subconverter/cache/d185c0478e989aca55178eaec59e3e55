@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：454.33 GB', type: vmess, server: w2x9.ddns.tunnels.farm, port: '21965', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
+    - { name: '剩余流量：452.42 GB', type: vmess, server: w2x9.ddns.tunnels.farm, port: '21965', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
     - { name: 套餐到期：长期有效, type: vmess, server: w2x9.ddns.tunnels.farm, port: '21965', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
     - { name: 香港1|IEPL|流媒体|1.0x, type: vmess, server: w2x9.ddns.tunnels.farm, port: '21965', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
     - { name: 香港2|IEPL|流媒体|1.0x, type: vmess, server: q7rxpd.mispeed.org, port: '47312', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
@@ -30,9 +30,9 @@ proxies:
     - { name: 新加坡2|IEPL|流媒体1.0x, type: vmess, server: swiozhwsz.mispeed.org, port: '53770', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
     - { name: 美国1|IEPL|1.0x, type: vmess, server: w2x9.ddns.tunnels.farm, port: '29243', uuid: e4da905b-b046-4bbe-8031-6a6d6a7fc21d, alterId: 0, cipher: auto, udp: true }
 proxy-groups:
-    - { name: 叔叔的机场, type: select, proxies: [自动选择, 故障转移, '剩余流量：454.33 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：454.33 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：454.33 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 叔叔的机场, type: select, proxies: [自动选择, 故障转移, '剩余流量：452.42 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：452.42 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：452.42 GB', 套餐到期：长期有效, 香港1|IEPL|流媒体|1.0x, 香港2|IEPL|流媒体|1.0x, 香港|直连|1.0x, 日本BGP1|IEPL|流媒体|1.0x, 日本BGP2|IEPL|流媒体|1.0x, 日本|直连|1.0x, 台湾1|IEPL|流媒体|1.0x, 台湾2|IEPL|流媒体|1.0x, 韩国|直连|1.0x, 新加坡1|IEPL|流媒体|1.0x, 新加坡2|IEPL|流媒体1.0x, 美国1|IEPL|1.0x], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,xn--rora42xd2we6r.shop,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,叔叔的机场'
