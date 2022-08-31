@@ -15,7 +15,6 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 美国Vip-001, type: trojan, server: usa001.369boy.com, port: 56301, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: usa001.369boy.com, skip-cert-verify: true }
     - { name: 香港-1线, type: trojan, server: hk001.369boy.com, port: 33156, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: hk001.369boy.com, skip-cert-verify: true }
     - { name: 香港-2线, type: trojan, server: hk002.369boy.com, port: 12287, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: hk002.369boy.com, skip-cert-verify: true }
     - { name: 香港-3线, type: trojan, server: hk003.369boy.com, port: 33303, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: hk003.369boy.com, skip-cert-verify: true }
@@ -23,9 +22,9 @@ proxies:
     - { name: 香港-5线, type: trojan, server: hk005.369boy.com, port: 33305, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: hk005.369boy.com, skip-cert-verify: true }
     - { name: 香港-ms-001, type: trojan, server: mshk1.369boy.com, port: 23511, password: c05795d7-486c-434d-8388-b601172db622, udp: true, sni: mshk1.369boy.com, skip-cert-verify: true }
 proxy-groups:
-    - { name: Small world, type: select, proxies: [自动选择, 故障转移, 美国Vip-001, 香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001] }
-    - { name: 自动选择, type: url-test, proxies: [美国Vip-001, 香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国Vip-001, 香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: Small world, type: select, proxies: [自动选择, 故障转移, 香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001] }
+    - { name: 自动选择, type: url-test, proxies: [香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [香港-1线, 香港-2线, 香港-3线, 香港-4线, 香港-5线, 香港-ms-001], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,abc.oioav.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,Small world'
