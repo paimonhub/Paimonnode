@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：9984342.08 GB', type: vmess, server: turkey.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
+    - { name: '剩余流量：9984341.98 GB', type: vmess, server: turkey.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
     - { name: 套餐到期：长期有效, type: vmess, server: turkey.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
     - { name: '土耳其 | Turkey | V2', type: vmess, server: turkey.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
     - { name: '美国 | USA | V2', type: vmess, server: usa.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
@@ -24,9 +24,9 @@ proxies:
     - { name: '新加坡 | Singapore | V2', type: vmess, server: sgp.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
     - { name: '卢森堡 | Luxemburg | V2', type: vmess, server: lsb.jcnf.app, port: '443', uuid: c753e8a8-e180-4e76-a486-c917273d718b, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /zcjd }, ws-path: /zcjd }
 proxy-groups:
-    - { name: 众筹加速器, type: select, proxies: [自动选择, 故障转移, '剩余流量：9984342.08 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：9984342.08 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：9984342.08 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 众筹加速器, type: select, proxies: [自动选择, 故障转移, '剩余流量：9984341.98 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：9984341.98 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：9984341.98 GB', 套餐到期：长期有效, '土耳其 | Turkey | V2', '美国 | USA | V2', '迪拜阿聯酋 | Etihad Rail | V2', '印度 | India | V2', '新加坡 | Singapore | V2', '卢森堡 | Luxemburg | V2'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jcnf.ga,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,众筹加速器'
