@@ -29,6 +29,7 @@ proxies:
     - { name: 'G 新加坡3', type: ss, server: sg3.linghun3.xyz, port: 40011, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'G 台湾1', type: ss, server: tw1.linghun3.xyz, port: 40004, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'G 台湾2', type: ss, server: tw2.linghun3.xyz, port: 40005, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
+    - { name: 'G 日本1', type: ss, server: gy.linghun3.xyz, port: 40010, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'S 日本1', type: ss, server: SH.linghun3.xyz, port: 40010, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'S 日本2', type: ss, server: SH.linghun3.xyz, port: 40012, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'G 美国1', type: ss, server: us1.linghun3.xyz, port: 40006, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
@@ -48,9 +49,9 @@ proxies:
     - { name: 'G 乌克兰1', type: ss, server: gy.linghun3.xyz, port: 40076, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
     - { name: 'G 巴西1', type: ss, server: gy.linghun3.xyz, port: 40077, cipher: aes-128-gcm, password: 81369ad1-2e03-4eaf-beea-797fdca4d2dd, udp: true }
 proxy-groups:
-    - { name: 灵魂云, type: select, proxies: [自动选择, 故障转移, 'IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'] }
-    - { name: 自动选择, type: url-test, proxies: ['IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 灵魂云, type: select, proxies: [自动选择, 故障转移, 'IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'G 日本1', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'] }
+    - { name: 自动选择, type: url-test, proxies: ['IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'G 日本1', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['IEPL 香港 ₃.₅ₓ', 'IEPL 台湾 ₃.₅ₓ', 'IEPL 日本 ₃.₅ₓ', 'IEPL 新加坡 ₃.₅ₓ', 'IEPL 韩国 ₃.₅ₓ', 'IEPL 美国 ₃.₅ₓ', 'G 香港1', 'G 香港2', 'G 香港3', 'G 新加坡1', 'G 新加坡2', 'G 新加坡3', 'G 台湾1', 'G 台湾2', 'G 日本1', 'S 日本1', 'S 日本2', 'G 美国1', 'G 美国2', 'S 美国1', 'S 韩国1', 'G 英国1', 'G 阿根廷1', 'G 土耳其1', 'G 马来西亚1', 'G 德国1', 'G 西班牙1', 'G 墨西哥1', 'G 荷兰1', 'G 法国1', 'G 波兰1', 'G 乌克兰1', 'G 巴西1'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,rss.linghunyun.xyz,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,灵魂云'
