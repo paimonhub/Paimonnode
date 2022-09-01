@@ -15,8 +15,8 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 香港-02, type: trojan, server: hk.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
-    - { name: 香港-03, type: trojan, server: n03.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
+    - { name: 香港-01, type: trojan, server: hk.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
+    - { name: 香港-02, type: trojan, server: n03.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
     - { name: 日本-01, type: trojan, server: n04.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
     - { name: 日本-02, type: trojan, server: n05.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
     - { name: 日本-03, type: trojan, server: n18.mireya233.com, port: 23333, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true }
@@ -28,9 +28,9 @@ proxies:
     - { name: 美国03-0.5x, type: trojan, server: n16.mireya233.com, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true, sni: n16.mireya233.com }
     - { name: 加拿大-01, type: trojan, server: ca.mireya.team, port: 10233, password: 38383c6a-3e63-4424-afaa-920efadc0391, udp: true, sni: ca.mireya.team }
 proxy-groups:
-    - { name: MireyaCola, type: select, proxies: [自动选择, 故障转移, 香港-02, 香港-03, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01] }
-    - { name: 自动选择, type: url-test, proxies: [香港-02, 香港-03, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [香港-02, 香港-03, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: MireyaCola, type: select, proxies: [自动选择, 故障转移, 香港-01, 香港-02, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01] }
+    - { name: 自动选择, type: url-test, proxies: [香港-01, 香港-02, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [香港-01, 香港-02, 日本-01, 日本-02, 日本-03, 韩国-01, 韩国-02, 新加坡-01, 新加坡-02, 美国-02, 美国03-0.5x, 加拿大-01], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,mireya233.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,MireyaCola'
