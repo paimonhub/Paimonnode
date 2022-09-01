@@ -15,14 +15,13 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 拉斯维加斯负载均衡2×0.5, type: trojan, server: qoslsjws.hootfun.top, port: 52133, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: qoslsjws.hootfun.top, skip-cert-verify: true }
-    - { name: 拉斯维加斯负载均衡×0.5, type: trojan, server: lswjs.hootfun.top, port: 61233, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: lswjs.hootfun.top, skip-cert-verify: true }
-    - { name: 圣何塞-CN2, type: trojan, server: us218.hootfun.top, port: 23411, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: us218.hootfun.top, skip-cert-verify: true }
-    - { name: 洛杉矶-CN2, type: trojan, server: la60100.hootfun.top, port: 32451, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: la60100.hootfun.top, skip-cert-verify: true }
+    - { name: '达拉斯×0.1 | 10G', type: vmess, server: dls.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: dls.hotfun.buzz, network: ws, ws-opts: { path: /hoot }, ws-path: /hoot }
+    - { name: '洛杉矶 | 共享1G', type: vmess, server: la20cf.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: la20cf.hotfun.buzz, network: ws, ws-opts: { path: /Hot }, ws-path: /Hot }
+    - { name: '圣何塞 | 共享1G', type: vmess, server: la60cf.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: la60cf.hotfun.buzz, network: ws, ws-opts: { path: /Hot }, ws-path: /Hot }
 proxy-groups:
-    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, 拉斯维加斯负载均衡2×0.5, 拉斯维加斯负载均衡×0.5, 圣何塞-CN2, 洛杉矶-CN2] }
-    - { name: 自动选择, type: url-test, proxies: [拉斯维加斯负载均衡2×0.5, 拉斯维加斯负载均衡×0.5, 圣何塞-CN2, 洛杉矶-CN2], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [拉斯维加斯负载均衡2×0.5, 拉斯维加斯负载均衡×0.5, 圣何塞-CN2, 洛杉矶-CN2], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, '达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'] }
+    - { name: 自动选择, type: url-test, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yuzex.top,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HootFun趣云'
