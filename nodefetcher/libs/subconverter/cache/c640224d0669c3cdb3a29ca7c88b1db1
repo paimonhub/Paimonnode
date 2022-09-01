@@ -16,15 +16,16 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: JP, type: ss, server: 40.115.199.35, port: 50001, cipher: aes-256-gcm, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
-    - { name: '🇭🇰 SG 01 [Basic] [Media]', type: trojan, server: sg1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
-    - { name: '🇯🇵 日本直连02-流解', type: trojan, server: jp2.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
-    - { name: '🇰🇷 韩国直连02-流解', type: trojan, server: kr2.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
-    - { name: '🇺🇸 美国直连01-流解', type: trojan, server: us1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
-    - { name: '🇬🇧 英国直连01-流解', type: trojan, server: uk1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇸🇬 SG 01 [Basic]', type: trojan, server: sg1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇯🇵 JP 01 [Basic]', type: trojan, server: jp1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇯🇵 JP 02 [Premium]', type: trojan, server: jp2.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇰🇷 KR 01 [Basic]', type: trojan, server: kr1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇺🇸 US 01 [Basic]', type: trojan, server: us1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
+    - { name: '🇬🇧 GB 01 [Basic]', type: trojan, server: uk1.fastconnect.ml, port: 50001, password: 8fed74d8-b90a-4ef5-a3aa-c92bf40882c3, udp: true }
 proxy-groups:
-    - { name: Fast Connect 快速互联, type: select, proxies: [自动选择, 故障转移, JP, '🇭🇰 SG 01 [Basic] [Media]', '🇯🇵 日本直连02-流解', '🇰🇷 韩国直连02-流解', '🇺🇸 美国直连01-流解', '🇬🇧 英国直连01-流解'] }
-    - { name: 自动选择, type: url-test, proxies: [JP, '🇭🇰 SG 01 [Basic] [Media]', '🇯🇵 日本直连02-流解', '🇰🇷 韩国直连02-流解', '🇺🇸 美国直连01-流解', '🇬🇧 英国直连01-流解'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [JP, '🇭🇰 SG 01 [Basic] [Media]', '🇯🇵 日本直连02-流解', '🇰🇷 韩国直连02-流解', '🇺🇸 美国直连01-流解', '🇬🇧 英国直连01-流解'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: Fast Connect 快速互联, type: select, proxies: [自动选择, 故障转移, JP, '🇸🇬 SG 01 [Basic]', '🇯🇵 JP 01 [Basic]', '🇯🇵 JP 02 [Premium]', '🇰🇷 KR 01 [Basic]', '🇺🇸 US 01 [Basic]', '🇬🇧 GB 01 [Basic]'] }
+    - { name: 自动选择, type: url-test, proxies: [JP, '🇸🇬 SG 01 [Basic]', '🇯🇵 JP 01 [Basic]', '🇯🇵 JP 02 [Premium]', '🇰🇷 KR 01 [Basic]', '🇺🇸 US 01 [Basic]', '🇬🇧 GB 01 [Basic]'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [JP, '🇸🇬 SG 01 [Basic]', '🇯🇵 JP 01 [Basic]', '🇯🇵 JP 02 [Premium]', '🇰🇷 KR 01 [Basic]', '🇺🇸 US 01 [Basic]', '🇬🇧 GB 01 [Basic]'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,fastconnect.ml,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,Fast Connect 快速互联'
