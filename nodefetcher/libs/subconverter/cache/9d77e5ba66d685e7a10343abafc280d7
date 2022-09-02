@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：99.95 GB', type: vmess, server: 20.222.54.78, port: '23456', uuid: 61c24b5b-b705-4b2d-8068-89ea05722c42, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: '?ed=2048' }, ws-path: '?ed=2048' }
+    - { name: '剩余流量：99.92 GB', type: vmess, server: 20.222.54.78, port: '23456', uuid: 61c24b5b-b705-4b2d-8068-89ea05722c42, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: '?ed=2048' }, ws-path: '?ed=2048' }
     - { name: 套餐到期：2022-09-02, type: vmess, server: 20.222.54.78, port: '23456', uuid: 61c24b5b-b705-4b2d-8068-89ea05722c42, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: '?ed=2048' }, ws-path: '?ed=2048' }
     - { name: '"使用前更新订阅"', type: vmess, server: 20.222.54.78, port: '23456', uuid: 61c24b5b-b705-4b2d-8068-89ea05722c42, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: '?ed=2048' }, ws-path: '?ed=2048' }
     - { name: Tokyo原-生, type: vmess, server: cloudflare.catcdndev.tk, port: '443', uuid: 61c24b5b-b705-4b2d-8068-89ea05722c42, alterId: 0, cipher: auto, udp: true, tls: true, servername: jp.acec.cloud, network: ws, ws-opts: { path: '/jp.acec.cloud?ed=2048', headers: { Host: jp.acec.cloud } }, ws-path: '/jp.acec.cloud?ed=2048', ws-headers: { Host: jp.acec.cloud } }
@@ -32,9 +32,9 @@ proxies:
     - { name: V2|日本B|X1, type: ss, server: 120.241.236.183, port: 52005, cipher: aes-128-gcm, password: 61c24b5b-b705-4b2d-8068-89ea05722c42, udp: true }
     - { name: v2|日本C, type: ss, server: 120.241.236.183, port: 50025, cipher: chacha20-ietf-poly1305, password: 61c24b5b-b705-4b2d-8068-89ea05722c42, udp: true }
 proxy-groups:
-    - { name: ACEC云加速, type: select, proxies: [自动选择, 故障转移, '剩余流量：99.95 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：99.95 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：99.95 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: ACEC云加速, type: select, proxies: [自动选择, 故障转移, '剩余流量：99.92 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：99.92 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：99.92 GB', 套餐到期：2022-09-02, '"使用前更新订阅"', Tokyo原-生, V2|香港sc|X1, V2|香港hkbn|X1, 'V2|香港共享奈飞/P站 |X1', V2|美国A|X1, V2|台湾A|X1, V2|台湾B|X1, V2|新加坡A|X1, V2|新加坡B|X1, V2|新加坡C|X1, V2|日本A|X1, V2|日本B|X1, v2|日本C], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,acec.icu,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,ACEC云加速'
