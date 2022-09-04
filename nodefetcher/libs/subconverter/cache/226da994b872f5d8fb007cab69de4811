@@ -5,48 +5,30 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇦🇺 澳大利亚-930.4慢(官网：猫云.fun), server: 185.167.116.250, port: 9011, type: ss, cipher: aes-256-cfb, password: M3t2ZEQcMGRWBjRa}
-  - {name: 🇦🇺 澳大利亚-1.08快(官网：猫云.fun), server: 185.167.116.250, port: 9097, type: ss, cipher: aes-256-cfb, password: Sn5B7jTqr76aCJT8}
-  - {name: 🇺🇸 美国-620.8慢(官网：猫云.fun), server: 38.75.136.34, port: 8080, type: ss, cipher: aes-256-gcm, password: KixLvKzwjekG00rm}
-  - {name: 🇨🇭 瑞士-296.0慢(官网：猫云.fun), server: 185.126.116.123, port: 9045, type: ss, cipher: aes-256-cfb, password: Lp27rqyJq72bZsqX}
-  - {name: 🇦🇺 澳大利亚-1.70快(官网：猫云.fun), server: 185.167.116.250, port: 9042, type: ss, cipher: aes-256-cfb, password: S7KwUu7yBy58S3Ga}
-  - {name: 🇨🇳 中国-2.09快(官网：猫云.fun), server: gyjp1.333003.xyz, port: 19324, type: trojan, password: 6367e137-7366-44e4-a7a1-eba23a6d1e93, sni: gyjp1.333003.xyz, skip-cert-verify: false}
-  - {name: 🇰🇷 韩国-469.8慢(官网：猫云.fun), server: jgw2.gaox.ml, port: 443, type: trojan, password: f2117e99-9b6e-47fd-b0a9-634a0b15b998, sni: jgw2.gaox.ml, skip-cert-verify: false}
-  - {name: 🇺🇸 美国-2.59快(官网：猫云.fun), server: s3.hazz.win, port: 12340, type: trojan, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, sni: s3.hazz.win, skip-cert-verify: false}
-  - {name: 🇦🇺 澳大利亚-966.6慢(官网：猫云.fun), server: 185.167.116.250, port: 9031, type: ss, cipher: aes-256-cfb, password: BwcAUZk8hUFAkDGN}
-  - {name: 🇦🇺 澳大利亚-315.4慢(官网：猫云.fun), server: 185.167.116.250, port: 9043, type: ss, cipher: aes-256-cfb, password: HSZuyJQcWe8dxNdF}
+  - {name: 🇯🇵 免费时段：每日8点到16点, server: 180.215.130.123, port: 29601, type: vmess, uuid: 9b268285-0dbf-4524-8491-4c2accc7376f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 180.215.130.123}}
+  - {name: 长期使用建议购买猫云套餐, server: 180.215.130.123, port: 32951, type: ss, cipher: aes-256-gcm, password: 3DL1wUgv6b}
+  - {name: 购买地址：www.maoy.cc, server: 180.215.130.123, port: 49955, type: vmess, uuid: c43454d1-7cd2-48d0-a716-a84ac06b3f55, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 180.215.130.123}}
+  - {name: 免费线路不代表正式套餐效果, server: 180.215.130.123, port: 51602, type: vmess, uuid: 2927c549-c802-46b4-8890-e26e5fe4dac4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 180.215.130.123}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇦🇺 澳大利亚-930.4慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.08快(官网：猫云.fun)
-      - 🇺🇸 美国-620.8慢(官网：猫云.fun)
-      - 🇨🇭 瑞士-296.0慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.70快(官网：猫云.fun)
-      - 🇨🇳 中国-2.09快(官网：猫云.fun)
-      - 🇰🇷 韩国-469.8慢(官网：猫云.fun)
-      - 🇺🇸 美国-2.59快(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-966.6慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-315.4慢(官网：猫云.fun)
+      - 🇯🇵 免费时段：每日8点到16点
+      - 长期使用建议购买猫云套餐
+      - 购买地址：www.maoy.cc
+      - 免费线路不代表正式套餐效果
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇦🇺 澳大利亚-930.4慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.08快(官网：猫云.fun)
-      - 🇺🇸 美国-620.8慢(官网：猫云.fun)
-      - 🇨🇭 瑞士-296.0慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.70快(官网：猫云.fun)
-      - 🇨🇳 中国-2.09快(官网：猫云.fun)
-      - 🇰🇷 韩国-469.8慢(官网：猫云.fun)
-      - 🇺🇸 美国-2.59快(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-966.6慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-315.4慢(官网：猫云.fun)
+      - 🇯🇵 免费时段：每日8点到16点
+      - 长期使用建议购买猫云套餐
+      - 购买地址：www.maoy.cc
+      - 免费线路不代表正式套餐效果
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -64,21 +46,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇦🇺 澳大利亚-930.4慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.08快(官网：猫云.fun)
-      - 🇺🇸 美国-620.8慢(官网：猫云.fun)
-      - 🇨🇭 瑞士-296.0慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-1.70快(官网：猫云.fun)
-      - 🇨🇳 中国-2.09快(官网：猫云.fun)
-      - 🇰🇷 韩国-469.8慢(官网：猫云.fun)
-      - 🇺🇸 美国-2.59快(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-966.6慢(官网：猫云.fun)
-      - 🇦🇺 澳大利亚-315.4慢(官网：猫云.fun)
+      - 🇯🇵 免费时段：每日8点到16点
+      - 长期使用建议购买猫云套餐
+      - 购买地址：www.maoy.cc
+      - 免费线路不代表正式套餐效果
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-loopback,🎯 全球直连
- - DOMAIN-SUFFIX,lan,🎯 全球直连
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - DOMAIN-SUFFIX,localhost,🎯 全球直连
  - IP-CIDR,10.0.0.0/8,🎯 全球直连,no-resolve
@@ -87,7 +62,6 @@ rules:
  - IP-CIDR,172.16.0.0/12,🎯 全球直连,no-resolve
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
  - IP-CIDR,198.18.0.0/16,🎯 全球直连,no-resolve
- - IP-CIDR,224.0.0.0/4,🎯 全球直连,no-resolve
  - IP-CIDR6,::1/128,🎯 全球直连,no-resolve
  - IP-CIDR6,fc00::/7,🎯 全球直连,no-resolve
  - IP-CIDR6,fe80::/10,🎯 全球直连,no-resolve
@@ -114,7 +88,6 @@ rules:
  - DOMAIN,origin-a.akamaihd.net,🎯 全球直连
  - DOMAIN,xivanalysis.com,🎯 全球直连
  - DOMAIN,picanalysis.vivo.com.cn,🎯 全球直连
- - DOMAIN,picanalysis-auth.vivo.com.cn,🎯 全球直连
  - DOMAIN,fairplay.l.qq.com,🎯 全球直连
  - DOMAIN,livew.l.qq.com,🎯 全球直连
  - DOMAIN,vd.l.qq.com,🎯 全球直连
@@ -311,6 +284,7 @@ rules:
  - DOMAIN-SUFFIX,edigitalsurvey.com,🛑 全球拦截
  - DOMAIN-SUFFIX,eduancm.com,🛑 全球拦截
  - DOMAIN-SUFFIX,emarbox.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,epsilon.com,🛑 全球拦截
  - DOMAIN-SUFFIX,exosrv.com,🛑 全球拦截
  - DOMAIN-SUFFIX,fancyapi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,feitian001.com,🛑 全球拦截
@@ -386,6 +360,7 @@ rules:
  - DOMAIN-SUFFIX,mediaplex.com,🛑 全球拦截
  - DOMAIN-SUFFIX,mediav.com,🛑 全球拦截
  - DOMAIN-SUFFIX,megajoy.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,meiqia.com,🛑 全球拦截
  - DOMAIN-SUFFIX,mgogo.com,🛑 全球拦截
  - DOMAIN-SUFFIX,miaozhen.com,🛑 全球拦截
  - DOMAIN-SUFFIX,microad-cn.com,🛑 全球拦截
@@ -598,6 +573,7 @@ rules:
  - DOMAIN-SUFFIX,criteo.com,🛑 全球拦截
  - DOMAIN-SUFFIX,criteo.net,🛑 全球拦截
  - DOMAIN-SUFFIX,csbew.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,demdex.net,🛑 全球拦截
  - DOMAIN-SUFFIX,directrev.com,🛑 全球拦截
  - DOMAIN-SUFFIX,dumedia.ru,🛑 全球拦截
  - DOMAIN-SUFFIX,effectivemeasure.com,🛑 全球拦截
@@ -1233,6 +1209,7 @@ rules:
  - DOMAIN-SUFFIX,jellyfish.pandora.xiaomi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,migc.g.mi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,migcreport.g.mi.com,🛑 全球拦截
+ - DOMAIN-SUFFIX,mis.g.mi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,notice.game.xiaomi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,ppurifier.game.xiaomi.com,🛑 全球拦截
  - DOMAIN-SUFFIX,r.browser.miui.com,🛑 全球拦截
@@ -2175,6 +2152,7 @@ rules:
  - DOMAIN-SUFFIX,cloudfront.net,🚀 节点选择
  - DOMAIN-SUFFIX,comodoca.com,🚀 节点选择
  - DOMAIN-SUFFIX,daum.net,🚀 节点选择
+ - DOMAIN-SUFFIX,demdex.net,🚀 节点选择
  - DOMAIN-SUFFIX,deskconnect.com,🚀 节点选择
  - DOMAIN-SUFFIX,disqus.com,🚀 节点选择
  - DOMAIN-SUFFIX,disquscdn.com,🚀 节点选择
@@ -2439,7 +2417,6 @@ rules:
  - DOMAIN-SUFFIX,steamcommunity.com,🚀 节点选择
  - DOMAIN-SUFFIX,steamgames.com,🚀 节点选择
  - DOMAIN-SUFFIX,steampowered.com,🚀 节点选择
- - DOMAIN-SUFFIX,steamserver.net,🚀 节点选择
  - DOMAIN-SUFFIX,steamstatic.com,🚀 节点选择
  - DOMAIN-SUFFIX,steamstat.us,🚀 节点选择
  - DOMAIN,steambroadcast.akamaized.net,🚀 节点选择
@@ -2534,6 +2511,7 @@ rules:
  - DOMAIN-KEYWORD,ccgslb,🎯 全球直连
  - DOMAIN-KEYWORD,chinacache,🎯 全球直连
  - DOMAIN-KEYWORD,duobao,🎯 全球直连
+ - DOMAIN-KEYWORD,duolingo,🎯 全球直连
  - DOMAIN-KEYWORD,jdpay,🎯 全球直连
  - DOMAIN-KEYWORD,moke,🎯 全球直连
  - DOMAIN-KEYWORD,qhimg,🎯 全球直连
@@ -2747,16 +2725,10 @@ rules:
  - DOMAIN-SUFFIX,leju.com,🎯 全球直连
  - DOMAIN-SUFFIX,miaopai.com,🎯 全球直连
  - DOMAIN-SUFFIX,sina.com,🎯 全球直连
- - DOMAIN-SUFFIX,sina.com.cn,🎯 全球直连
- - DOMAIN-SUFFIX,sina.cn,🎯 全球直连
  - DOMAIN-SUFFIX,sinaapp.com,🎯 全球直连
- - DOMAIN-SUFFIX,sinaapp.cn,🎯 全球直连
  - DOMAIN-SUFFIX,sinaimg.com,🎯 全球直连
- - DOMAIN-SUFFIX,sinaimg.cn,🎯 全球直连
  - DOMAIN-SUFFIX,weibo.com,🎯 全球直连
- - DOMAIN-SUFFIX,weibo.cn,🎯 全球直连
  - DOMAIN-SUFFIX,weibocdn.com,🎯 全球直连
- - DOMAIN-SUFFIX,weibocdn.cn,🎯 全球直连
  - DOMAIN-SUFFIX,xiaoka.tv,🎯 全球直连
  - DOMAIN-SUFFIX,go2map.com,🎯 全球直连
  - DOMAIN-SUFFIX,sogo.com,🎯 全球直连
