@@ -15,14 +15,14 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：290.58 GB', type: trojan, server: aws2.raytrack.cloud, port: 59648, password: f6f16e37-c800-46d5-ac12-475b4b61c18b, udp: true, sni: hk.yiyuanyun.xyz, skip-cert-verify: true }
+    - { name: '剩余流量：288.95 GB', type: trojan, server: aws2.raytrack.cloud, port: 59648, password: f6f16e37-c800-46d5-ac12-475b4b61c18b, udp: true, sni: hk.yiyuanyun.xyz, skip-cert-verify: true }
     - { name: '距离下次重置剩余：26 天', type: trojan, server: aws2.raytrack.cloud, port: 59648, password: f6f16e37-c800-46d5-ac12-475b4b61c18b, udp: true, sni: hk.yiyuanyun.xyz, skip-cert-verify: true }
     - { name: 套餐到期：2022-10-02, type: trojan, server: aws2.raytrack.cloud, port: 59648, password: f6f16e37-c800-46d5-ac12-475b4b61c18b, udp: true, sni: hk.yiyuanyun.xyz, skip-cert-verify: true }
     - { name: 香港, type: trojan, server: aws2.raytrack.cloud, port: 59648, password: f6f16e37-c800-46d5-ac12-475b4b61c18b, udp: true, sni: hk.yiyuanyun.xyz, skip-cert-verify: true }
 proxy-groups:
-    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：290.58 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：290.58 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：290.58 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：288.95 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：288.95 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：288.95 GB', '距离下次重置剩余：26 天', 套餐到期：2022-10-02, 香港], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yiyuanyun.xyz,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,一元云'
