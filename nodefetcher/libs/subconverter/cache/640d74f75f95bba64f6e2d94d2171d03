@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：654219.51 GB', type: trojan, server: s1.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
+    - { name: '剩余流量：654213.32 GB', type: trojan, server: s1.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
     - { name: 套餐到期：长期有效, type: trojan, server: s1.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
     - { name: 🌎全球直连①, type: trojan, server: s1.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
     - { name: 🌎全球直连②, type: trojan, server: s2.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
@@ -26,9 +26,9 @@ proxies:
     - { name: 稳定高速可购买付费节点↓, type: trojan, server: s3.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
     - { name: '网址: hazz.win/reg', type: trojan, server: s4.hazz.win, port: 12340, password: dfbf0d67-f03d-4184-a224-c2d64a571f99, udp: true, sni: static.dingtalk.com, skip-cert-verify: true }
 proxy-groups:
-    - { name: 火箭加速器, type: select, proxies: [自动选择, 故障转移, '剩余流量：654219.51 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：654219.51 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：654219.51 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 火箭加速器, type: select, proxies: [自动选择, 故障转移, '剩余流量：654213.32 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：654213.32 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：654213.32 GB', 套餐到期：长期有效, 🌎全球直连①, 🌎全球直连②, 🌎全球直连③, 🌎全球直连④, 这是教程赠送免费节点, 免费节点定期失效, 稳定高速可购买付费节点↓, '网址: hazz.win/reg'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,dash.huojianfly.com,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,火箭加速器'
