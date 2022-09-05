@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 external-controller: '127.0.0.1:9090'
 proxies:
-    - { name: '剩余流量：995.48 GB', type: trojan, server: agroup.node1.t.nodelist-gfwairport.download, port: 50001, password: 228a99d3-1686-4278-85b1-650b2138da96, udp: true }
+    - { name: '剩余流量：995.17 GB', type: trojan, server: agroup.node1.t.nodelist-gfwairport.download, port: 50001, password: 228a99d3-1686-4278-85b1-650b2138da96, udp: true }
     - { name: '距离下次重置剩余：24 天', type: trojan, server: agroup.node1.t.nodelist-gfwairport.download, port: 50001, password: 228a99d3-1686-4278-85b1-650b2138da96, udp: true }
     - { name: 套餐到期：2022-09-16, type: trojan, server: agroup.node1.t.nodelist-gfwairport.download, port: 50001, password: 228a99d3-1686-4278-85b1-650b2138da96, udp: true }
     - { name: 'Tokyo, Tj', type: trojan, server: agroup.node1.t.nodelist-gfwairport.download, port: 50001, password: 228a99d3-1686-4278-85b1-650b2138da96, udp: true }
@@ -24,9 +24,9 @@ proxies:
     - { name: 'Hongkong, V2', type: vmess, server: agroup.node4.v.nodelist-gfwairport.download, port: '50001', uuid: 228a99d3-1686-4278-85b1-650b2138da96, alterId: 0, cipher: auto, udp: true }
     - { name: 'California, V2', type: vmess, server: agroup.node5.v.nodelist-gfwairport.download, port: '50001', uuid: 228a99d3-1686-4278-85b1-650b2138da96, alterId: 0, cipher: auto, udp: true }
 proxy-groups:
-    - { name: 翻墙机场, type: select, proxies: [自动选择, 故障转移, '剩余流量：995.48 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：995.48 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：995.48 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 翻墙机场, type: select, proxies: [自动选择, 故障转移, '剩余流量：995.17 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：995.17 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：995.17 GB', '距离下次重置剩余：24 天', 套餐到期：2022-09-16, 'Tokyo, Tj', 'Incheon, Tj', 'Singapore, Tj', 'Hongkong, Tj', 'California, Tj', 'Tokyo, SS', 'Incheon, SS', 'Singapore, SS', 'Hongkong, SS', 'California, SS', 'Tokyo, V2', 'Incheon, V2', 'Singapore, V2', 'Hongkong, V2', 'California, V2'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,gfwairport.icu,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,翻墙机场'
