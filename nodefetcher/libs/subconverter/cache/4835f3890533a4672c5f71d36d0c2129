@@ -17,11 +17,12 @@ dns:
 proxies:
     - { name: 【直连】香港PQ高速, type: trojan, server: tr04.kaochangonline.online, port: 443, password: 70342897-826e-4ffe-ba96-da4824ad7b85, udp: true, skip-cert-verify: true }
     - { name: 【流媒体】新加坡DIG高速, type: trojan, server: tr01.kczz2038.online, port: 443, password: 70342897-826e-4ffe-ba96-da4824ad7b85, udp: true, skip-cert-verify: true }
+    - { name: 【直连】洛杉矶DE, type: trojan, server: tr02.kczz2038.online, port: 443, password: 70342897-826e-4ffe-ba96-da4824ad7b85, udp: true, skip-cert-verify: true }
     - { name: 【直连】莫斯科200M, type: trojan, server: transfer02.kaochangonline.online, port: 443, password: 70342897-826e-4ffe-ba96-da4824ad7b85, udp: true, skip-cert-verify: true }
 proxy-groups:
-    - { name: Sausage Cloud, type: select, proxies: [自动选择, 故障转移, 【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】莫斯科200M] }
-    - { name: 自动选择, type: url-test, proxies: [【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】莫斯科200M], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】莫斯科200M], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: Sausage Cloud, type: select, proxies: [自动选择, 故障转移, 【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】洛杉矶DE, 【直连】莫斯科200M] }
+    - { name: 自动选择, type: url-test, proxies: [【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】洛杉矶DE, 【直连】莫斯科200M], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [【直连】香港PQ高速, 【流媒体】新加坡DIG高速, 【直连】洛杉矶DE, 【直连】莫斯科200M], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,reborn.kaochang.ltd,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,Sausage Cloud'
