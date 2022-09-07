@@ -18,10 +18,12 @@ proxies:
     - { name: '达拉斯×0.1 | 10G', type: vmess, server: dls.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: dls.hotfun.buzz, network: ws, ws-opts: { path: /hoot }, ws-path: /hoot }
     - { name: '洛杉矶 | 共享1G', type: vmess, server: la20cf.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: la20cf.hotfun.buzz, network: ws, ws-opts: { path: /Hot }, ws-path: /Hot }
     - { name: '圣何塞 | 共享1G', type: vmess, server: la60cf.hotfun.buzz, port: '2087', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: la60cf.hotfun.buzz, network: ws, ws-opts: { path: /Hot }, ws-path: /Hot }
+    - { name: '达拉斯直连×0.2 | 5000M', type: trojan, server: dlszl.hotfun.buzz, port: 24135, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: dlszl.hotfun.buzz, skip-cert-verify: true }
+    - { name: '法国×0.1 | 500M', type: trojan, server: fr.hotfun.buzz, port: 61244, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: fr.hotfun.buzz, skip-cert-verify: true }
 proxy-groups:
-    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, '达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'] }
-    - { name: 自动选择, type: url-test, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, '达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G', '达拉斯直连×0.2 | 5000M', '法国×0.1 | 500M'] }
+    - { name: 自动选择, type: url-test, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G', '达拉斯直连×0.2 | 5000M', '法国×0.1 | 500M'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['达拉斯×0.1 | 10G', '洛杉矶 | 共享1G', '圣何塞 | 共享1G', '达拉斯直连×0.2 | 5000M', '法国×0.1 | 500M'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yuzex.top,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HootFun趣云'
