@@ -2,6 +2,7 @@ mixed-port: 7890
 allow-lan: true
 bind-address: '*'
 mode: rule
+cfw-latency-url: 'https://1.1.1.1'
 log-level: info
 external-controller: '127.0.0.1:9090'
 dns:
@@ -12,7 +13,7 @@ dns:
     fake-ip-range: 198.18.0.1/16
     use-hosts: true
     nameserver: ['https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
-    fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
+    fallback: ['tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: '剩余流量：50 GB', type: trojan, server: wh.mimon.xyz, port: 20461, password: 6c0aed90-be17-4d88-ad5b-8be2b149b05d, udp: true, sni: tfmus2.shanjun.me, skip-cert-verify: true }
@@ -20,8 +21,8 @@ proxies:
     - { name: 官方网站mimon.cc, type: trojan, server: wh.mimon.xyz, port: 20461, password: 6c0aed90-be17-4d88-ad5b-8be2b149b05d, udp: true, sni: tfmus2.shanjun.me, skip-cert-verify: true }
 proxy-groups:
     - { name: 咪萌, type: select, proxies: [自动选择, 故障转移, '剩余流量：50 GB', 套餐到期：长期有效, 官方网站mimon.cc] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：50 GB', 套餐到期：长期有效, 官方网站mimon.cc], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：50 GB', 套餐到期：长期有效, 官方网站mimon.cc], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：50 GB', 套餐到期：长期有效, 官方网站mimon.cc], url: 'https://1.1.1.1', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：50 GB', 套餐到期：长期有效, 官方网站mimon.cc], url: 'https://1.1.1.1', interval: 7200 }
 rules:
     - 'DOMAIN,a7r5cc89.buzz,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,咪萌'
@@ -58,6 +59,8 @@ rules:
     - 'DOMAIN-SUFFIX,apple.com,DIRECT'
     - 'DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT'
     - 'DOMAIN-SUFFIX,apple-mapkit.com,DIRECT'
+    - 'DOMAIN-SUFFIX,cn,DIRECT'
+    - 'DOMAIN-KEYWORD,-cn,DIRECT'
     - 'DOMAIN-SUFFIX,126.com,DIRECT'
     - 'DOMAIN-SUFFIX,126.net,DIRECT'
     - 'DOMAIN-SUFFIX,127.net,DIRECT'
@@ -151,7 +154,6 @@ rules:
     - 'DOMAIN-SUFFIX,sogoucdn.com,DIRECT'
     - 'DOMAIN-SUFFIX,sohu.com,DIRECT'
     - 'DOMAIN-SUFFIX,soku.com,DIRECT'
-    - 'DOMAIN-SUFFIX,speedtest.net,DIRECT'
     - 'DOMAIN-SUFFIX,sspai.com,DIRECT'
     - 'DOMAIN-SUFFIX,suning.com,DIRECT'
     - 'DOMAIN-SUFFIX,taobao.com,DIRECT'
@@ -224,6 +226,7 @@ rules:
     - 'DOMAIN-SUFFIX,vungle.com,REJECT'
     - 'DOMAIN-KEYWORD,wlmonitor,REJECT'
     - 'DOMAIN-KEYWORD,zjtoolbar,REJECT'
+    - 'DOMAIN-SUFFIX,centerhop.com,咪萌'
     - 'DOMAIN-SUFFIX,9to5mac.com,咪萌'
     - 'DOMAIN-SUFFIX,abpchina.org,咪萌'
     - 'DOMAIN-SUFFIX,adblockplus.org,咪萌'
@@ -355,7 +358,6 @@ rules:
     - 'DOMAIN-SUFFIX,klip.me,咪萌'
     - 'DOMAIN-SUFFIX,libsyn.com,咪萌'
     - 'DOMAIN-SUFFIX,linkedin.com,咪萌'
-    - 'DOMAIN-SUFFIX,line-apps.com,咪萌'
     - 'DOMAIN-SUFFIX,linode.com,咪萌'
     - 'DOMAIN-SUFFIX,lithium.com,咪萌'
     - 'DOMAIN-SUFFIX,littlehj.com,咪萌'
@@ -533,7 +535,5 @@ rules:
     - 'IP-CIDR,100.64.0.0/10,DIRECT'
     - 'IP-CIDR,224.0.0.0/4,DIRECT'
     - 'IP-CIDR6,fe80::/10,DIRECT'
-    - 'DOMAIN-SUFFIX,cn,DIRECT'
-    - 'DOMAIN-KEYWORD,-cn,DIRECT'
     - 'GEOIP,CN,DIRECT'
     - 'MATCH,咪萌'
