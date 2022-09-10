@@ -15,10 +15,10 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：-0.21000000000004 GB', type: trojan, server: 18.140.65.66, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
-    - { name: '距离下次重置剩余：21 天', type: trojan, server: 18.140.65.66, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
-    - { name: 套餐到期：2022-10-01, type: trojan, server: 18.140.65.66, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
-    - { name: 新加坡(推荐), type: trojan, server: 18.140.65.66, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
+    - { name: '剩余流量：-0.21000000000004 GB', type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
+    - { name: '距离下次重置剩余：21 天', type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
+    - { name: 套餐到期：2022-10-01, type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
+    - { name: 新加坡(推荐), type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 日本, type: trojan, server: 52.198.198.133, port: 35901, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.raytrack.cloud, skip-cert-verify: true }
 proxy-groups:
     - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：-0.21000000000004 GB', '距离下次重置剩余：21 天', 套餐到期：2022-10-01, 新加坡(推荐), 日本] }
