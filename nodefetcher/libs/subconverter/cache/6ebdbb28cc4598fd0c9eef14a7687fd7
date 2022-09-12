@@ -23,15 +23,10 @@ proxies:
     - { name: 新加坡中转3, type: trojan, server: awshk.yiyuanyun.xyz, port: 41497, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 新加坡中转4, type: trojan, server: awssg2.yiyuanyun.xyz, port: 62431, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 新加坡中转5, type: trojan, server: awsjp2.yiyuanyun.xyz, port: 40375, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
-    - { name: 日本中转1, type: trojan, server: awsjp1.yiyuanyun.xyz, port: 35901, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.ddag.xyz, skip-cert-verify: true }
-    - { name: 日本中转2, type: trojan, server: awsjp2.yiyuanyun.xyz, port: 56266, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.ddag.xyz, skip-cert-verify: true }
-    - { name: 日本中转3, type: trojan, server: awssg1.yiyuanyun.xyz, port: 55281, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.ddag.xyz, skip-cert-verify: true }
-    - { name: 日本中转4, type: trojan, server: awssg2.yiyuanyun.xyz, port: 37061, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.ddag.xyz, skip-cert-verify: true }
-    - { name: 日本中转5, type: trojan, server: awshk.yiyuanyun.xyz, port: 14253, password: 1b60a674-a7b7-4322-b6e4-f6db29c7e4c9, udp: true, sni: onevps.ddag.xyz, skip-cert-verify: true }
 proxy-groups:
-    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5, 日本中转1, 日本中转2, 日本中转3, 日本中转4, 日本中转5] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5, 日本中转1, 日本中转2, 日本中转3, 日本中转4, 日本中转5], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5, 日本中转1, 日本中转2, 日本中转3, 日本中转4, 日本中转5], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-0.21000000000004 GB', '距离下次重置剩余：19 天', 套餐到期：2022-10-01, 新加坡中转1, 新加坡中转2, 新加坡中转3, 新加坡中转4, 新加坡中转5], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yiyuanyun.xyz,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,一元云'
