@@ -16,10 +16,13 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: 美国🇺🇸｜Oracle, type: vmess, server: jgwus.jgwaad.tk, port: '443', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: jgwus.jgwaad.tk } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: jgwus.jgwaad.tk } }
+    - { name: 日本🇯🇵, type: vmess, server: awsrb.linuxonezzm.ga, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awsrb.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awsrb.linuxonezzm.ga } }
+    - { name: 新加坡🇸🇬, type: vmess, server: awsxjp.linuxonezzm.ga, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awsxjp.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awsxjp.linuxonezzm.ga } }
+    - { name: 香港🇭🇰, type: vmess, server: awshk.linuxonezzm.ga, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awshk.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awshk.linuxonezzm.ga } }
 proxy-groups:
-    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle] }
-    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 日本🇯🇵, 新加坡🇸🇬, 香港🇭🇰] }
+    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 新加坡🇸🇬, 香港🇭🇰], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 新加坡🇸🇬, 香港🇭🇰], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HG☁️'
