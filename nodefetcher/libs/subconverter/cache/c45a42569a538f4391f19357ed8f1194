@@ -16,7 +16,7 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: '剩余流量：-5.01 GB', type: trojan, server: tr04.kaochangonline.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
-    - { name: '距离下次重置剩余：14 天', type: trojan, server: tr04.kaochangonline.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
+    - { name: '距离下次重置剩余：13 天', type: trojan, server: tr04.kaochangonline.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
     - { name: 套餐到期：2022-10-26, type: trojan, server: tr04.kaochangonline.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
     - { name: 【直连】香港PQ高速, type: trojan, server: tr04.kaochangonline.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
     - { name: '【流媒体】新加坡DIG高速 1.5X', type: trojan, server: tr01.kczz2038.online, port: 443, password: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, udp: true, skip-cert-verify: true }
@@ -26,9 +26,9 @@ proxies:
     - { name: '【直连】首尔EC2 0.8X', type: vmess, server: 13.125.239.130, port: '15606', uuid: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, alterId: 0, cipher: auto, udp: true }
     - { name: '【直连】新加坡EC2 02 0.8X', type: vmess, server: 13.250.15.38, port: '15608', uuid: 6414baac-2dc2-4a9f-bc07-86e90e3a375e, alterId: 0, cipher: auto, udp: true }
 proxy-groups:
-    - { name: Sausage Cloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：-5.01 GB', '距离下次重置剩余：14 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-5.01 GB', '距离下次重置剩余：14 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-5.01 GB', '距离下次重置剩余：14 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: Sausage Cloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：-5.01 GB', '距离下次重置剩余：13 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-5.01 GB', '距离下次重置剩余：13 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-5.01 GB', '距离下次重置剩余：13 天', 套餐到期：2022-10-26, 【直连】香港PQ高速, '【流媒体】新加坡DIG高速 1.5X', 【直连】洛杉矶DE, '【直连】新加坡EC2 0.8X', '【直连】东京EC2 0.8X', '【直连】首尔EC2 0.8X', '【直连】新加坡EC2 02 0.8X'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,reborn.kaochang.ltd,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,Sausage Cloud'
