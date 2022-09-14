@@ -20,11 +20,11 @@ proxies:
     - { name: 香港🇭🇰, type: vmess, server: awshk.linuxonezzm.ga, port: '8080', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awshk.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awshk.linuxonezzm.ga } }
     - { name: 韩国🇰🇷, type: vmess, server: awshg.linuxonezzm.ga, port: '8080', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awshg.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awshg.linuxonezzm.ga } }
     - { name: 美国🇺🇸-测试, type: vmess, server: cs.jgwlxh.ga, port: '8080', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: cs.jgwlxh.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: cs.jgwlxh.ga } }
-    - { name: 新加坡🇰🇷, type: vmess, server: awsxjp.linuxonezzm.ga, port: '8080', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awsxjp.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awsxjp.linuxonezzm.ga } }
+    - { name: 新加坡, type: vmess, server: awsxjp.linuxonezzm.ga, port: '8080', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: awsxjp.linuxonezzm.ga } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: awsxjp.linuxonezzm.ga } }
 proxy-groups:
-    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡🇰🇷] }
-    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡🇰🇷], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡🇰🇷], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡] }
+    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 日本🇯🇵, 香港🇭🇰, 韩国🇰🇷, 美国🇺🇸-测试, 新加坡], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HG☁️'
