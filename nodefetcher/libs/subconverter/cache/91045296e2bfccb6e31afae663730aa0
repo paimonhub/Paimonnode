@@ -15,7 +15,6 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '新加坡2000M | 限时0.1倍率', type: ss, server: fastsg.hoot.cf, port: 25111, cipher: chacha20-ietf-poly1305, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true }
     - { name: '洛杉矶1000M | 沪美隧道', type: ss, server: fastoneclouddjd.hoot.cf, port: 20001, cipher: chacha20-ietf-poly1305, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true }
     - { name: '拉斯维加斯1000M | 沪日隧道', type: ss, server: fastoneclouddjone.hoot.cf, port: 20004, cipher: chacha20-ietf-poly1305, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true }
     - { name: '荷兰1000M×1.2 | 解锁NF | 沪美隧道', type: ss, server: fastoneclouddjc.hoot.cf, port: 20001, cipher: chacha20-ietf-poly1305, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true }
@@ -24,7 +23,6 @@ proxies:
     - { name: '达拉斯直连×0.2 | 5000M', type: trojan, server: dlszl.hotfun.buzz, port: 24135, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: dlszl.hotfun.buzz, skip-cert-verify: true }
     - { name: 美国×0.5, type: vmess, server: mrk.hotfun.buzz, port: '25211', uuid: 935f34c1-1713-402c-bfe1-f051cf49d370, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: mrk.hotfun.buzz, network: ws, ws-opts: { path: /hoot }, ws-path: /hoot }
     - { name: '台湾GCP | 1000M', type: trojan, server: tbz.hotfun.buzz, port: 45123, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: tbz.hotfun.buzz, skip-cert-verify: true }
-    - { name: '东京中转 | 1000M', type: trojan, server: ajpws.hotfun.buzz, port: 45123, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: ajpws.hotfun.buzz, skip-cert-verify: true }
     - { name: '日本大阪 | 解锁NF | 3000M', type: trojan, server: ajpcws.hotfun.buzz, port: 45123, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: ajpcws.hotfun.buzz, skip-cert-verify: true }
     - { name: '日本东京×0.5 | 解锁NF | 500M独享', type: trojan, server: jp1g.hotfun.buzz, port: 45123, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: jp1g.hotfun.buzz, skip-cert-verify: true }
     - { name: '德国×0.5 | 1000M', type: trojan, server: de.hotfun.buzz, port: 61244, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: de.hotfun.buzz, skip-cert-verify: true }
@@ -32,9 +30,9 @@ proxies:
     - { name: '法国×0.1 | 500M', type: trojan, server: fr.hotfun.buzz, port: 61244, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: fr.hotfun.buzz, skip-cert-verify: true }
     - { name: '新加坡 | 1000M', type: trojan, server: sg.hotfun.buzz, port: 23511, password: 935f34c1-1713-402c-bfe1-f051cf49d370, udp: true, sni: sg.hotfun.buzz, skip-cert-verify: true }
 proxy-groups:
-    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, '新加坡2000M | 限时0.1倍率', '洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '东京中转 | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'] }
-    - { name: 自动选择, type: url-test, proxies: ['新加坡2000M | 限时0.1倍率', '洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '东京中转 | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['新加坡2000M | 限时0.1倍率', '洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '东京中转 | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HootFun趣云, type: select, proxies: [自动选择, 故障转移, '洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'] }
+    - { name: 自动选择, type: url-test, proxies: ['洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['洛杉矶1000M | 沪美隧道', '拉斯维加斯1000M | 沪日隧道', '荷兰1000M×1.2 | 解锁NF | 沪美隧道', '达拉斯1000M | 沪日隧道', '香港HGC×3| 解锁NF | 广港IEPL', '达拉斯直连×0.2 | 5000M', 美国×0.5, '台湾GCP | 1000M', '日本大阪 | 解锁NF | 3000M', '日本东京×0.5 | 解锁NF | 500M独享', '德国×0.5 | 1000M', '拉斯维加斯×0.01 | 1000M', '法国×0.1 | 500M', '新加坡 | 1000M'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yuzex.top,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HootFun趣云'
