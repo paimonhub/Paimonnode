@@ -17,10 +17,11 @@ dns:
 proxies:
     - { name: 美国🇺🇸｜Oracle, type: vmess, server: jgwus.jgwaad.tk, port: '443', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: jgwus.jgwaad.tk } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: jgwus.jgwaad.tk } }
     - { name: 法国🇫🇷, type: vmess, server: 193.70.33.128, port: '17772', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 193.70.33.128 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 193.70.33.128 } }
+    - { name: 日本🇯🇵, type: vmess, server: 172.105.227.64, port: '443', uuid: 0c7caa09-5c69-42dc-8048-8e8b0d7efd4a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 172.105.227.64 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 172.105.227.64 } }
 proxy-groups:
-    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 法国🇫🇷] }
-    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵] }
+    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HG☁️'
