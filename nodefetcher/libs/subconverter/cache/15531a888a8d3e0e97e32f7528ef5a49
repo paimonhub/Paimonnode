@@ -22,10 +22,11 @@ proxies:
     - { name: 美国🇺🇸纽约, type: vmess, server: 68.183.129.197, port: '8080', uuid: bcaf6b8f-0acb-4ffd-86ad-8f13e7dfe436, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 68.183.129.197 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 68.183.129.197 } }
     - { name: 加拿大🇨🇦, type: vmess, server: 138.197.165.31, port: '8080', uuid: bcaf6b8f-0acb-4ffd-86ad-8f13e7dfe436, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 138.197.165.31 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 138.197.165.31 } }
     - { name: 日本🇯🇵东京, type: vmess, server: armdj.zhdjc.me, port: '8080', uuid: bcaf6b8f-0acb-4ffd-86ad-8f13e7dfe436, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: armdj.zhdjc.me } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: armdj.zhdjc.me } }
+    - { name: 新加坡🇸🇬-linode, type: vmess, server: 139.162.37.111, port: '8080', uuid: bcaf6b8f-0acb-4ffd-86ad-8f13e7dfe436, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 139.162.37.111 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 139.162.37.111 } }
 proxy-groups:
-    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京] }
-    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode] }
+    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HG☁️'
