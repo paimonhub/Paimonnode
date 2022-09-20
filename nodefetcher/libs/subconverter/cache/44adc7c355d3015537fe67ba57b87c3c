@@ -15,7 +15,7 @@ dns:
     fallback: ['tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 🇯🇵日本Tokyo急速-01.Ss.1.0x, type: ss, server: 120.241.126.41, port: 10001, cipher: aes-128-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
+    - { name: 🇯🇵日本东京01.Ss.1.0x, type: ss, server: 52.81.179.243, port: 10001, cipher: aes-256-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
     - { name: 🇯🇵日本Tokyo急速-02.Ss.1.0x, type: ss, server: japanix-002.anrun-ix.top, port: 10002, cipher: aes-128-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
     - { name: 🇸🇬新加坡狮城01.Ss.1.0x, type: ss, server: sgix-001.anrun-ix.top, port: 20001, cipher: aes-256-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
     - { name: 🇸🇬新加坡狮城02.Ss.1.0x, type: ss, server: sgix-002.anrun-ix.top, port: 20002, cipher: aes-256-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
@@ -25,9 +25,9 @@ proxies:
     - { name: 🇰🇷韩国首尔-01.Ss.1.0x, type: ss, server: krix-001.anrun-ix.top, port: 60001, cipher: aes-256-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
     - { name: 🇺🇸美国洛杉矶QN-01.Ss.1.0x, type: ss, server: 155.94.239.243, port: 20001, cipher: aes-128-gcm, password: 61e2d024-31ac-4c8a-8ca8-6ea85ae7941b, udp: true }
 proxy-groups:
-    - { name: Anrun Network, type: select, proxies: [自动选择, 故障转移, 🇯🇵日本Tokyo急速-01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x] }
-    - { name: 自动选择, type: url-test, proxies: [🇯🇵日本Tokyo急速-01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [🇯🇵日本Tokyo急速-01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: Anrun Network, type: select, proxies: [自动选择, 故障转移, 🇯🇵日本东京01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x] }
+    - { name: 自动选择, type: url-test, proxies: [🇯🇵日本东京01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [🇯🇵日本东京01.Ss.1.0x, 🇯🇵日本Tokyo急速-02.Ss.1.0x, 🇸🇬新加坡狮城01.Ss.1.0x, 🇸🇬新加坡狮城02.Ss.1.0x, 🇸🇬新加坡狮城03.Ss.1.0x, 🇸🇬新加坡狮城04.Ss.1.0x, 🇸🇬新加坡狮城05.Ss.1.0x, 🇰🇷韩国首尔-01.Ss.1.0x, 🇺🇸美国洛杉矶QN-01.Ss.1.0x], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,console.anrun.online,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,Anrun Network'
