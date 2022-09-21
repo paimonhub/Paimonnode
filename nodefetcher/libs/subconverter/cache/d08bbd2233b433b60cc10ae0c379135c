@@ -15,8 +15,6 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 美国🇺🇸｜Oracle, type: vmess, server: jgwus.jgwaad.tk, port: '443', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: jgwus.jgwaad.tk } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: jgwus.jgwaad.tk } }
-    - { name: 法国🇫🇷, type: vmess, server: 193.70.33.128, port: '17772', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 193.70.33.128 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 193.70.33.128 } }
     - { name: 日本🇯🇵, type: vmess, server: 172.104.70.195, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 172.104.70.195 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 172.104.70.195 } }
     - { name: 新加坡🇸🇬, type: vmess, server: 159.223.32.230, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 159.223.32.230 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 159.223.32.230 } }
     - { name: 美国🇺🇸纽约, type: vmess, server: 68.183.129.197, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 68.183.129.197 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 68.183.129.197 } }
@@ -27,9 +25,9 @@ proxies:
     - { name: 英国🇬🇧, type: vmess, server: 165.227.231.254, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 165.227.231.254 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 165.227.231.254 } }
     - { name: 德国🇩🇪, type: vmess, server: 138.68.90.231, port: '8080', uuid: 2ed609d0-7467-471b-94a9-34a734ccc40a, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /cctv13/hd.m3u8, headers: { Host: 138.68.90.231 } }, ws-path: /cctv13/hd.m3u8, ws-headers: { Host: 138.68.90.231 } }
 proxy-groups:
-    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪] }
-    - { name: 自动选择, type: url-test, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [美国🇺🇸｜Oracle, 法国🇫🇷, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: HG☁️, type: select, proxies: [自动选择, 故障转移, 日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪] }
+    - { name: 自动选择, type: url-test, proxies: [日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [日本🇯🇵, 新加坡🇸🇬, 美国🇺🇸纽约, 加拿大🇨🇦, 日本🇯🇵东京, 新加坡🇸🇬-linode, 印度🇮🇳, 英国🇬🇧, 德国🇩🇪], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,HG☁️'
