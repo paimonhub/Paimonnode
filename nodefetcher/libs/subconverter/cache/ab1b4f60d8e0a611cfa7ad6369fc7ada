@@ -15,15 +15,15 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：417.24 GB', type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
+    - { name: '剩余流量：410.67 GB', type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: '距离下次重置剩余：12 天', type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 套餐到期：2022-10-03, type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 新加坡中转1, type: trojan, server: awssg1.yiyuanyun.xyz, port: 39990, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
     - { name: 新加坡中转2, type: trojan, server: awsjp1.yiyuanyun.xyz, port: 19612, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true, sni: do2.ddag.xyz, skip-cert-verify: true }
 proxy-groups:
-    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：417.24 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：417.24 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：417.24 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 一元云, type: select, proxies: [自动选择, 故障转移, '剩余流量：410.67 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：410.67 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：410.67 GB', '距离下次重置剩余：12 天', 套餐到期：2022-10-03, 新加坡中转1, 新加坡中转2], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,yiyuanyun.xyz,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,一元云'
