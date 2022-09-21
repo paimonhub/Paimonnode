@@ -1,0 +1,260 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: true
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - 117.50.10.10
+    - 119.29.29.29
+    - 114.114.114.114
+    - 223.5.5.5
+    - 223.6.6.6
+  Auto:
+    - tls://1.1.1.1:853
+    - tls://1.0.0.1:853
+    - tls://dns.google:853
+    
+proxies:
+- { name: "GetAFreeNode-NewYork", type: vmess, server: 149.57.218.16, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-LosAngeles", type: vmess, server: 88.210.37.106, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Frankfurt", type: vmess, server: 213.226.71.174, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Tokyo", type: vmess, server: 103.173.178.110, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Amsterdam", type: vmess, server: 89.208.105.63, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Novosibirsk", type: vmess, server: 80.66.64.17, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Vienna", type: vmess, server: 94.177.8.87, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Krasnoyarsk", type: vmess, server: 91.230.211.4, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Moscow", type: vmess, server: 185.112.83.35, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "VPN-for-China-->xeton.co", type: vmess, server: 185.194.30.40, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "VPN-For-China-->milkcat.net", type: vmess, server: seoul.napsternetv.com, port: 443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: { path: /, headers: { host: seoul.napsternetv.com } } }
+
+
+proxy-groups:
+
+  - name: "Main Node"
+    type: select
+    proxies:
+      - Auto Choose
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+
+  - name: "AD Block"
+    type: select
+    proxies:
+      - Turn on
+      - Turn off
+
+
+  - name: "Apple Services"
+    type: select
+    proxies:
+      - Main Node
+      - Auto Choose
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+      - Directly
+
+  - name: "Google Services"
+    type: select
+    proxies:
+      - Main Node
+      - Auto Choose
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+      - Directly
+
+  - name: "Blocked Domains"
+    type: select
+    proxies:
+      - Main Node
+      - Auto Choose
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+      - Directly
+      
+  - name: "CHN Mainland"
+    type: select
+    proxies:
+      - Directly
+      - Main Node
+      - Auto Choose
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+
+  - name: "Auto Choose"
+    type: fallback
+    proxies:
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-LosAngeles
+      - GetAFreeNode-Frankfurt
+      - GetAFreeNode-Tokyo
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-Novosibirsk
+      - GetAFreeNode-Vienna
+      - GetAFreeNode-Krasnoyarsk
+      - GetAFreeNode-Moscow
+      - VPN-for-China-->xeton.co
+      - VPN-For-China-->milkcat.net
+
+    url: 'http://www.gstatic.com/generate_204'
+    interval: 300
+
+
+  - name: "Directly"
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: "Turn on"
+    type: select
+    proxies:
+      - REJECT
+
+  - name: "Turn off"
+    type: select
+    proxies:
+      - DIRECT
+
+ 
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://githubresources.v2raysocks.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+ 
+
+rules:
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,Surge%203,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - RULE-SET,reject,AD Block
+  - RULE-SET,icloud,Apple Services
+  - RULE-SET,apple,Apple Services
+  - RULE-SET,google,Google Services
+  - RULE-SET,proxy,Blocked Domains
+  - RULE-SET,cncidr,CHN Mainland
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - MATCH,Main Node
