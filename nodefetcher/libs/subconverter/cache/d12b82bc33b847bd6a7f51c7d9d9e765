@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：5861.08 GB', type: ss, server: 0.0.0.0, port: 6666, cipher: chacha20-ietf-poly1305, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true }
+    - { name: '剩余流量：5852.83 GB', type: ss, server: 0.0.0.0, port: 6666, cipher: chacha20-ietf-poly1305, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true }
     - { name: 套餐到期：长期有效, type: ss, server: 0.0.0.0, port: 6666, cipher: chacha20-ietf-poly1305, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true }
     - { name: '购买地址：ydshop.us/?cid=4', type: ss, server: 0.0.0.0, port: 6666, cipher: chacha20-ietf-poly1305, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true }
     - { name: '官网: ydgw.us', type: trojan, server: 0.0.0.0, port: 443, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true, sni: 0.0.0.0 }
@@ -24,9 +24,9 @@ proxies:
     - { name: '洛杉矶 2 Trojan', type: trojan, server: los1.ydnode.us, port: 443, password: b6a487eb-2ccf-4640-856e-4a32f974c8b1, udp: true, sni: los1.ydnode.us }
     - { name: '洛杉矶 2 v2ray', type: vmess, server: los1.ydnode.us, port: '80', uuid: b6a487eb-2ccf-4640-856e-4a32f974c8b1, alterId: 0, cipher: auto, udp: true, tls: true, servername: los1.ydnode.us, network: grpc, grpc-opts: { grpc-service-name: los1.ydnode.us } }
 proxy-groups:
-    - { name: YD Cloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：5861.08 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：5861.08 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：5861.08 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: YD Cloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：5852.83 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：5852.83 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：5852.83 GB', 套餐到期：长期有效, '购买地址：ydshop.us/?cid=4', '官网: ydgw.us', '洛杉矶 Trojan', '洛杉矶 v2ray', '洛杉矶 2 Trojan', '洛杉矶 2 v2ray'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,src.ydcloud.us,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,YD Cloud'
