@@ -23,6 +23,7 @@ dns:
     - tls://dns.google:853
     
 proxies:
+- { name: "GetAFreeNode-Gcore", type: vmess, server: 31.184.207.4, port: 443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: { path: /, headers: { host: gcore.v2ray.online } } }
 - { name: "GetAFreeNode-NewYork", type: vmess, server: 149.57.218.16, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 - { name: "GetAFreeNode-LosAngeles", type: vmess, server: 88.210.37.106, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 - { name: "GetAFreeNode-Frankfurt", type: vmess, server: 213.226.71.174, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
@@ -34,7 +35,6 @@ proxies:
 - { name: "GetAFreeNode-Moscow", type: vmess, server: 185.112.83.35, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 - { name: "VPN-for-China-->xeton.co", type: vmess, server: 185.194.30.40, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 - { name: "VPN-For-China-->milkcat.net", type: vmess, server: seoul.napsternetv.com, port: 443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: { path: /, headers: { host: seoul.napsternetv.com } } }
-- { name: "GetAFreeNode-Stockholm", type: vmess, server: 31.184.207.4, port: 443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: { path: /, headers: { host: gcore.v2ray.online } } }
 
 
 proxy-groups:
@@ -43,6 +43,7 @@ proxy-groups:
     type: select
     proxies:
       - Auto Choose
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -54,7 +55,6 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
 
   - name: "AD Block"
@@ -69,6 +69,7 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -80,7 +81,6 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
       - Directly
 
@@ -89,6 +89,7 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -100,7 +101,6 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
       - Directly
 
@@ -109,6 +109,7 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -120,7 +121,6 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
       - Directly
       
@@ -130,6 +130,7 @@ proxy-groups:
       - Directly
       - Main Node
       - Auto Choose
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -141,12 +142,12 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
 
   - name: "Auto Choose"
     type: fallback
     proxies:
+      - GetAFreeNode-Gcore
       - GetAFreeNode-NewYork
       - GetAFreeNode-LosAngeles
       - GetAFreeNode-Frankfurt
@@ -158,7 +159,6 @@ proxy-groups:
       - GetAFreeNode-Moscow
       - VPN-for-China-->xeton.co
       - VPN-For-China-->milkcat.net
-      - GetAFreeNode-Stockholm
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
