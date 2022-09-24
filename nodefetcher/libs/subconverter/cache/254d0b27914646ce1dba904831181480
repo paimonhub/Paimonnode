@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：196.56 GB', type: vmess, server: vultr1.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: vultr1.755657.xyz, network: grpc, grpc-opts: { grpc-service-name: www.oracle.com } }
+    - { name: '剩余流量：196.41 GB', type: vmess, server: vultr1.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: vultr1.755657.xyz, network: grpc, grpc-opts: { grpc-service-name: www.oracle.com } }
     - { name: '距离下次重置剩余：6 天', type: vmess, server: vultr1.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: vultr1.755657.xyz, network: grpc, grpc-opts: { grpc-service-name: www.oracle.com } }
     - { name: 套餐到期：2023-02-21, type: vmess, server: vultr1.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: vultr1.755657.xyz, network: grpc, grpc-opts: { grpc-service-name: www.oracle.com } }
     - { name: '??东京-MyVmess1', type: vmess, server: vultr1.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: vultr1.755657.xyz, network: grpc, grpc-opts: { grpc-service-name: www.oracle.com } }
@@ -25,9 +25,9 @@ proxies:
     - { name: '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', type: vmess, server: nexo.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: nexo.755657.xyz, network: ws, ws-opts: { path: /javasdkandroidgufd }, ws-path: /javasdkandroidgufd }
     - { name: '??香港-MyVmess13-解锁港区NETFLIX非自制剧', type: vmess, server: nc.755657.xyz, port: '8443', uuid: 11b8206c-8ae2-4ab3-a92c-208cdb8cc73d, alterId: 0, cipher: auto, udp: true, tls: true, servername: nc.755657.xyz, network: ws, ws-opts: { path: /javasdkujghdf }, ws-path: /javasdkujghdf }
 proxy-groups:
-    - { name: 雀巢, type: select, proxies: [自动选择, 故障转移, '剩余流量：196.56 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：196.56 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：196.56 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 雀巢, type: select, proxies: [自动选择, 故障转移, '剩余流量：196.41 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：196.41 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：196.41 GB', '距离下次重置剩余：6 天', 套餐到期：2023-02-21, '??东京-MyVmess1', '??法兰克福-MyVmess2-解锁DE区NETFLIX非自制剧', '??美国-MyVmess5-解锁美区NETFLIX非自制剧', '??香港-MyVmess6-解锁港区NETFLIX非自制剧', '??荷兰-MyVmess7-解锁DE区NETFLIX非自制剧', '??香港-MyVmess13-解锁港区NETFLIX非自制剧'], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,www.cloudorg.uk,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,雀巢'
