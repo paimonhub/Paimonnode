@@ -7,5 +7,4 @@ const client = new MongoClient(url);
     let res = await client.db("paimonnode").collection("res").find({"symbol": "pmw"}).toArray()
     fs.writeFileSync("./clash.yaml",res[0]['sub-clash'])
     fs.writeFileSync("./base64",res[0]['sub-v2'])
-    process.exit(0)
-})()
+    setTimeout(process.exit(0),330000)
