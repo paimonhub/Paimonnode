@@ -15,8 +15,9 @@ dns:
     fallback: ['tls://1.0.0.1:853', 'https://cloudflare-dns.com/dns-query', 'https://dns.google/dns-query']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: 'Hongkong (New Territories)', type: trojan, server: 165.154.246.195, port: 49000, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: hk-a.bbbb.pw, skip-cert-verify: true }
-    - { name: 'Hongkong (owloon)', type: trojan, server: 165.154.246.195, port: 49001, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: hk-c.bbbb.pw, skip-cert-verify: true }
+    - { name: Hongkong_1, type: trojan, server: 165.154.246.195, port: 49000, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: hk-a.bbbb.pw, skip-cert-verify: true }
+    - { name: Hongkong_2, type: trojan, server: 165.154.246.195, port: 49001, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: hk-c.bbbb.pw, skip-cert-verify: true }
+    - { name: Hongkong_3, type: trojan, server: 165.154.246.195, port: 49011, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: hk-b.bbbb.pw, skip-cert-verify: true }
     - { name: U.S.A(Dallas), type: trojan, server: 165.154.246.195, port: 49002, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: us-a.bbbb.pw, skip-cert-verify: true }
     - { name: 'U.S.A(Los Angeles1)', type: trojan, server: 165.154.246.195, port: 49003, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: us-b.bbbb.pw, skip-cert-verify: true }
     - { name: 'U.S.A(Las Vegas)', type: trojan, server: 165.154.246.195, port: 49004, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: us-c.bbbb.pw, skip-cert-verify: true }
@@ -27,9 +28,9 @@ proxies:
     - { name: Taiwan(Taipei2), type: trojan, server: dgcm.pdjs.top, port: 49009, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: tw-b.bbbb.pw, skip-cert-verify: true }
     - { name: Luxembourg, type: trojan, server: dgcm.pdjs.top, port: 49010, password: 69dc51ad-260d-4c10-8377-3d1658d8ad1e, udp: true, sni: eu-a.bbbb.pw, skip-cert-verify: true }
 proxy-groups:
-    - { name: PDJC, type: select, proxies: [自动选择, 故障转移, 'Hongkong (New Territories)', 'Hongkong (owloon)', U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg] }
-    - { name: 自动选择, type: url-test, proxies: ['Hongkong (New Territories)', 'Hongkong (owloon)', U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['Hongkong (New Territories)', 'Hongkong (owloon)', U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: PDJC, type: select, proxies: [自动选择, 故障转移, Hongkong_1, Hongkong_2, Hongkong_3, U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg] }
+    - { name: 自动选择, type: url-test, proxies: [Hongkong_1, Hongkong_2, Hongkong_3, U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [Hongkong_1, Hongkong_2, Hongkong_3, U.S.A(Dallas), 'U.S.A(Los Angeles1)', 'U.S.A(Las Vegas)', 'U.S.A(Los Angeles2)', Japan(Osaka1), Japan(Osaka2), Taiwan(Taipei1), Taiwan(Taipei2), Luxembourg], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,pdjc.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,PDJC'
