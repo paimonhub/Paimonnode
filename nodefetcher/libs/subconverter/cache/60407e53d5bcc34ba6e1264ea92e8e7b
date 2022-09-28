@@ -17,10 +17,11 @@ dns:
 proxies:
     - { name: xmss.vip, type: ss, server: mf01.xmss.vip, port: 18888, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
     - { name: cn.xmss.vip, type: ss, server: mf02.xmss.vip, port: 18888, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
+    - { name: MF02-02, type: ss, server: mf02.xmss.vip, port: 18888, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
 proxy-groups:
-    - { name: 寻梦SS-XMSS, type: select, proxies: [自动选择, 故障转移, xmss.vip, cn.xmss.vip] }
-    - { name: 自动选择, type: url-test, proxies: [xmss.vip, cn.xmss.vip], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: [xmss.vip, cn.xmss.vip], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 寻梦SS-XMSS, type: select, proxies: [自动选择, 故障转移, xmss.vip, cn.xmss.vip, MF02-02] }
+    - { name: 自动选择, type: url-test, proxies: [xmss.vip, cn.xmss.vip, MF02-02], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: [xmss.vip, cn.xmss.vip, MF02-02], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,xmss.vip,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,寻梦SS-XMSS'
