@@ -17,8 +17,8 @@ dns:
 proxies:
     - { name: '官网 jfjs.cc 邀请佣金30%', type: trojan, server: kr-s2.jfjs.cc, port: 11443, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
     - { name: 北京联通-香港3, type: trojan, server: zz-2.jfjs.cc, port: 30040, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-5.jfjs.cc, skip-cert-verify: true }
-    - { name: 北京联通-香港-解锁流媒体-2倍率, type: trojan, server: zz-2.jfjs.cc, port: 30034, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-2.jfjs.cc, skip-cert-verify: true }
-    - { name: 北京联通-台湾-解锁流媒体-2倍率, type: trojan, server: zz-2.jfjs.cc, port: 30030, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: tw1.jfjs.cc, skip-cert-verify: true }
+    - { name: 北京联通-香港-解锁流媒体, type: trojan, server: zz-2.jfjs.cc, port: 30034, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-2.jfjs.cc, skip-cert-verify: true }
+    - { name: 北京联通-台湾-解锁流媒体, type: trojan, server: zz-2.jfjs.cc, port: 30030, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: tw1.jfjs.cc, skip-cert-verify: true }
     - { name: 北京联通-新加坡, type: trojan, server: zz-2.jfjs.cc, port: 30035, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: sg1.jfjs.cc, skip-cert-verify: true }
     - { name: 北京联通-韩国, type: trojan, server: zz-2.jfjs.cc, port: 30031, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: kr1.jfjs.cc, skip-cert-verify: true }
     - { name: 京日专线-东京-解锁流媒体, type: trojan, server: zz-3.jfjs.cc, port: 30038, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: jp2.jfjs.cc, skip-cert-verify: true }
@@ -26,9 +26,9 @@ proxies:
     - { name: 北京联通-荷兰, type: trojan, server: zz-2.jfjs.cc, port: 30021, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: nl1.jfjs.cc, skip-cert-verify: true }
     - { name: 北京联通-美国, type: trojan, server: zz-2.jfjs.cc, port: 30012, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us2.jfjs.cc, skip-cert-verify: true }
 proxy-groups:
-    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体-2倍率, 北京联通-台湾-解锁流媒体-2倍率, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国] }
-    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体-2倍率, 北京联通-台湾-解锁流媒体-2倍率, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体-2倍率, 北京联通-台湾-解锁流媒体-2倍率, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体, 北京联通-台湾-解锁流媒体, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国] }
+    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体, 北京联通-台湾-解锁流媒体, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港3, 北京联通-香港-解锁流媒体, 北京联通-台湾-解锁流媒体, 北京联通-新加坡, 北京联通-韩国, 京日专线-东京-解锁流媒体, 北京联通-日本-解锁流媒体, 北京联通-荷兰, 北京联通-美国], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jfjs.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,飓风加速'
