@@ -17,15 +17,16 @@ dns:
 proxies:
     - { name: '官网 jfjs.cc 邀请佣金30%', type: trojan, server: kr-s2.jfjs.cc, port: 11443, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
     - { name: 香港解锁流媒体-2倍率, type: trojan, server: hk-2.jfjs.cc, port: 10015, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, skip-cert-verify: true }
+    - { name: 新加坡-直连-1倍率, type: trojan, server: sg1.jfjs.cc, port: 10026, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, skip-cert-verify: true }
     - { name: 韩国首尔1-直连-1倍率, type: trojan, server: kr1.jfjs.cc, port: 10007, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
     - { name: 日本东京1-直连-1倍率, type: trojan, server: jp1.jfjs.cc, port: 10020, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
     - { name: 荷兰1-直连-1倍率, type: trojan, server: nl1.jfjs.cc, port: 10005, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, skip-cert-verify: true }
     - { name: 美国1-直连-1倍率, type: trojan, server: us1.jfjs.cc, port: 10009, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
     - { name: 美国2-解锁流媒体-2倍率, type: trojan, server: us2.jfjs.cc, port: 10024, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
 proxy-groups:
-    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率] }
-    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 新加坡-直连-1倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率] }
+    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 新加坡-直连-1倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港解锁流媒体-2倍率, 新加坡-直连-1倍率, 韩国首尔1-直连-1倍率, 日本东京1-直连-1倍率, 荷兰1-直连-1倍率, 美国1-直连-1倍率, 美国2-解锁流媒体-2倍率], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jfjs.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,飓风加速'
