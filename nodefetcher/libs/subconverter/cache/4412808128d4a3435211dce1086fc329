@@ -16,8 +16,8 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: '官网 jfjs.cc 邀请佣金30%', type: trojan, server: kr-s2.jfjs.cc, port: 11443, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true }
-    - { name: 香港01, type: trojan, server: zz-2.jfjs.cc, port: 30006, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-1.jfjs.cc, skip-cert-verify: true }
-    - { name: 香港-3台负载, type: trojan, server: zz-3.jfjs.cc, port: 33306, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-1.jfjs.cc, skip-cert-verify: true }
+    - { name: 北京联通-香港01, type: trojan, server: zz-2.jfjs.cc, port: 30006, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-1.jfjs.cc, skip-cert-verify: true }
+    - { name: 京新专线-香港01, type: trojan, server: zz-3.jfjs.cc, port: 33306, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-1.jfjs.cc, skip-cert-verify: true }
     - { name: 香港02, type: trojan, server: zz-2.jfjs.cc, port: 30032, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-2.jfjs.cc, skip-cert-verify: true }
     - { name: 香港03, type: trojan, server: zz-2.jfjs.cc, port: 30040, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: hk-5.jfjs.cc, skip-cert-verify: true }
     - { name: 台湾01, type: trojan, server: zz-2.jfjs.cc, port: 30030, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: tw1.jfjs.cc, skip-cert-verify: true }
@@ -29,9 +29,9 @@ proxies:
     - { name: 北京联通-美国01, type: trojan, server: zz-2.jfjs.cc, port: 30012, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us1.jfjs.cc, skip-cert-verify: true }
     - { name: 京美专线-美国02, type: trojan, server: zz-3.jfjs.cc, port: 33312, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us1.jfjs.cc, skip-cert-verify: true }
 proxy-groups:
-    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 香港01, 香港-3台负载, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02] }
-    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港-3台负载, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港-3台负载, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 北京联通-香港01, 京新专线-香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02] }
+    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港01, 京新专线-香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 北京联通-香港01, 京新专线-香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 北京联通-美国01, 京美专线-美国02], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jfjs.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,飓风加速'
