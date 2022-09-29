@@ -25,11 +25,12 @@ proxies:
     - { name: 日本02, type: trojan, server: zz-2.jfjs.cc, port: 30042, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: jp-2.jfjs.cc, skip-cert-verify: true }
     - { name: 新加坡02, type: trojan, server: zz-2.jfjs.cc, port: 30035, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: sg1.jfjs.cc, skip-cert-verify: true }
     - { name: 荷兰01, type: trojan, server: zz-2.jfjs.cc, port: 30021, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: nl1.jfjs.cc, skip-cert-verify: true }
-    - { name: 美国01, type: trojan, server: zz-2.jfjs.cc, port: 30012, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us2.jfjs.cc, skip-cert-verify: true }
+    - { name: 美国01-北京联通, type: trojan, server: zz-2.jfjs.cc, port: 30012, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us1.jfjs.cc, skip-cert-verify: true }
+    - { name: 美国02-京美专线, type: trojan, server: zz-3.jfjs.cc, port: 33312, password: f8eba853-2763-4577-b18b-8558c9801ebb, udp: true, sni: us1.jfjs.cc, skip-cert-verify: true }
 proxy-groups:
-    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01] }
-    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 飓风加速, type: select, proxies: [自动选择, 故障转移, '官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01-北京联通, 美国02-京美专线] }
+    - { name: 自动选择, type: url-test, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01-北京联通, 美国02-京美专线], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['官网 jfjs.cc 邀请佣金30%', 香港01, 香港02, 香港03, 台湾01, 韩国02, 日本01, 日本02, 新加坡02, 荷兰01, 美国01-北京联通, 美国02-京美专线], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jfjs.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,飓风加速'
