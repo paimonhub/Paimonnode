@@ -16,13 +16,14 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: '剩余流量：-1.5700000000001 GB', type: vmess, server: dt.755657.xyz, port: '57923', uuid: 690397bf-64fc-4e18-8810-4f95979a21d3, alterId: 0, cipher: auto, udp: true, tls: true, servername: ale.755657.xyz, network: ws, ws-opts: { path: /djhcbjrdvjtoepvdsj }, ws-path: /djhcbjrdvjtoepvdsj }
+    - { name: '距离下次重置剩余：30 天', type: vmess, server: dt.755657.xyz, port: '57923', uuid: 690397bf-64fc-4e18-8810-4f95979a21d3, alterId: 0, cipher: auto, udp: true, tls: true, servername: ale.755657.xyz, network: ws, ws-opts: { path: /djhcbjrdvjtoepvdsj }, ws-path: /djhcbjrdvjtoepvdsj }
     - { name: 套餐到期：2023-09-03, type: vmess, server: dt.755657.xyz, port: '57923', uuid: 690397bf-64fc-4e18-8810-4f95979a21d3, alterId: 0, cipher: auto, udp: true, tls: true, servername: ale.755657.xyz, network: ws, ws-opts: { path: /djhcbjrdvjtoepvdsj }, ws-path: /djhcbjrdvjtoepvdsj }
     - { name: 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, type: vmess, server: dt.755657.xyz, port: '57923', uuid: 690397bf-64fc-4e18-8810-4f95979a21d3, alterId: 0, cipher: auto, udp: true, tls: true, servername: ale.755657.xyz, network: ws, ws-opts: { path: /djhcbjrdvjtoepvdsj }, ws-path: /djhcbjrdvjtoepvdsj }
     - { name: 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧, type: vmess, server: dt.755657.xyz, port: '57925', uuid: 690397bf-64fc-4e18-8810-4f95979a21d3, alterId: 0, cipher: auto, udp: true, tls: true, servername: ncs.755657.xyz, network: ws, ws-opts: { path: /javasdkandroidgufd }, ws-path: /javasdkandroidgufd }
 proxy-groups:
-    - { name: 雀巢, type: select, proxies: [自动选择, 故障转移, '剩余流量：-1.5700000000001 GB', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-1.5700000000001 GB', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-1.5700000000001 GB', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 雀巢, type: select, proxies: [自动选择, 故障转移, '剩余流量：-1.5700000000001 GB', '距离下次重置剩余：30 天', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-1.5700000000001 GB', '距离下次重置剩余：30 天', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-1.5700000000001 GB', '距离下次重置剩余：30 天', 套餐到期：2023-09-03, 🇭🇰香港-MyVmess6-解锁港区NETFLIX非自制剧, 🇳🇱荷兰-MyVmess7-解锁DE区NETFLIX非自制剧], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,www.cloudorg.uk,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,雀巢'
