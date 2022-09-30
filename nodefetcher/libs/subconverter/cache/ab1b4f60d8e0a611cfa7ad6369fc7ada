@@ -16,7 +16,7 @@ dns:
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
     - { name: 日本2, type: ss, server: aws.raytrack.cloud, port: 65059, cipher: chacha20-ietf-poly1305, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true }
-    - { name: 新加坡, type: ss, server: 43.248.96.46, port: 57279, cipher: chacha20-ietf-poly1305, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true }
+    - { name: 新加坡, type: ss, server: 43.248.96.185, port: 57279, cipher: chacha20-ietf-poly1305, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true }
     - { name: 新加坡2, type: ss, server: aws.raytrack.cloud, port: 34400, cipher: chacha20-ietf-poly1305, password: 57dec1b6-08b4-492a-a535-a17968ae9c10, udp: true }
 proxy-groups:
     - { name: 一元云, type: select, proxies: [自动选择, 故障转移, 日本2, 新加坡, 新加坡2] }
