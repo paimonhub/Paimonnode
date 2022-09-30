@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：4208.67 GB', type: vmess, server: gaio.miaoge110.cf, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /jcnf }, ws-path: /jcnf }
+    - { name: '剩余流量：4186.76 GB', type: vmess, server: gaio.miaoge110.cf, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /jcnf }, ws-path: /jcnf }
     - { name: 套餐到期：长期有效, type: vmess, server: gaio.miaoge110.cf, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /jcnf }, ws-path: /jcnf }
     - { name: 美国Azure, type: vmess, server: gaio.miaoge110.cf, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /jcnf }, ws-path: /jcnf }
     - { name: 喵哥巴西Azure, type: vmess, server: zh.miaoge.gay, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws }
@@ -24,9 +24,9 @@ proxies:
     - { name: 日本Azure, type: vmess, server: rben.miaoge.gay, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws }
     - { name: 喵哥Azure韩国, type: vmess, server: riop.miaoge110.cf, port: '443', uuid: 4893ed3e-8a5f-48dc-aa1e-bbc2e67a065b, alterId: 0, cipher: auto, udp: true, network: ws }
 proxy-groups:
-    - { name: 喵哥加速云, type: select, proxies: [自动选择, 故障转移, '剩余流量：4208.67 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：4208.67 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：4208.67 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: 喵哥加速云, type: select, proxies: [自动选择, 故障转移, '剩余流量：4186.76 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：4186.76 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：4186.76 GB', 套餐到期：长期有效, 美国Azure, 喵哥巴西Azure, 香港Azure, Azure阿拉伯迪拜, 日本Azure, 喵哥Azure韩国], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,jichang.miaoge110.cf,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,喵哥加速云'
