@@ -1,1 +1,120 @@
-const _0x172d85=_0x275b;(function(_0x5524e6,_0x5093ec){const _0xa7dade=_0x275b,_0x185544=_0x5524e6();while(!![]){try{const _0xc69d58=parseInt(_0xa7dade(0x16c))/0x1+parseInt(_0xa7dade(0x165))/0x2*(-parseInt(_0xa7dade(0x16b))/0x3)+parseInt(_0xa7dade(0x172))/0x4*(parseInt(_0xa7dade(0x16a))/0x5)+-parseInt(_0xa7dade(0x15b))/0x6+-parseInt(_0xa7dade(0x150))/0x7+-parseInt(_0xa7dade(0x169))/0x8*(-parseInt(_0xa7dade(0x151))/0x9)+-parseInt(_0xa7dade(0x171))/0xa;if(_0xc69d58===_0x5093ec)break;else _0x185544['push'](_0x185544['shift']());}catch(_0x38e0c0){_0x185544['push'](_0x185544['shift']());}}}(_0x312f,0x3c6d7));import{startSub}from'./libs/toolbox.js';function _0x275b(_0x318f50,_0x21ff56){const _0x93f460=_0x312f();return _0x275b=function(_0x171ee1,_0x1beeb7){_0x171ee1=_0x171ee1-0x14f;let _0x312f83=_0x93f460[_0x171ee1];return _0x312f83;},_0x275b(_0x318f50,_0x21ff56);}import'./libs/log.js';import{MongoClient}from'mongodb';import _0x2ce4c5 from'axios';import _0x279473 from'fs';const mClient=new MongoClient(process[_0x172d85(0x173)][_0x172d85(0x155)]);let sublist,nodes=[],outList=[],preloadServ=async function(){const _0x32e65c=_0x172d85;Logger[_0x32e65c(0x160)](_0x32e65c(0x162));async function _0x4d4484(){const _0x4ddc90=_0x32e65c;try{await mClient[_0x4ddc90(0x161)](),sublist=await mClient['db']('paimonnode')[_0x4ddc90(0x175)]('sublist');}catch(_0x7140db){Logger[_0x4ddc90(0x16d)]('Cannot\x20connect\x20to\x20the\x20db.'+_0x7140db),process['exit'](0x1);}Logger['info']('DB\x20√');}await _0x4d4484();try{await startSub();}catch(_0x4aa8a3){Logger[_0x32e65c(0x16d)](_0x32e65c(0x163)+_0x4aa8a3),process[_0x32e65c(0x15e)](0x1);}Logger[_0x32e65c(0x160)](_0x32e65c(0x152));},fetchNodes=async function(){const _0x2bdf0f=_0x172d85;Logger['info'](_0x2bdf0f(0x16f));let _0x59e705=_0x279473[_0x2bdf0f(0x167)](_0x2bdf0f(0x153),_0x2bdf0f(0x178))[_0x2bdf0f(0x168)]('\x0a'),_0x2770e6=_0x279473['readFileSync'](_0x2bdf0f(0x166),_0x2bdf0f(0x14f))[_0x2bdf0f(0x168)]('\x0a');for(let _0xd2fc65=0x0;_0xd2fc65<_0x2770e6[_0x2bdf0f(0x177)];_0xd2fc65++){_0x2770e6[_0xd2fc65]!==''&&nodes['push'](_0x2770e6[_0xd2fc65]);}let _0x441bb9=await sublist['find']({'PLEASEIGNORE':0x1})[_0x2bdf0f(0x15f)]();for(let _0x572a01=0x0;_0x572a01<_0x441bb9[_0x2bdf0f(0x177)];_0x572a01++){_0x59e705[_0x2bdf0f(0x158)](_0x441bb9[_0x572a01][_0x2bdf0f(0x15d)]);}try{let _0x467abc=await _0x2ce4c5('https://github.com/RenaLio/Mux2sub/raw/main/sub_list'),_0x34c771=_0x467abc['data']['split']('\x0a');console[_0x2bdf0f(0x164)](_0x2bdf0f(0x170)+_0x34c771[_0x2bdf0f(0x177)]);for(let _0xf28c72=0x0;_0xf28c72<_0x34c771[_0x2bdf0f(0x177)];_0xf28c72++){_0x34c771[_0xf28c72]!==''&&_0x59e705[_0x2bdf0f(0x158)](_0x34c771[_0xf28c72]);}}catch(_0x2ceb1f){Logger[_0x2bdf0f(0x15a)](_0x2bdf0f(0x17b)+_0x2ceb1f);}for(let _0x59a234=0x0;_0x59a234<_0x59e705[_0x2bdf0f(0x177)];_0x59a234+=0x5){let _0xf9947c=[];for(let _0x16cc9a=0x0;_0x16cc9a<0x5;_0x16cc9a++){if(_0x59a234+_0x16cc9a<_0x59e705['length']){let _0x5d3280=_0x59e705[_0x59a234+_0x16cc9a];_0xf9947c['push'](new Promise(async(_0x2f60bf,_0x4a5f12)=>{const _0x332e39=_0x2bdf0f;try{let _0x101eb7=await _0x2ce4c5('http://127.0.0.1:25500/sub?target=mixed&remove_emoji=false&url='+encodeURIComponent(_0x5d3280),{'headers':{'User-Agent':_0x332e39(0x157)}}),_0x56c926=Buffer[_0x332e39(0x179)](_0x101eb7[_0x332e39(0x156)],_0x332e39(0x16e))[_0x332e39(0x154)](_0x332e39(0x178))[_0x332e39(0x168)]('\x0a');nodes=nodes['concat'](_0x56c926);}catch(_0x1fd287){Logger['warn']('Cannot\x20convert\x20the\x20sub\x20'+_0x5d3280+'\x20'+_0x1fd287+_0x1fd287[_0x332e39(0x156)]);}_0x2f60bf();}));}}await Promise[_0x2bdf0f(0x15c)](_0xf9947c);}},output=async function(){const _0x28c4e5=_0x172d85;Logger['info'](_0x28c4e5(0x174));let _0x2caa2d=Buffer[_0x28c4e5(0x179)](nodes[_0x28c4e5(0x17d)]('\x0a'))['toString'](_0x28c4e5(0x16e));return _0x279473[_0x28c4e5(0x159)]('out.txt',_0x2caa2d),Logger['info']('Output\x20√'),_0x2caa2d;};function _0x312f(){const _0x69e79d=['105JUOHMF','451238iBgukC','error','base64','Start\x20fetch\x20nodes.','flist\x20len:','7570960fOgnFy','456452FqhQnf','env','Start\x20output\x20nodes.','collection','apply','length','utf8','from','constructor','Fetch\x20autosub\x20sourse\x20faild.','search','join','utf-8','97629ZQYFQD','126954MnTlvJ','Subconvert\x20√','../sublist.txt','toString','PAIMONNODE_DB_URI','data','Clash','push','writeFileSync','warn','144672vRytJY','all','link','exit','toArray','info','connect','Launching\x20service...','Cannot\x20start\x20subconvert\x20service.','log','9142TATMKp','../nodelist.txt','readFileSync','split','232HTsYXV','15VeUbkI'];_0x312f=function(){return _0x69e79d;};return _0x312f();}async function main(){const _0x2a8240=_0x172d85,_0x1815de=(function(){let _0x455db1=!![];return function(_0x1f9214,_0xba2a90){const _0x484946=_0x455db1?function(){const _0x1ee661=_0x275b;if(_0xba2a90){const _0x21532a=_0xba2a90[_0x1ee661(0x176)](_0x1f9214,arguments);return _0xba2a90=null,_0x21532a;}}:function(){};return _0x455db1=![],_0x484946;};}()),_0x464899=_0x1815de(this,function(){const _0x1e5d89=_0x275b;return _0x464899[_0x1e5d89(0x154)]()['search']('(((.+)+)+)+$')['toString']()[_0x1e5d89(0x17a)](_0x464899)[_0x1e5d89(0x17c)]('(((.+)+)+)+$');});_0x464899(),await preloadServ(),await fetchNodes(),await output(),process[_0x2a8240(0x15e)]();}main();
+import { startSub } from './libs/toolbox.js';
+import './libs/log.js';
+import { MongoClient } from 'mongodb';
+import axios from "axios";
+import fs from "fs";
+import { Logger } from 'winston';
+
+const mClient = new MongoClient(process.env.PAIMONNODE_DB_URI);
+let sublist
+let nodes = []
+let outList = []
+//start db and subconverter
+let preloadServ = async function(){
+    Logger.info("Launching service...")
+    //Connect to db
+    async function startDB(){
+        try{
+            await mClient.connect();
+            sublist = await mClient.db("paimonnode").collection("sublist");
+        }catch(e){
+            Logger.error("Cannot connect to the db."+e);
+            process.exit(1)
+        }
+        Logger.info("DB √")
+    }
+    await startDB()
+    try{
+        await startSub()//Start subconvert service
+    }catch(e){
+        Logger.error("Cannot start subconvert service."+e)
+        process.exit(1)
+    }
+    Logger.info("Subconvert √")
+}
+
+//fetch nodes
+let fetchNodes = async function(){
+    Logger.info("Start fetch nodes.")
+    let file = fs.readFileSync('../sublist.txt','utf8').split('\n')
+    let nodeFromFile = fs.readFileSync('../nodelist.txt','utf-8').split('\n')
+    for(let i=0;i<nodeFromFile.length;i++){
+        if(nodeFromFile[i] !== ""){
+            nodes.push(nodeFromFile[i])
+        }
+    } 
+    let subs = await sublist.find({"PLEASEIGNORE":1}).toArray()
+    for(let i=0;i<subs.length;i++){
+        file.push(subs[i].link)
+    }
+    try{
+        let res = await axios('https://github.com/WilliamXor/Mux2sub/raw/main/urllist')
+        let sourceLst = res.data.split('\n')
+        console.log("flist len:"+sourceLst.length)
+        for(let i=0;i<sourceLst.length;i++){
+            if(sourceLst[i] !== ""){
+                file.push(sourceLst[i])
+            }
+        }
+        Logger.info("Black ♂ Magic:Got "+file.length+" ")
+    }catch(e){
+        Logger.warn("Black ♂ Magic faild."+e)
+    }
+    /*
+    let tsk =[];
+    for(let sub of file){
+        tsk.push(
+            new Promise(async(resolve,rej)=>{
+                try{
+                    let res = await axios("http://127.0.0.1:25500/sub?target=mixed&remove_emoji=false&url="+encodeURIComponent(sub),{headers:{'User-Agent':'Clash'}})
+                    let node = Buffer.from(res.data,'base64').toString('utf8').split('\n')
+                    nodes = nodes.concat(node)
+                    resolve()
+                }catch (e) {
+                    Logger.warn("Cannot convert the sub "+sub+" "+e)
+                    resolve()
+                }
+            })
+        )
+    }*/
+    
+    for(let i=0;i<file.length;i+=5){
+        let taskList = []
+        for(let j=0;j<5;j++){
+            if(i+j<file.length){
+                let sub = file[i+j]
+                taskList.push(
+                    new Promise(async (res,rej)=>{
+                        try{
+                            let res = await axios("http://127.0.0.1:25500/sub?target=mixed&remove_emoji=false&url="+encodeURIComponent(sub),{headers:{'User-Agent':'Clash'}})
+                            let node = Buffer.from(res.data,'base64').toString('utf8').split('\n')
+                            Logger.info("Success fetch "+node.length+" from "+sub)
+                            nodes = nodes.concat(node)
+                        }catch (e) {
+                            //Logger.warn("Cannot convert the sub "+sub+" "+e+e.data)
+                        }
+                        res()
+                    })
+                )
+            }
+        }
+        await Promise.all(taskList)
+    }
+    //await Promise.all(tsk)
+
+}
+//output to file in base64
+let output = async function(){
+    Logger.info("Start output nodes.")
+    let output = Buffer.from(nodes.join('\n')).toString('base64')
+    fs.writeFileSync('out.txt',output)
+    Logger.info("Output √")
+    return output
+}
+async function main(){
+    await preloadServ()
+    await fetchNodes()
+    await output()
+    process.exit()
+}
+main()
