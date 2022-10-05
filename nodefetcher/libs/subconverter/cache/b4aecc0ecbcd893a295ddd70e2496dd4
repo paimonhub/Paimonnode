@@ -23,13 +23,13 @@ dns:
     - tls://dns.google:853
     
 proxies:
-- { name: "GetAFreeNode-Kazan", type: vmess, server: 46.29.161.160, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
-- { name: "GetAFreeNode-Frankfurt", type: vmess, server: 213.226.71.174, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
-- { name: "GetAFreeNode-Tokyo", type: vmess, server: 103.173.178.110, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
-- { name: "GetAFreeNode-Amsterdam", type: vmess, server: 89.208.105.63, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Frankfurt", type: vmess, server: 81.28.13.90, port: 20002, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 - { name: "GetAFreeNode-Vienna", type: vmess, server: 94.177.8.87, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
-- { name: "GetAFreeNode-Moscow", type: vmess, server: 185.112.83.35, port: 42443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
-- { name: "VPN-for-China-->xeton.co", type: vmess, server: 185.194.30.40, port: 41443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Kazan", type: vmess, server: 81.28.13.90, port: 20004, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Moscow", type: vmess, server: 81.28.13.90, port: 20003, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Amsterdam", type: vmess, server: 81.28.13.90, port: 20001, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-NewYork", type: vmess, server: 47.87.166.143, port: 44443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
+- { name: "GetAFreeNode-Helsinki", type: vmess, server: 185.174.137.112, port: 44443, uuid: 2F094845-E2BD-EBF7-DEB7-995992436FAF, alterId: 0, cipher: auto, tls: true, network: tcp, servername: node.napsternetv.com }
 
 
 proxy-groups:
@@ -38,13 +38,13 @@ proxy-groups:
     type: select
     proxies:
       - Auto Choose
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
 
   - name: "AD Block"
@@ -59,13 +59,13 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
       - Directly
 
@@ -74,13 +74,13 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
       - Directly
 
@@ -89,13 +89,13 @@ proxy-groups:
     proxies:
       - Main Node
       - Auto Choose
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
       - Directly
       
@@ -105,25 +105,25 @@ proxy-groups:
       - Directly
       - Main Node
       - Auto Choose
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
 
   - name: "Auto Choose"
     type: fallback
     proxies:
-      - GetAFreeNode-Kazan
       - GetAFreeNode-Frankfurt
-      - GetAFreeNode-Tokyo
-      - GetAFreeNode-Amsterdam
       - GetAFreeNode-Vienna
+      - GetAFreeNode-Kazan
       - GetAFreeNode-Moscow
-      - VPN-for-China-->xeton.co
+      - GetAFreeNode-Amsterdam
+      - GetAFreeNode-NewYork
+      - GetAFreeNode-Helsinki
 
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
