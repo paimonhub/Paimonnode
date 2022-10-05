@@ -15,8 +15,8 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: xmss.vip, type: ss, server: mf01.xmss.vip, port: 18888, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
-    - { name: cn.xmss.vip, type: ss, server: mf02.xmss.vip, port: 18888, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
+    - { name: xmss.vip, type: ss, server: xmssmf01.xmss.vip, port: 16666, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
+    - { name: cn.xmss.vip, type: ss, server: xmssmf02.xmss.vip, port: 16666, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true }
 proxy-groups:
     - { name: 寻梦SS-XMSS, type: select, proxies: [自动选择, 故障转移, xmss.vip, cn.xmss.vip] }
     - { name: 自动选择, type: url-test, proxies: [xmss.vip, cn.xmss.vip], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
