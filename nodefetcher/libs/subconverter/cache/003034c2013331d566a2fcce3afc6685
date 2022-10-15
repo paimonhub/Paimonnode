@@ -15,7 +15,7 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：66.09 GB', type: vmess, server: 162.159.138.163, port: '443', uuid: efd30354-baf5-4508-afa0-91ef8e59c5ec, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /, headers: { Host: test1.cloudfast.cc } }, ws-path: /, ws-headers: { Host: test1.cloudfast.cc } }
+    - { name: '剩余流量：65.59 GB', type: vmess, server: 162.159.138.163, port: '443', uuid: efd30354-baf5-4508-afa0-91ef8e59c5ec, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /, headers: { Host: test1.cloudfast.cc } }, ws-path: /, ws-headers: { Host: test1.cloudfast.cc } }
     - { name: '距离下次重置剩余：2 天', type: vmess, server: 162.159.138.163, port: '443', uuid: efd30354-baf5-4508-afa0-91ef8e59c5ec, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /, headers: { Host: test1.cloudfast.cc } }, ws-path: /, ws-headers: { Host: test1.cloudfast.cc } }
     - { name: 套餐到期：2022-10-17, type: vmess, server: 162.159.138.163, port: '443', uuid: efd30354-baf5-4508-afa0-91ef8e59c5ec, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /, headers: { Host: test1.cloudfast.cc } }, ws-path: /, ws-headers: { Host: test1.cloudfast.cc } }
     - { name: '东京linode3 CF中转 1x', type: vmess, server: 162.159.138.163, port: '443', uuid: efd30354-baf5-4508-afa0-91ef8e59c5ec, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /, headers: { Host: test1.cloudfast.cc } }, ws-path: /, ws-headers: { Host: test1.cloudfast.cc } }
@@ -33,9 +33,9 @@ proxies:
     - { name: 英国伦敦-直连, type: trojan, server: uk002.cloudfast.cc, port: 443, password: efd30354-baf5-4508-afa0-91ef8e59c5ec, udp: true, skip-cert-verify: true }
     - { name: 荷兰001-直连, type: trojan, server: he001.cloudfast.cc, port: 443, password: efd30354-baf5-4508-afa0-91ef8e59c5ec, udp: true, skip-cert-verify: true }
 proxy-groups:
-    - { name: cloudfast, type: select, proxies: [自动选择, 故障转移, '剩余流量：66.09 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：66.09 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：66.09 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: cloudfast, type: select, proxies: [自动选择, 故障转移, '剩余流量：65.59 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：65.59 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：65.59 GB', '距离下次重置剩余：2 天', 套餐到期：2022-10-17, '东京linode3 CF中转 1x', 'Hong Kong BGP 0.5x测试中', 'Hong Kong 01', 'Singapore 01', 'KR 01', 美国0001, 日本1, '东京az 0.5x', '东京linode -2 直连', 加拿大1-A, '印度001 -直连', 德国1-A, 英国伦敦-直连, 荷兰001-直连], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,cloudfast.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,cloudfast'
