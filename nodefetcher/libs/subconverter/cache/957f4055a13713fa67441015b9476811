@@ -15,7 +15,8 @@ dns:
     fallback: ['https://doh.dns.sb/dns-query', 'https://dns.cloudflare.com/dns-query', 'https://dns.twnic.tw/dns-query', 'tls://8.8.4.4:853']
     fallback-filter: { geoip: true, ipcidr: [240.0.0.0/4, 0.0.0.0/32] }
 proxies:
-    - { name: '剩余流量：3954.02 GB', type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
+    - { name: '剩余流量：-1.75 GB', type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
+    - { name: '距离下次重置剩余：30 天', type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
     - { name: 套餐到期：2022-11-14, type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
     - { name: 香港D1, type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
     - { name: 香港D2, type: trojan, server: basics.efcloud.cc, port: 50000, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: basics.efcloud.cc }
@@ -28,9 +29,9 @@ proxies:
     - { name: 美国D1, type: trojan, server: standard.efcloud.cc, port: 45001, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: ssl.efcloud.cc }
     - { name: 美国D2, type: trojan, server: standard.efcloud.cc, port: 45001, password: 2f95d996-e911-4b1b-82b1-1d86bf2c517d, udp: true, sni: ssl.efcloud.cc }
 proxy-groups:
-    - { name: EFCloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：3954.02 GB', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2] }
-    - { name: 自动选择, type: url-test, proxies: ['剩余流量：3954.02 GB', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
-    - { name: 故障转移, type: fallback, proxies: ['剩余流量：3954.02 GB', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
+    - { name: EFCloud, type: select, proxies: [自动选择, 故障转移, '剩余流量：-1.75 GB', '距离下次重置剩余：30 天', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2] }
+    - { name: 自动选择, type: url-test, proxies: ['剩余流量：-1.75 GB', '距离下次重置剩余：30 天', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2], url: 'http://www.gstatic.com/generate_204', interval: 86400 }
+    - { name: 故障转移, type: fallback, proxies: ['剩余流量：-1.75 GB', '距离下次重置剩余：30 天', 套餐到期：2022-11-14, 香港D1, 香港D2, 台湾D1, 台湾D2, 日本D1, 日本D2, 新加坡D1, 新加坡D2, 美国D1, 美国D2], url: 'http://www.gstatic.com/generate_204', interval: 7200 }
 rules:
     - 'DOMAIN,www.efcloud.cc,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,EFCloud'
