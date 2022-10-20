@@ -5,63 +5,79 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转 🇺🇸 US 1 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50092, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 1 TG:@airproxies, server: 119.36.161.40, port: 443, type: vmess, uuid: 946ba5df-5771-4873-a3cb-892378526147, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/120306182525, headers: {Host: www.99136853.xyz}}, udp: true}
   - {name: 中转 🇺🇸 US 2 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50093, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 3 TG:@nodpai, server: 172.245.218.162, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 4 TG:@airproxies, server: 172.245.218.162, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 5 TG:@airproxies, server: 172.245.218.162, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 6 TG:@nodpai, server: 172.245.218.162, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 7 TG:@airproxies, server: 172.245.218.162, port: 801, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 8 TG:@airproxies, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 9 TG:@nodpai, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 3 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50092, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 4 TG:@airproxies, server: 172.245.218.162, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 5 TG:@airproxies, server: 172.245.218.162, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 6 TG:@nodpai, server: 172.245.218.162, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 7 TG:@airproxies, server: 172.245.218.162, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 8 TG:@airproxies, server: 172.245.218.162, port: 801, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 中转 🇺🇸 US 9 TG:@nodpai, server: 119.36.161.40, port: 443, type: vmess, uuid: 946ba5df-5771-4873-a3cb-892378526147, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/120306182525, headers: {Host: www.99136853.xyz}}, udp: true}
   - {name: 🇺🇸 US 10 TG:@nodpai, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 11 TG:@airproxies, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 12 TG:@airproxies, server: 119.36.161.40, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/120306182525, headers: {Host: www.69961573.xyz}}, udp: true}
-  - {name: 🇺🇸 US 13 TG:@airproxies, server: 172.245.218.162, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 14 TG:@airproxies, server: 172.245.218.162, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 15 TG:@nodpai, server: 172.245.218.162, port: 805, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 16 TG:@nodpai, server: 172.245.218.162, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 🇺🇸 US 17 TG:@nodpai, server: 172.245.218.162, port: 801, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
-  - {name: 中转 🇭🇰 HK 1 TG:@airproxies, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
-  - {name: 🇭🇰 HK 2 TG:@nodpai, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 3 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50083, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 4 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50081, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 5 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50080, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 6 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50082, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 7 TG:@nodpai, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 8 TG:@airproxies, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 9 TG:@nodpai, server: 111.45.22.239, port: 30302, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 10 TG:@airproxies, server: xg1.xbywwcp.us, port: 25055, type: vmess, uuid: ab08a8a4-26f6-3540-8b7d-adbd8c0d571b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aaaa, headers: {Host: a.189.cn}}, udp: true}
-  - {name: 🇭🇰 HK 11 TG:@nodpai, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 1 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50084, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 2 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50086, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 3 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50087, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 4 TG:@nodpai, server: 44b68835c5ed1dde.leadingto.club, port: 20111, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 5 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50085, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 11 TG:@airproxies, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 12 TG:@nodpai, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 13 TG:@airproxies, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 14 TG:@nodpai, server: 172.64.153.102, port: 443, type: vmess, uuid: bed3d876-2d26-4d4d-b789-3063438ee774, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash2.trump2023.us}}, udp: true}
+  - {name: 中转 🇺🇸 US 15 TG:@nodpai, server: 119.36.161.40, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/120306182525, headers: {Host: www.69961573.xyz}}, udp: true}
+  - {name: 🇺🇸 US 16 TG:@nodpai, server: 172.245.218.162, port: 809, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 17 TG:@nodpai, server: 172.245.218.162, port: 804, type: ss, cipher: chacha20-ietf-poly1305, password: G!yBwPWH3Vao, udp: true}
+  - {name: 🇺🇸 US 18 TG:@nodpai, server: 38.107.226.146, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
+  - {name: 🇺🇸 US 19 TG:@nodpai, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 20 TG:@nodpai, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 21 TG:@nodpai, server: 38.114.114.69, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
+  - {name: 🇺🇸 US 22 TG:@nodpai, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 23 TG:@nodpai, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 24 TG:@airproxies, server: 143.198.237.122, port: 10002, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g13.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 25 TG:@nodpai, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 26 TG:@airproxies, server: 165.22.4.188, port: 10003, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g14.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 27 TG:@nodpai, server: azus01.flyxxl.xyz, port: 29994, type: vmess, uuid: 75bac4bc-4e03-415c-831e-78b9447091ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /pic/fjiew2-054j0gewn23k-1fr, headers: {Host: azus01.flyxxl.xyz}}, udp: true}
+  - {name: 中转 🇭🇰 HK 1 TG:@nodpai, server: 14.29.124.174, port: 11036, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 中转 🇭🇰 HK 2 TG:@nodpai, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
+  - {name: 中转 🇭🇰 HK 3 TG:@airproxies, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
+  - {name: 🇭🇰 HK 4 TG:@nodpai, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 5 TG:@airproxies, server: 111.45.22.239, port: 30302, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 6 TG:@airproxies, server: 34.92.69.118, port: 56819, type: vmess, uuid: cff8190d-352c-4eb7-dfb5-e9fcf2feb40e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dm.toutiao.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 7 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50081, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 8 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50082, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 9 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50083, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 10 TG:@nodpai, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 11 TG:@nodpai, server: 34.92.69.118, port: 56819, type: vmess, uuid: cff8190d-352c-4eb7-dfb5-e9fcf2feb40e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dm.toutiao.com}}, udp: true}
+  - {name: 🇭🇰 HK 12 TG:@nodpai, server: tr.33yun.xyz, port: 33001, type: vmess, uuid: 27c24fb6-9c82-4278-bf19-1658e0579795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 13 TG:@airproxies, server: 165.154.244.29, port: 443, type: vmess, uuid: e13a9c42-54d6-4fe1-9578-0ca3bfc17122, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 14 TG:@nodpai, server: xg1.xbywwcp.us, port: 25055, type: vmess, uuid: ab08a8a4-26f6-3540-8b7d-adbd8c0d571b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /aaaa, headers: {Host: a.189.cn}}, udp: true}
+  - {name: 中转 🇹🇼 TW 1 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50084, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 2 TG:@airproxies, server: 44b68835c5ed1dde.leadingto.club, port: 20111, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 3 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50085, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 4 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50086, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 5 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50087, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇸🇬 SG 1 TG:@nodpai, server: sg202.hkaa0.tk, port: 1018, type: vmess, uuid: bdf798f4-a990-4743-e9b2-9c78ba58fb04, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hkaa0, headers: {Host: sg202.hkaa0.tk}}, udp: true}
-  - {name: 中转 🇸🇬 SG 2 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50094, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 2 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50094, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转 🇸🇬 SG 3 TG:@airproxies, server: 44b68835c5ed1dde.leadingto.club, port: 20114, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转 🇸🇬 SG 4 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50095, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 5 TG:@airproxies, server: cu-hn.dnspro.icu, port: 4000, type: vmess, uuid: e2b65fdc-ff1d-378b-b2f2-43e9d82a3836, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /iso, headers: {Host: st-1.dnspro.icu}}, udp: true}
-  - {name: 中转 🇸🇬 SG 6 TG:@airproxies, server: cu-hn.dnspro.icu, port: 4000, type: vmess, uuid: e2b65fdc-ff1d-378b-b2f2-43e9d82a3836, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /iso, headers: {Host: st-1.dnspro.icu}}, udp: true}
-  - {name: 中转 🇸🇬 SG 7 TG:@nodpai, server: aws-beijing-1.dnspro.icu, port: 20028, type: vmess, uuid: e2b65fdc-ff1d-378b-b2f2-43e9d82a3836, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /iso, headers: {Host: aws-beijing-1.dnspro.icu}}, udp: true}
-  - {name: 中转 🇸🇬 SG 8 TG:@nodpai, server: aws-beijing-1.dnspro.icu, port: 20028, type: vmess, uuid: e2b65fdc-ff1d-378b-b2f2-43e9d82a3836, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /iso, headers: {Host: aws-beijing-1.dnspro.icu}}, udp: true}
-  - {name: 中转 🇯🇵 JP 1 TG:@nodpai, server: 221.181.185.118, port: 13324, type: trojan, password: M1b378d7, sni: if22a.ft3.us, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 2 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50088, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 3 TG:@airproxies, server: 44b68835c5ed1dde.leadingto.club, port: 20113, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 4 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50089, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 5 TG:@airproxies, server: tr.33yun.xyz, port: 33003, type: vmess, uuid: 27c24fb6-9c82-4278-bf19-1658e0579795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG 5 TG:@airproxies, server: 51.79.166.171, port: 50004, type: ss, cipher: aes-256-cfb, password: !<str> 4415934295, udp: true}
+  - {name: 中转 🇯🇵 JP 1 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50088, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 2 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50089, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 3 TG:@nodpai, server: 44b68835c5ed1dde.leadingto.club, port: 20113, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 4 TG:@airproxies, server: 172.105.237.183, port: 10001, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 5 TG:@nodpai, server: 172.105.237.183, port: 10001, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 JP 6 TG:@nodpai, server: 172.105.237.183, port: 10001, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 JP 7 TG:@nodpai, server: 172.105.237.183, port: 10001, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇬🇧 GB 1 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50091, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇬🇧 GB 2 TG:@airproxies, server: 44b68835c5ed1dde.leadingto.club, port: 20112, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 1 TG:@nodpai, server: jjkk.usdeth.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 2 TG:@nodpai, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 3 TG:@nodpai, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 4 TG:@nodpai, server: tr.33yun.xyz, port: 33004, type: vmess, uuid: 27c24fb6-9c82-4278-bf19-1658e0579795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 5 TG:@nodpai, server: d4d6224804d9ba59.leadingto.club, port: 50090, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 6 TG:@airproxies, server: kr1.api-aws.com, port: 443, type: trojan, password: 36443c4f-4487-48a6-8438-57bd7700b916, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 7 TG:@airproxies, server: tr.33yun.xyz, port: 33004, type: vmess, uuid: 27c24fb6-9c82-4278-bf19-1658e0579795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 8 TG:@nodpai, server: 172.105.237.183, port: 10001, type: trojan, password: 862e68d2-05f3-4253-9116-819623bb7335, sni: aewfhe5z1pokrkw8bi9g06.xingbayun.buzz, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 DE 1 TG:@airproxies, server: 51.75.76.22, port: 443, type: trojan, password: c60fbf90-4b55-11ed-b935-225401db9d57, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 DE 2 TG:@airproxies, server: de.tjvpn.org, port: 443, type: trojan, password: c60fbf90-4b55-11ed-b935-225401db9d57, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 FR 1 TG:@nodpai, server: 141.101.114.33, port: 443, type: vmess, uuid: e5a88ce2-fc1b-45d1-9c5f-553721d28004, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: v2ray1.zhujicn2.org}}, udp: true}
+  - {name: 中转 🇬🇧 GB 1 TG:@nodpai, server: 44b68835c5ed1dde.leadingto.club, port: 20112, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇬🇧 GB 2 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50091, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 1 TG:@nodpai, server: 144.24.72.126, port: 443, type: trojan, password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 2 TG:@airproxies, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 3 TG:@airproxies, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 4 TG:@airproxies, server: d4d6224804d9ba59.leadingto.club, port: 50090, type: vmess, uuid: ad7d0753-f237-4300-9dd0-3b9b3a90ff90, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 5 TG:@airproxies, server: kr1.api-aws.com, port: 443, type: trojan, password: da647e58-8f85-450f-b123-568c492c297c, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 6 TG:@airproxies, server: 144.24.72.126, port: 443, type: trojan, password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 7 TG:@airproxies, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 8 TG:@nodpai, server: tr.33yun.xyz, port: 33004, type: vmess, uuid: 27c24fb6-9c82-4278-bf19-1658e0579795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 9 TG:@airproxies, server: jk.jkk.mkitty.top, port: 443, type: trojan, password: 71354f48-e8c8-4c4c-a967-47d7ac5e953c, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -70,61 +86,77 @@ proxy-groups:
       - 🎯 全球直连
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -132,61 +164,77 @@ proxy-groups:
     proxies:
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -195,61 +243,77 @@ proxy-groups:
       - 🎯 全球直连
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -270,61 +334,77 @@ proxy-groups:
       - 🎯 全球直连
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -337,61 +417,77 @@ proxy-groups:
       - 🔰 节点选择
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: 📲 电报信息
     type: select
     proxies:
@@ -399,61 +495,77 @@ proxy-groups:
       - 🎯 全球直连
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -462,61 +574,77 @@ proxy-groups:
       - ♻️ 自动选择
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -534,61 +662,77 @@ proxy-groups:
       - ♻️ 自动选择
       - 中转 🇺🇸 US 1 TG:@airproxies
       - 中转 🇺🇸 US 2 TG:@nodpai
-      - 🇺🇸 US 3 TG:@nodpai
+      - 中转 🇺🇸 US 3 TG:@nodpai
       - 🇺🇸 US 4 TG:@airproxies
       - 🇺🇸 US 5 TG:@airproxies
       - 🇺🇸 US 6 TG:@nodpai
       - 🇺🇸 US 7 TG:@airproxies
       - 🇺🇸 US 8 TG:@airproxies
-      - 🇺🇸 US 9 TG:@nodpai
+      - 中转 🇺🇸 US 9 TG:@nodpai
       - 🇺🇸 US 10 TG:@nodpai
       - 🇺🇸 US 11 TG:@airproxies
-      - 中转 🇺🇸 US 12 TG:@airproxies
+      - 🇺🇸 US 12 TG:@nodpai
       - 🇺🇸 US 13 TG:@airproxies
-      - 🇺🇸 US 14 TG:@airproxies
-      - 🇺🇸 US 15 TG:@nodpai
+      - 🇺🇸 US 14 TG:@nodpai
+      - 中转 🇺🇸 US 15 TG:@nodpai
       - 🇺🇸 US 16 TG:@nodpai
       - 🇺🇸 US 17 TG:@nodpai
-      - 中转 🇭🇰 HK 1 TG:@airproxies
-      - 🇭🇰 HK 2 TG:@nodpai
+      - 🇺🇸 US 18 TG:@nodpai
+      - 🇺🇸 US 19 TG:@nodpai
+      - 🇺🇸 US 20 TG:@nodpai
+      - 🇺🇸 US 21 TG:@nodpai
+      - 🇺🇸 US 22 TG:@nodpai
+      - 🇺🇸 US 23 TG:@nodpai
+      - 🇺🇸 US 24 TG:@airproxies
+      - 🇺🇸 US 25 TG:@nodpai
+      - 🇺🇸 US 26 TG:@airproxies
+      - 🇺🇸 US 27 TG:@nodpai
+      - 中转 🇭🇰 HK 1 TG:@nodpai
+      - 中转 🇭🇰 HK 2 TG:@nodpai
       - 中转 🇭🇰 HK 3 TG:@airproxies
-      - 中转 🇭🇰 HK 4 TG:@airproxies
-      - 中转 🇭🇰 HK 5 TG:@nodpai
-      - 中转 🇭🇰 HK 6 TG:@nodpai
-      - 🇭🇰 HK 7 TG:@nodpai
-      - 🇭🇰 HK 8 TG:@airproxies
+      - 🇭🇰 HK 4 TG:@nodpai
+      - 中转 🇭🇰 HK 5 TG:@airproxies
+      - 🇭🇰 HK 6 TG:@airproxies
+      - 中转 🇭🇰 HK 7 TG:@nodpai
+      - 中转 🇭🇰 HK 8 TG:@nodpai
       - 中转 🇭🇰 HK 9 TG:@nodpai
-      - 中转 🇭🇰 HK 10 TG:@airproxies
+      - 🇭🇰 HK 10 TG:@nodpai
       - 🇭🇰 HK 11 TG:@nodpai
-      - 中转 🇹🇼 TW 1 TG:@airproxies
-      - 中转 🇹🇼 TW 2 TG:@nodpai
+      - 🇭🇰 HK 12 TG:@nodpai
+      - 🇭🇰 HK 13 TG:@airproxies
+      - 中转 🇭🇰 HK 14 TG:@nodpai
+      - 中转 🇹🇼 TW 1 TG:@nodpai
+      - 中转 🇹🇼 TW 2 TG:@airproxies
       - 中转 🇹🇼 TW 3 TG:@airproxies
-      - 中转 🇹🇼 TW 4 TG:@nodpai
-      - 中转 🇹🇼 TW 5 TG:@nodpai
+      - 中转 🇹🇼 TW 4 TG:@airproxies
+      - 中转 🇹🇼 TW 5 TG:@airproxies
       - 🇸🇬 SG 1 TG:@nodpai
-      - 中转 🇸🇬 SG 2 TG:@airproxies
+      - 中转 🇸🇬 SG 2 TG:@nodpai
       - 中转 🇸🇬 SG 3 TG:@airproxies
       - 中转 🇸🇬 SG 4 TG:@airproxies
-      - 中转 🇸🇬 SG 5 TG:@airproxies
-      - 中转 🇸🇬 SG 6 TG:@airproxies
-      - 中转 🇸🇬 SG 7 TG:@nodpai
-      - 中转 🇸🇬 SG 8 TG:@nodpai
-      - 中转 🇯🇵 JP 1 TG:@nodpai
+      - 🇸🇬 SG 5 TG:@airproxies
+      - 中转 🇯🇵 JP 1 TG:@airproxies
       - 中转 🇯🇵 JP 2 TG:@nodpai
-      - 中转 🇯🇵 JP 3 TG:@airproxies
-      - 中转 🇯🇵 JP 4 TG:@airproxies
-      - 🇯🇵 JP 5 TG:@airproxies
+      - 中转 🇯🇵 JP 3 TG:@nodpai
+      - 🇯🇵 JP 4 TG:@airproxies
+      - 🇯🇵 JP 5 TG:@nodpai
       - 🇯🇵 JP 6 TG:@nodpai
       - 🇯🇵 JP 7 TG:@nodpai
+      - 🇯🇵 JP 8 TG:@nodpai
+      - 🇩🇪 DE 1 TG:@airproxies
+      - 🇩🇪 DE 2 TG:@airproxies
+      - 🇫🇷 FR 1 TG:@nodpai
       - 中转 🇬🇧 GB 1 TG:@nodpai
       - 中转 🇬🇧 GB 2 TG:@airproxies
       - 🇰🇷 KR 1 TG:@nodpai
-      - 🇰🇷 KR 2 TG:@nodpai
-      - 🇰🇷 KR 3 TG:@nodpai
-      - 🇰🇷 KR 4 TG:@nodpai
-      - 中转 🇰🇷 KR 5 TG:@nodpai
+      - 🇰🇷 KR 2 TG:@airproxies
+      - 🇰🇷 KR 3 TG:@airproxies
+      - 中转 🇰🇷 KR 4 TG:@airproxies
+      - 🇰🇷 KR 5 TG:@airproxies
       - 🇰🇷 KR 6 TG:@airproxies
       - 🇰🇷 KR 7 TG:@airproxies
+      - 🇰🇷 KR 8 TG:@nodpai
+      - 🇰🇷 KR 9 TG:@airproxies
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
