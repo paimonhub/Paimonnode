@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://www.ure.best/link/CJeUVzcCwMhPxrRJ?clash=1
 
 #---------------------------------------------------#
-## 上次更新于：2022-10-24 08:49:43
+## 上次更新于：2022-10-24 08:55:28
 #---------------------------------------------------#
 
 port: 7890
@@ -13,6 +13,24 @@ log-level: silent
 external-controller: '0.0.0.0:9090'
 secret: ''
 proxies:
+  -
+    name: 'HK.香港.X | 优化'
+    type: vmess
+    server: fast.vless.tk
+    port: 55201
+    uuid: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
+    alterId: 0
+    cipher: auto
+    udp: true
+    servername: hkx.onecld.top
+    network: ws
+    ws-path: /index
+    ws-headers:
+      Host: hkx.onecld.top
+    ws-opts:
+      path: /index
+      headers: { Host: hkx.onecld.top }
+    tls: true
   -
     name: 'HK.香港.A | 原生'
     type: trojan
@@ -34,24 +52,6 @@ proxies:
     port: 55200
     password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
     sni: hkc.onecld.top
-  -
-    name: 'HK.香港.X | 优化'
-    type: vmess
-    server: fast.vless.tk
-    port: 55201
-    uuid: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    alterId: 0
-    cipher: auto
-    udp: true
-    servername: hkx.onecld.top
-    network: ws
-    ws-path: /index
-    ws-headers:
-      Host: hkx.onecld.top
-    ws-opts:
-      path: /index
-      headers: { Host: hkx.onecld.top }
-    tls: true
   -
     name: 'JP.东京.A | 优化.Disney+'
     type: trojan
@@ -248,15 +248,15 @@ proxies:
   -
     name: '[0.1].ES.电报群组：https://t.me/urebest'
     type: trojan
-    server: esgy.onecld.top
-    port: 55200
+    server: best.vless.tk
+    port: 55001
     password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
     sni: esgy.onecld.top
   -
     name: '[0.1].ES.备用域名：https://www.ones.gq'
     type: trojan
-    server: esgy2.onecld.top
-    port: 55200
+    server: best.vless.tk
+    port: 55002
     password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
     sni: esgy2.onecld.top
   -
@@ -266,36 +266,15 @@ proxies:
     port: 55200
     password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
     sni: krgy.onecld.top
-  -
-    name: '[0.1].KR.若体验差,请升级并使用正式节点~'
-    type: trojan
-    server: krgy2.onecld.top
-    port: 55200
-    password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    sni: krgy2.onecld.top
-  -
-    name: '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-    type: trojan
-    server: krgy3.onecld.top
-    port: 55200
-    password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    sni: krgy3.onecld.top
-  -
-    name: '[0.1].KR.招推广合作,TG群内联系管理~'
-    type: trojan
-    server: krgy4.onecld.top
-    port: 55200
-    password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    sni: krgy4.onecld.top
 proxy-groups:
   -
     name: 🔰国外流量
     type: select
     proxies:
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -326,9 +305,6 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
       - 🚀直接连接
   -
     name: ⚓️其他流量
@@ -341,10 +317,10 @@ proxy-groups:
     type: select
     proxies:
       - 🔰国外流量
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -375,18 +351,15 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
   -
     name: 🎬Youtube
     type: select
     proxies:
       - 🔰国外流量
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -417,18 +390,15 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
   -
     name: 🎬Netflix
     type: select
     proxies:
       - 🔰国外流量
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -459,18 +429,15 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
   -
     name: 🎬哔哩哔哩
     type: select
     proxies:
       - 🚀直接连接
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -501,18 +468,15 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
   -
     name: 🎬国外媒体
     type: select
     proxies:
       - 🔰国外流量
+      - 'HK.香港.X | 优化'
       - 'HK.香港.A | 原生'
       - 'HK.香港.B | 原生'
       - 'HK.香港.C | 原生'
-      - 'HK.香港.X | 优化'
       - 'JP.东京.A | 优化.Disney+'
       - 'JP.东京.B | 优化.Unlock'
       - 'JP.东京.C | 优化.Unlock'
@@ -543,9 +507,6 @@ proxy-groups:
       - '[0.1].ES.电报群组：https://t.me/urebest'
       - '[0.1].ES.备用域名：https://www.ones.gq'
       - '[0.1].KR.公益节点,无法保证连通性和速率~'
-      - '[0.1].KR.若体验差,请升级并使用正式节点~'
-      - '[0.1].KR.主页有WIN/安卓/Mac专用VPN程序~'
-      - '[0.1].KR.招推广合作,TG群内联系管理~'
   -
     name: 🍎苹果服务
     type: select
