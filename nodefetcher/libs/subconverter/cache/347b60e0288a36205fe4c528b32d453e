@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://www.ure.best/link/CJeUVzcCwMhPxrRJ?clash=1
 
 #---------------------------------------------------#
-## 上次更新于：2022-10-24 01:26:15
+## 上次更新于：2022-10-24 01:35:01
 #---------------------------------------------------#
 
 port: 7890
@@ -150,11 +150,22 @@ proxies:
     tls: true
   -
     name: 'IN.印度.A | 优化.Unlock'
-    type: trojan
-    server: best.vless.tk
-    port: 55115
-    password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    sni: ina.onecld.top
+    type: vmess
+    server: inax.azureedge.net
+    port: 12345
+    uuid: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
+    alterId: 0
+    cipher: auto
+    udp: true
+    servername: inax.azureedge.net
+    network: ws
+    ws-path: /index
+    ws-headers:
+      Host: inax.azureedge.net
+    ws-opts:
+      path: /index
+      headers: { Host: inax.azureedge.net }
+    tls: true
   -
     name: 'IN.印度.B | 优化'
     type: trojan
