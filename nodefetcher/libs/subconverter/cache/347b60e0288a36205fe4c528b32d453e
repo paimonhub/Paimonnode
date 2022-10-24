@@ -1,7 +1,7 @@
 #!MANAGED-CONFIG https://www.ure.best/link/CJeUVzcCwMhPxrRJ?clash=1
 
 #---------------------------------------------------#
-## 上次更新于：2022-10-24 12:09:46
+## 上次更新于：2022-10-24 12:30:20
 #---------------------------------------------------#
 
 port: 7890
@@ -150,11 +150,22 @@ proxies:
     tls: true
   -
     name: 'IN.印度.A | 优化.Unlock'
-    type: trojan
+    type: vmess
     server: fdhk.vless.tk
     port: 55115
-    password: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
-    sni: ina.onecld.top
+    uuid: 551ad2ec-b2e8-38f8-90ac-d934d57ca395
+    alterId: 0
+    cipher: auto
+    udp: true
+    servername: ina.onecld.top
+    network: ws
+    ws-path: /index
+    ws-headers:
+      Host: ina.onecld.top
+    ws-opts:
+      path: /index
+      headers: { Host: ina.onecld.top }
+    tls: true
   -
     name: 'IN.印度.B | 优化'
     type: trojan
