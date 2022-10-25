@@ -23,4 +23,6 @@ jobs:
     - name: Configure Git
       run: git config pull.rebase false && git config --local user.name "GitHub Actions" && git config --local user.email "actions@github.com"
     - run: chmod 777 ./publish/up.sh
+    - run: cp ./publish/clash.yaml .
+    - run: cp ./publish/base64 .
     - run: ./publish/up.sh
