@@ -5,543 +5,439 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies, server: 117.149.247.11, port: 20048, type: trojan, password: 6CF89406-B124-EF62-C121-E1189081F0DF, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 2 OVH SAS TG:@airproxies, server: 51.81.211.171, port: 443, type: trojan, password: 2dab5d78-5c56-4252-850d-c037753a40db, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20047, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20043, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20044, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai, server: 117.149.247.11, port: 20048, type: trojan, password: 6CF89406-B124-EF62-C121-E1189081F0DF, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 2 Oracle Corporation TG:@nodpai, server: 129.146.242.130, port: 443, type: trojan, password: 05742120-ce23-4cc8-88f5-6d221ce45bf4, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 3 OVH SAS TG:@nodpai, server: 51.81.211.171, port: 443, type: trojan, password: 2dab5d78-5c56-4252-850d-c037753a40db, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20044, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
   - {name: 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20046, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
   - {name: 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20045, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20042, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies, server: us2.awslcn.cc, port: 25256, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us2.awslcn.cc}}, udp: true}
-  - {name: 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai, server: us01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: us01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies, server: us1.awslcn.cc, port: 25239, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.awslcn.cc}}, udp: true}
-  - {name: 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai, server: us1.awslcn.cc, port: 25257, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.awslcn.cc}}, udp: true}
-  - {name: 中转 🇺🇸 US 17 OVH SAS TG:@airproxies, server: us1.awslcn.cc, port: 25255, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1.awslcn.cc}}, udp: true}
-  - {name: 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai, server: p1.bxy-fun2.com, port: 26107, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 🇺🇸 US 57 Oracle Corporation TG:@airproxies, server: 129.146.135.157, port: 443, type: trojan, password: e23f408a-012e-4030-8b31-02022031cb50, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 58 Linode  LLC TG:@nodpai, server: usa.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 94 Hyonix LLC TG:@airproxies, server: 146.56.162.25, port: 443, type: vmess, uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: lg30.cfcdn3.xyz}}, udp: true}
+  - {name: 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20043, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20047, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20042, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 16 Hyonix LLC TG:@airproxies, server: 146.56.162.25, port: 443, type: vmess, uuid: 91646f9a-b4e9-4aca-bfe3-8892b3e58fe7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ray, headers: {Host: lg30.cfcdn3.xyz}}, udp: true}
+  - {name: 🇺🇸 US 27 Linode  LLC TG:@airproxies, server: usa.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 28 Oracle Corporation TG:@nodpai, server: aop.ssfree.ru, port: 443, type: vmess, uuid: 789b07c4-6bac-11ed-a8cb-000017022008, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /getweather, headers: {Host: aop.ssfree.ru}}, udp: true}
+  - {name: 🇺🇸 US 48 FranTech Solutions TG:@nodpai, server: azgy001.xibai6.top, port: 20713, type: trojan, password: ca2345ba-46e7-3991-b1b7-45d18954caf1, sni: ssl.ssl12.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 57  TG:@airproxies, server: unicomus.mipglxi.cn, port: 5629, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
   - {name: 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies, server: pull-cache-lu01.xyx-xylo.com, port: 19701, type: trojan, password: 79745894-044c-3298-a893-bbfcb6b24a2c, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20001, type: trojan, password: FDD7BFCC-4176-4C39-6CA8-0DCCD72B72B5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20006, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies, server: oss-cn-guangzhou.westdatacloud.xyz, port: 20007, type: trojan, password: 79864638-4679-241F-5ACE-5DD17E505503, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai, server: hk01.diwaleifast.com, port: 30001, type: ss, cipher: aes-128-gcm, password: 7417c739-90f5-418c-9f74-67310a372c6c, udp: true}
-  - {name: 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20005, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20008, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai, server: hk80.sanfen001.pics, port: 80, type: vmess, uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/download, headers: {Host: a.189.cn}}, udp: true}
-  - {name: 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20003, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20002, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20004, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai, server: hk2.awslcn.cc, port: 25242, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk2.awslcn.cc}}, udp: true}
-  - {name: 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies, server: p1.bxy-fun1.com, port: 11407, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies, server: 1e659d63-dce3-40a9-adca-80be663d74ee.world-in-tunnel.xyz, port: 45583, type: trojan, password: 49b6740e-2f48-4ea5-9485-ad3e0a70f615, sni: hk.coloris.kan-shi-jie.cyou, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai, server: 20014.purefast2.com, port: 20014, type: trojan, password: 357827e5-a45d-3f09-9b73-ef4431dfb323, sni: purefast1.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai, server: 14.29.124.168, port: 24000, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
-  - {name: 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: h745768.waihuizhibiaowang.com, port: 15343, type: ss, cipher: chacha20-ietf-poly1305, password: 3dbdf038-ef96-4b51-834e-ac7e5ce94fe2, udp: true}
-  - {name: 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20013, type: trojan, password: FDD7BFCC-4176-4C39-6CA8-0DCCD72B72B5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20012, type: trojan, password: FDD7BFCC-4176-4C39-6CA8-0DCCD72B72B5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20015, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20011, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: tw02.diwaleifast.com, port: 30007, type: ss, cipher: aes-128-gcm, password: 7417c739-90f5-418c-9f74-67310a372c6c, udp: true}
-  - {name: 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20014, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20018, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: p1.bxy-fun2.com, port: 23105, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: cu.awslcn.cc, port: 25233, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cu.awslcn.cc}}, udp: true}
-  - {name: 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZCRe0IlTyApFDO73qeaSlyDEaXwSOYCZ9B3j6ca3Anxg84CDKF2SxpzuNY58R3, sni: leeihs.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies, server: xin.mooooobai.top, port: 5122, type: vmess, uuid: 9627c468-64f1-31ac-8f88-bd39e1748aa8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /usr, headers: {Host: xin.mooooobai.top}}, udp: true}
-  - {name: 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: TaSXwOxORaZ7pD8DlzCE3yNFS5C38eeCuDng03FcA4BSpjK96YaZRIAlx2yqY3, sni: mhkla.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies, server: oss-cn-guangzhou.westdatacloud.xyz, port: 20001, type: trojan, password: 79864638-4679-241F-5ACE-5DD17E505503, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies, server: oss-cn-guangzhou.westdatacloud.xyz, port: 20007, type: trojan, password: 79864638-4679-241F-5ACE-5DD17E505503, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20006, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies, server: hk01.diwaleifast.com, port: 30001, type: ss, cipher: aes-128-gcm, password: 7417c739-90f5-418c-9f74-67310a372c6c, udp: true}
+  - {name: 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20004, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai, server: hk80.sanfen001.pics, port: 80, type: vmess, uuid: 80e94af6-e42a-4dbc-8f4b-c5f99bf97d3d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/download, headers: {Host: a.189.cn}}, udp: true}
+  - {name: 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20008, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20005, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20002, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20003, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai, server: p1.bxy-fun1.com, port: 11407, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
+  - {name: 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai, server: 14.29.124.168, port: 24005, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: h745768.waihuizhibiaowang.com, port: 15343, type: ss, cipher: chacha20-ietf-poly1305, password: 3dbdf038-ef96-4b51-834e-ac7e5ce94fe2, udp: true}
+  - {name: 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20013, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20015, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai, server: oss-cn-guangzhou.westdatacloud.xyz, port: 20012, type: trojan, password: 79864638-4679-241F-5ACE-5DD17E505503, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20011, type: trojan, password: F5AFF76C-8C28-878F-3A1A-241A467736F5, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: tw02.diwaleifast.com, port: 30007, type: ss, cipher: aes-128-gcm, password: 7417c739-90f5-418c-9f74-67310a372c6c, udp: true}
+  - {name: 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20014, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20018, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: p1.bxy-fun1.com, port: 23102, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
+  - {name: 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR, sni: pbvre.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
+  - {name: 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies, server: xin.mooooobai.top, port: 5122, type: vmess, uuid: 9627c468-64f1-31ac-8f88-bd39e1748aa8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /usr, headers: {Host: xin.mooooobai.top}}, udp: true}
+  - {name: 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
+  - {name: 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai, server: p1.bxy-fun1.com, port: 44101, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
   - {name: 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies, server: sg2.awslcn.cc, port: 25221, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg2.awslcn.cc}}, udp: true}
-  - {name: 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20023, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20026, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20022, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 20 OVH SAS TG:@airproxies, server: sg02.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: sg02.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20021, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai, server: sg01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: sg01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20027, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai, server: 14.18.93.168, port: 20028, type: trojan, password: 70AC3E1E-59B1-CE5A-39C1-AF9DE01BEF90, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20025, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai, server: p1.bxy-fun1.com, port: 44101, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
-  - {name: 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR, sni: pbvre.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies, server: p1.bxy-fun2.com, port: 24101, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies, server: sg1.awslcn.cc, port: 25243, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg1.awslcn.cc}}, udp: true}
-  - {name: 🇸🇬 SG 59 Oracle Corporation TG:@airproxies, server: 138.2.81.70, port: 443, type: trojan, password: 81d93f62-15a2-4994-adb9-0b5d906aac7e, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai, server: sg1.awslcn.cc, port: 25245, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: sg1.awslcn.cc}}, udp: true}
-  - {name: 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS, sni: reooec.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai, server: 219.76.13.180, port: 443, type: trojan, password: F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0, sni: stutter.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20025, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies, server: 14.18.93.168, port: 20028, type: trojan, password: 88AFD362-4506-8FFA-3ED2-E766566EC27F, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20026, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20022, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20023, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20027, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
+  - {name: 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20021, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai, server: moblev2-sg.mipglxi.cn, port: 5611, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
+  - {name: 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: ZCRe0IlTyApFDO73qeaSlyDEaXwSOYCZ9B3j6ca3Anxg84CDKF2SxpzuNY58R3, sni: leeihs.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai, server: p1.bxy-fun1.com, port: 44101, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
+  - {name: 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai, server: 103.172.116.7, port: 9027, type: ss, cipher: aes-256-cfb, password: EXN3S3eQpjE7EJu8, udp: true}
+  - {name: 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS, sni: reooec.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai, server: 219.76.13.180, port: 443, type: trojan, password: F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0, sni: stutter.freetrade.link, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZEIR0qFZau9jOp7x6e8e4y3AaXwS2SzD3llxTyRYKCF8DCD3c5Y3pgNnaSOBAC, sni: tensely.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: Ty33ylFA4u6A5e0NE3wRFp3DIa8lZOzC87CeKnxYgpSOSa2ZaXBjDDSY9qCcxR, sni: flowery.meijireform.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai, server: p1.bxy-fun1.com, port: 26105, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai, server: jp1.awslcn.cc, port: 25237, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: jp1.awslcn.cc}}, udp: true}
-  - {name: 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20038, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai, server: 117.149.247.11, port: 20031, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20033, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20035, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20037, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20036, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai, server: jp01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: jp01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies, server: h649960.waihuizhibiaowang.com, port: 15443, type: ss, cipher: chacha20-ietf-poly1305, password: 3dbdf038-ef96-4b51-834e-ac7e5ce94fe2, udp: true}
-  - {name: 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai, server: jp01a.roc-taiwan.net.ua, port: 65011, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b, sni: 45.32.28.232, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies, server: jp08a.roc-taiwan.org.ua, port: 65018, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b, sni: 45.32.28.232, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies, server: h649960.waihuizhibiaowang.com, port: 15443, type: ss, cipher: chacha20-ietf-poly1305, password: 3dbdf038-ef96-4b51-834e-ac7e5ce94fe2, udp: true}
+  - {name: 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai, server: 117.149.247.11, port: 20031, type: trojan, password: 70AC3E1E-59B1-CE5A-39C1-AF9DE01BEF90, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20035, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies, server: p1.bxy-fun2.com, port: 23101, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
+  - {name: 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20036, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20038, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20037, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20033, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 25 Linode  LLC TG:@nodpai, server: jp.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
   - {name: 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20062, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇦🇺 AU 1 Linode  LLC TG:@nodpai, server: ap.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies, server: 14.18.93.168, port: 20061, type: trojan, password: 88AFD362-4506-8FFA-3ED2-E766566EC27F, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20063, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 CA 1 OVH SAS TG:@airproxies, server: ca2.v2rayserv.com, port: 80, type: vmess, uuid: e3eba3ac-5bea-409f-ac5c-6c964e04d0c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /sshocean, headers: {Host: ca2.v2rayserv.com}}, udp: true}
-  - {name: 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies, server: 117.149.247.11, port: 20051, type: trojan, password: 70AC3E1E-59B1-CE5A-39C1-AF9DE01BEF90, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 CA 4 Linode  LLC TG:@airproxies, server: ca.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
-  - {name: 🇨🇦 CA 16 OVH SAS TG:@nodpai, server: 148.113.141.99, port: 443, type: trojan, password: HdsUZmsHQW, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20064, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai, server: 14.18.93.168, port: 20061, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20063, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai, server: 117.149.247.11, port: 20051, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 CA 2 OVH SAS TG:@airproxies, server: ca2.v2rayserv.com, port: 80, type: vmess, uuid: e3eba3ac-5bea-409f-ac5c-6c964e04d0c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: ca2.v2rayserv.com}}, udp: true}
+  - {name: 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20064, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: moblev2.mipglxi.cn, port: 5607, type: ss, cipher: aes-128-gcm, password: 5bc3be60-e171-4e6d-954c-161d519489d3, udp: true}
   - {name: 🇩🇪 DE 1 OVH SAS TG:@nodpai, server: content-provider12.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE 4 Oracle Corporation TG:@nodpai, server: 150.230.149.55, port: 6374, type: vmess, uuid: 80f25361-877d-46d4-8404-f0dce1faf84f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai, server: de01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: de01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai, server: 14.18.93.168, port: 20055, type: trojan, password: 70AC3E1E-59B1-CE5A-39C1-AF9DE01BEF90, sni: cos-ap-beijing.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE 14 OVH SAS TG:@nodpai, server: 51.77.71.131, port: 443, type: trojan, password: Sp3eDVp, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 DE 18 Linode  LLC TG:@nodpai, server: de.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 DE 4 Oracle Corporation TG:@airproxies, server: 150.230.149.55, port: 6374, type: vmess, uuid: 80f25361-877d-46d4-8404-f0dce1faf84f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies, server: 14.18.93.168, port: 20055, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: cos-ap-beijing.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai, server: 45.64.22.6, port: 443, type: vmess, uuid: d217db0c-0faa-4270-ea38-e6093d9774e3, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: h2.800876.xyz}}, udp: true}
   - {name: 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai, server: cos-ap-beijing.westdatacloud.top, port: 20059, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇫🇷 FR 1 OVH SAS TG:@nodpai, server: content-provider26.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 FR 1 OVH SAS TG:@airproxies, server: content-provider26.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
   - {name: 中转 🇬🇧 GB 1 GTHost TG:@airproxies, server: p1.bxy-fun2.com, port: 20471, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai, server: uk01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: uk01.awcloud.top, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai, server: 14.18.93.168, port: 20052, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: cos-ap-beijing.westdatacloud.top, skip-cert-verify: true, udp: true}
   - {name: 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20053, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
   - {name: 🇬🇧 GB 4 OVH SAS TG:@airproxies, server: 51.89.100.10, port: 443, type: vmess, uuid: 83a424d8-4bcb-4cee-b016-2c8f1db4a921, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /path/243535322906, headers: {Host: www.96357765.xyz}}, udp: true}
-  - {name: 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20052, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 GB 6 Datacamp Limited TG:@airproxies, server: 212.102.53.80, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true}
+  - {name: 🇬🇧 GB 8 Linode  LLC TG:@nodpai, server: uk.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, skip-cert-verify: true, udp: true}
   - {name: 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20067, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai, server: in01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: in01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20066, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai, server: cos-ap-beijing.westdatacloud.top, port: 20058, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai, server: oss-cn-shanghai.westdatacloud.top, port: 20065, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai, server: cu.awslcn.cc, port: 25259, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cu.awslcn.cc}}, udp: true}
-  - {name: 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai, server: hkg.mooooobai.top, port: 51222, type: vmess, uuid: 9627c468-64f1-31ac-8f88-bd39e1748aa8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai, server: n3.nufsx.top, port: 24100, type: ss, cipher: chacha20-ietf-poly1305, password: d7bee830-09aa-43b2-8945-3b341b8787db, udp: true}
-  - {name: 🇰🇷 KR 14 Oracle Corporation TG:@nodpai, server: kr1.api-aws.com, port: 443, type: trojan, password: 205f8ab6-cb17-4480-93a6-aece90b88742, skip-cert-verify: true, udp: true}
-  - {name: 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies, server: my01.awcloud.top, port: 443, type: trojan, password: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, sni: my01.awcloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies, server: cm.awslcn.cc, port: 25228, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cm.awslcn.cc}}, udp: true}
-  - {name: 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai, server: 14.18.93.168, port: 20056, type: trojan, password: 753F996F-265C-F246-2730-A14DC159A832, sni: cos-ap-beijing.westdatacloud.top, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai, server: cos-ap-beijing.westdatacloud.top, port: 20057, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies, server: cm.awslcn.cc, port: 25230, type: vmess, uuid: 7f9ef59e-20fb-4343-bafc-3a84fa22fe70, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cm.awslcn.cc}}, udp: true}
+  - {name: 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20066, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20058, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 1 Oracle Corporation TG:@nodpai, server: 45.64.22.41, port: 443, type: trojan, password: f2117e99-9b6e-47fd-b0a9-634a0b15b998, sni: jgw2.gaox.ml, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies, server: oss-cn-shanghai.westdatacloud.top, port: 20065, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 5 Oracle Corporation TG:@airproxies, server: kr1.api-aws.com, port: 443, type: trojan, password: ca3a57c6-9bb5-4d19-876d-4552de4bb959, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 8 Oracle Corporation TG:@nodpai, server: 138.2.113.84, port: 443, type: trojan, password: b291d129-ee55-4801-a9b8-b5316e5c37b7, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai, server: 14.18.93.168, port: 20056, type: trojan, password: 88AFD362-4506-8FFA-3ED2-E766566EC27F, sni: cos-ap-beijing.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20057, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
   - {name: 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20068, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇷 TR 1 Comnet International TG:@airproxies, server: cos-ap-beijing.westdatacloud.top, port: 20060, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
-  - {name: 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai, server: tgunivstar-119-237-43-96.sslip.io, port: 80, type: vmess, uuid: d7f2b592-2e56-4a12-8f24-20f55b422ef2, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: vn3.thanhhaivpn.name.vn}}, udp: true}
-  - {name: 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai, server: cos-ap-guangzhou.westdatacloud.top, port: 20069, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇷 TR 1 Comnet International TG:@nodpai, server: cos-ap-beijing.westdatacloud.top, port: 20060, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
+  - {name: 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies, server: tgunivstar-119-237-43-96.sslip.io, port: 80, type: vmess, uuid: d7f2b592-2e56-4a12-8f24-20f55b422ef2, alterId: 64, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: vn3.thanhhaivpn.name.vn}}, udp: true}
+  - {name: 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies, server: cos-ap-guangzhou.westdatacloud.top, port: 20069, type: trojan, password: A15FC102-0EA2-0950-6B6C-593F1CF27294, sni: v12.kwaicdn.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -560,553 +456,448 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1122,136 +913,110 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 Kirino LLC TG:@airproxies
-      - 🇺🇸 US 2 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 6 Kirino LLC TG:@airproxies
+      - 中转 🇺🇸 US 1 Kirino LLC TG:@nodpai
+      - 🇺🇸 US 2 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 3 OVH SAS TG:@nodpai
       - 中转 🇺🇸 US 7 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 8 Kirino LLC TG:@airproxies
       - 中转 🇺🇸 US 9 Kirino LLC TG:@nodpai
       - 中转 🇺🇸 US 10 Kirino LLC TG:@nodpai
-      - 中转 🇺🇸 US 11 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 13 DigitalOcean  LLC TG:@airproxies
-      - 🇺🇸 US 14 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 15 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 16 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇺🇸 US 17 OVH SAS TG:@airproxies
-      - 中转 🇺🇸 US 20 Colocation America Corporation TG:@nodpai
-      - 🇺🇸 US 57 Oracle Corporation TG:@airproxies
-      - 🇺🇸 US 58 Linode  LLC TG:@nodpai
-      - 🇺🇸 US 94 Hyonix LLC TG:@airproxies
+      - 中转 🇺🇸 US 11 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 12 Kirino LLC TG:@nodpai
+      - 中转 🇺🇸 US 13 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 16 Hyonix LLC TG:@airproxies
+      - 🇺🇸 US 27 Linode  LLC TG:@airproxies
+      - 🇺🇸 US 28 Oracle Corporation TG:@nodpai
+      - 🇺🇸 US 48 FranTech Solutions TG:@nodpai
+      - 中转 🇺🇸 US 57  TG:@airproxies
       - 中转 🇭🇰 HK 1 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 2 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 5 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 8 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@nodpai
-      - 中转 🇭🇰 HK 16 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 18 Kirino LLC TG:@airproxies
-      - 🇭🇰 HK 19 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 20 Kirino LLC TG:@nodpai
-      - 中转 🇭🇰 HK 22 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 23 Kirino LLC TG:@airproxies
-      - 中转 🇭🇰 HK 25 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
-      - 中转 🇭🇰 HK 40 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇭🇰 HK 62 LightNetwork Computing Limited TG:@airproxies
-      - 中转 🇭🇰 HK 64 G-Core Labs S.A TG:@nodpai
+      - 中转 🇭🇰 HK 2 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 3 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 6 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 12 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Kirino LLC TG:@airproxies
+      - 🇭🇰 HK 17 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 18 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 19 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 21 Kirino LLC TG:@airproxies
+      - 中转 🇭🇰 HK 23 Kirino LLC TG:@nodpai
+      - 中转 🇭🇰 HK 25 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@nodpai
-      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 4 Kirino LLC TG:@nodpai
-      - 中转 🇹🇼 TW 10 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 15 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 17 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 24 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 7 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 9 Kirino LLC TG:@nodpai
+      - 中转 🇹🇼 TW 12 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 15 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 18 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 19 Kirino LLC TG:@airproxies
+      - 中转 🇹🇼 TW 24 Kirino LLC TG:@airproxies
       - 中转 🇹🇼 TW 25 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 26 Kirino LLC TG:@airproxies
-      - 中转 🇹🇼 TW 27 Kirino LLC TG:@nodpai
       - 中转 🇹🇼 TW 28 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 30 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@airproxies
       - 🇸🇬 SG 2 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 6 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 8 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 7 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 8 Linode  LLC TG:@nodpai
       - 中转 🇸🇬 SG 9 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 11 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 12 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 14 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 15 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 17 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 18 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 19 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 20 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 21 Kirino LLC TG:@airproxies
-      - 中转 🇸🇬 SG 22 Kirino LLC TG:@airproxies
-      - 🇸🇬 SG 23 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 24 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 25 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 26 Kirino LLC TG:@nodpai
-      - 中转 🇸🇬 SG 28 Linode  LLC TG:@nodpai
-      - 中转 🇸🇬 SG 32 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 46 Linode  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 57 DigitalOcean  LLC TG:@airproxies
-      - 🇸🇬 SG 59 Oracle Corporation TG:@airproxies
-      - 中转 🇸🇬 SG 63 DigitalOcean  LLC TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 4 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇸🇬 SG 10 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 11 DigitalOcean  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 12 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 13 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 14 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 15 Kirino LLC TG:@airproxies
+      - 中转 🇸🇬 SG 16 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 18 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 19 Kirino LLC TG:@nodpai
+      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 25 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 35 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 74 Melbikomas UAB TG:@nodpai
+      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@nodpai
+      - 🇯🇵 JP 3 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 7 Amazon Technologies Inc. TG:@nodpai
-      - 🇯🇵 JP 8 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 18 Linode  LLC TG:@nodpai
-      - 中转 🇯🇵 JP 19 GMO GlobalSign Holdings K.K. TG:@nodpai
-      - 中转 🇯🇵 JP 20 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 21 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 14 SAKURA Internet Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 15 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 16 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 17 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 18 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 19 Kirino LLC TG:@nodpai
+      - 中转 🇯🇵 JP 20 Kirino LLC TG:@airproxies
+      - 中转 🇯🇵 JP 21 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 22 Kirino LLC TG:@airproxies
       - 中转 🇯🇵 JP 23 Kirino LLC TG:@nodpai
-      - 中转 🇯🇵 JP 24 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 25 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 26 Kirino LLC TG:@airproxies
-      - 中转 🇯🇵 JP 27 Kirino LLC TG:@nodpai
-      - 🇯🇵 JP 28 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 30 SAKURA Internet Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 31 SAKURA Internet Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 44 SAKURA Internet Inc. TG:@airproxies
+      - 🇯🇵 JP 25 Linode  LLC TG:@nodpai
       - 中转 🇦🇷 AR 1 Sondatech S.A.S. TG:@airproxies
-      - 🇦🇺 AU 1 Linode  LLC TG:@nodpai
-      - 中转 🇦🇺 AU 2 Oracle Corporation TG:@airproxies
-      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@airproxies
-      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
-      - 中转 🇨🇦 CA 3 Aptum Technologies TG:@airproxies
-      - 🇨🇦 CA 4 Linode  LLC TG:@airproxies
-      - 🇨🇦 CA 16 OVH SAS TG:@nodpai
-      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@nodpai
+      - 中转 🇦🇺 AU 1 Oracle Corporation TG:@nodpai
+      - 中转 🇧🇷 BR 1 Eivus Data Center E Telecom TG:@nodpai
+      - 中转 🇨🇦 CA 1 Aptum Technologies TG:@nodpai
+      - 🇨🇦 CA 2 OVH SAS TG:@airproxies
+      - 中转 🇨🇱 CL 1 Grupo ZGH SPA TG:@airproxies
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 4 Oracle Corporation TG:@nodpai
-      - 🇩🇪 DE 12 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇩🇪 DE 13 myVirtualserver TG:@nodpai
-      - 🇩🇪 DE 14 OVH SAS TG:@nodpai
-      - 🇩🇪 DE 18 Linode  LLC TG:@nodpai
+      - 🇩🇪 DE 4 Oracle Corporation TG:@airproxies
+      - 中转 🇩🇪 DE 11 myVirtualserver TG:@airproxies
+      - 🇩🇪 DE 19 Cloudflare  Inc. TG:@nodpai
       - 中转 🇪🇸 ES 1 Propelin Consulting S.L. TG:@nodpai
-      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@airproxies
       - 中转 🇬🇧 GB 1 GTHost TG:@airproxies
-      - 🇬🇧 GB 2 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇬🇧 GB 2 Daniel Jackson TG:@nodpai
       - 中转 🇬🇧 GB 3 Daniel Jackson TG:@airproxies
       - 🇬🇧 GB 4 OVH SAS TG:@airproxies
-      - 中转 🇬🇧 GB 7 Daniel Jackson TG:@airproxies
+      - 🇬🇧 GB 6 Datacamp Limited TG:@airproxies
+      - 🇬🇧 GB 8 Linode  LLC TG:@nodpai
       - 中转 🇮🇱 IL 1 O.M.C. COMPUTERS & COMMUNICATIONS LTD TG:@airproxies
-      - 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇮🇳 IN 2 E2E Networks Limited TG:@airproxies
-      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@nodpai
-      - 中转 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
-      - 🇰🇷 KR 3 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 11 Oracle Corporation TG:@nodpai
-      - 🇰🇷 KR 14 Oracle Corporation TG:@nodpai
-      - 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
-      - 中转 🇲🇾 MY 2 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇮🇳 IN 1 E2E Networks Limited TG:@nodpai
+      - 中转 🇮🇹 IT 1 Cinzia Tocci trading as C1V TG:@airproxies
+      - 🇰🇷 KR 1 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 5 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 8 Oracle Corporation TG:@nodpai
       - 中转 🇳🇱 NL 1 Kirino LLC TG:@nodpai
-      - 中转 🇳🇱 NL 2 Kirino LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
+      - 中转 🇳🇱 NL 3 Kirino LLC TG:@airproxies
       - 中转 🇹🇭 TH 1 Bangmod Enterprise Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇷 TR 1 Comnet International TG:@airproxies
-      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@nodpai
-      - 中转 🇻🇳 VN 3 FPT Telecom Company TG:@nodpai
+      - 中转 🇹🇷 TR 1 Comnet International TG:@nodpai
+      - 🇻🇳 VN 1 Vietnam Internet Network Information Center TG:@airproxies
+      - 中转 🇻🇳 VN 2 FPT Telecom Company TG:@airproxies
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
