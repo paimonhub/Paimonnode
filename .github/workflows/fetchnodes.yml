@@ -7,23 +7,19 @@ on:
 
 jobs:
   Fetch:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js 
       uses: actions/setup-node@v3
       with:
         node-version: 16.0
-    - run: chmod 777 ./nodefetcher/libs/subconverter/*
     - run: git config pull.rebase false && git config --local user.name "GitHub Actions" && git config --local user.email "actions@github.com" && rm ./nodefetcher/out.txt && git status -s && git add . && git commit -m "del"
     - name: fetch
       env: 
         PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
-      run: cd ./nodefetcher && npm ci && npm run run
+        NFETCH_MAX_THREAD: 50
+      run: cd ./nodefetcher && ./sinf
     - run: cd ./nodefetcher && node dump
-    - name: Configure Git
-      run: chmod 777 ./nodefetcher/up.sh
-    - run: rm -rf ./nodefetcher/libs/subconverter/cache/
+    - run: rm -rf ./nodefetcher/subconverter/cache/
     - run: ./nodefetcher/up.sh
