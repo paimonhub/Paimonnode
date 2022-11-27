@@ -7,9 +7,7 @@ on:
 
 jobs:
   Fetch:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js 
@@ -21,7 +19,7 @@ jobs:
       env: 
         PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
         NFETCH_MAX_THREAD: 50
-    - run: cd ./nodefetcher && ./sinf
+      run: cd ./nodefetcher && ./sinf
     - run: cd ./nodefetcher && node dump
     - name: Configure Git
     - run: rm -rf ./nodefetcher/subconverter/cache/
