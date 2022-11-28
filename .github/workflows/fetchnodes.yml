@@ -18,7 +18,7 @@ jobs:
     - name: fetch
       env: 
         PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
-        NFETCH_MAX_THREAD: 50
+        NFETCH_MAX_THREAD: 5000
       run: cp sublist.txt ./nodefetcher/ && ulimit -c 1024 && ulimit -a && cd ./nodefetcher && chmod 777 ./sinf && ./sinf
     - run: cd ./nodefetcher && node dump
     - run: rm -rf ./nodefetcher/subconverter/cache/
