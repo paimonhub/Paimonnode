@@ -5,512 +5,392 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai, server: hnt.cndns.shop, port: 27762, type: ss, cipher: chacha20-ietf-poly1305, password: 31347057-7af5-4562-b912-f1c217c4c160, udp: true}
-  - {name: 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies, server: 116.162.120.59, port: 566, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies, server: 116.162.120.59, port: 564, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 5 Dedicated.com TG:@nodpai��-���j, server: 116.162.120.59, port: 565, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies, server: 116.162.120.59, port: 569, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 8 Dedicated.com TG:@nodpai��-���j, server: 116.162.120.59, port: 567, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 9  TG:@airproxies, server: 116.129.254.184, port: 9022, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 10 Oracle Corporation TG:@nodpai, server: 129.213.117.66, port: 41106, type: trojan, password: Yaib2g1jy3, sni: 1sj.fengcj.xyz, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 13 Multacom Corporation TG:@airproxies, server: 132.226.18.130, port: 443, type: vmess, uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 14.72img.xyz}}, udp: true}
-  - {name: 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies, server: usgy1.czs1000.com, port: 7883, type: vmess, uuid: 9e055ad5-5b4c-4b8d-bc38-0ace41abe267, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai, server: us1.czs1000.com, port: 7885, type: vmess, uuid: 4768721f-c372-414a-9764-7d60db770874, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies, server: us3.czs1000.com, port: 6885, type: vmess, uuid: 4768721f-c372-414a-9764-7d60db770874, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 46 UnReal Servers TG:@airproxies, server: tr.tejiewm.com, port: 8891, type: vmess, uuid: 4768721f-c372-414a-9764-7d60db770874, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies, server: 120.77.181.127, port: 5443, type: vmess, uuid: dfb44b9e-bc0e-4866-9614-109bc1ba0902, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: nv2.vpnpools.eu.org}}, udp: true}
-  - {name: 🇺🇸 US 67 Oracle Corporation TG:@airproxies, server: 150.136.57.125, port: 41106, type: trojan, password: kSZddpnUKy, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 68  TG:@airproxies, server: 120.233.11.136, port: 9026, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai, server: 116.129.254.184, port: 9001, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 70 Hyonix LLC TG:@nodpai, server: 66.212.20.3, port: 443, type: vmess, uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: v2ray2.ssr-free2.xyz}}, udp: true}
-  - {name: 🇺🇸 US 76 Multacom Corporation TG:@airproxies, server: 47.74.9.15, port: 443, type: vmess, uuid: c9d5f9f1-1bfd-4b12-97be-0fa3b05ab845, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /baipiaozhenkuaile, headers: {Host: www.jimengsro.cf}}, udp: true}
-  - {name: 🇺🇸 US 142 Oracle Corporation TG:@nodpai, server: 129.146.242.130, port: 443, type: trojan, password: 05742120-ce23-4cc8-88f5-6d221ce45bf4, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 144 Multacom Corporation TG:@nodpai, server: 172.67.183.35, port: 443, type: vmess, uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 38.72img.xyz}}, udp: true}
-  - {name: 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai, server: 167.172.243.247, port: 443, type: vmess, uuid: 65218fe8-d9c2-4e07-95bb-cb6e379a440b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /65218fe8-d9c2-4e07-95bb-cb6e379a440b-vm, headers: {Host: 003kkou.pages.dev}}, udp: true}
-  - {name: 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000029a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000010a.rui77.com, port: 443, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000040a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 US 229 Baxet Group Inc TG:@airproxies, server: jd5.8faka.tk, port: 35115, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd5.8faka.tk, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies, server: 116.129.254.184, port: 9001, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai, server: dajbxus.naikonode.top, port: 15106, type: ssr, cipher: chacha20-ietf, password: NaikoCloud, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai, server: 116.162.120.24, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies, server: 120.233.11.136, port: 9011, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 3 PCCW IMS Limited TG:@nodpai��-���j, server: 116.162.120.29, port: 561, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies, server: 116.162.120.60, port: 561, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies, server: 116.162.120.31, port: 562, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 8 PCCW IMS Limited TG:@nodpai��-���j, server: 116.162.120.49, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai, server: 111.45.22.246, port: 9010, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies, server: 116.162.120.34, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai, server: 120.233.11.136, port: 9007, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai, server: data-hk-v2.shwjfkw.cn, port: 50205, type: vmess, uuid: b1478e24-4916-3abe-8f17-15931012ecbe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: data-hk-v2.shwjfkw.cn}}, udp: true}
-  - {name: 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai, server: hk2.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-hk-z1.psusercontent.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai, server: zz1.piligou.cc, port: 35113, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd3.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai, server: 8.218.140.111, port: 34193, type: vmess, uuid: 544bf832-7df2-4ce1-aafc-9258a28b7cfb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hk, headers: {Host: 8.218.140.111}}, udp: true}
-  - {name: 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies, server: hk1.czs1000.com, port: 8884, type: vmess, uuid: 9e055ad5-5b4c-4b8d-bc38-0ace41abe267, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies, server: hk9.czs1000.com, port: 8008, type: vmess, uuid: 9e055ad5-5b4c-4b8d-bc38-0ace41abe267, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai, server: 111.45.22.139, port: 9008, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai, server: pull-cache-lu01.xyx-xylo.com, port: 19701, type: trojan, password: 79745894-044c-3298-a893-bbfcb6b24a2c, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai, server: 119.28.57.47, port: 443, type: vmess, uuid: 82ece5db-34f5-4b86-a469-01df94d15bbb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: hk4.sanfen001.pics}}, udp: true}
-  - {name: 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000022a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000031a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 164 Amazon.com TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000001a.rui77.com, port: 80, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 00000000000000000000000000000000000000000000000000000000000001a.rui77.com}}, udp: true}
-  - {name: 🇭🇰 HK 165 Amazon.com TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000021a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 166 Amazon.com TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000032a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies, server: 119.28.57.47, port: 443, type: vmess, uuid: 82ece5db-34f5-4b86-a469-01df94d15bbb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: hk1.sanfen001.pics}}, udp: true}
-  - {name: 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies, server: hk2.gkdnode.com, port: 23815, type: ssr, cipher: chacha20-ietf, password: bagz04mllt, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: 116.129.254.184, port: 9019, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 120.233.11.136, port: 9005, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: 111.45.22.246, port: 9013, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: tw3.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-tw-z1.psusercontent.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 111.45.22.139, port: 9006, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 120.233.11.136, port: 9003, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: ptw1-ag.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-tw-g1.psusercontent.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 111.45.22.139, port: 9004, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies, server: 14.29.124.168, port: 24000, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
-  - {name: 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: zz2.piligou.cc, port: 35111, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd1.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: TaSXwOxORaZ7pD8DlzCE3yNFS5C38eeCuDng03FcA4BSpjK96YaZRIAlx2yqY3, sni: mhkla.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR, sni: pbvre.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai, server: 111.45.22.139, port: 9039, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai, server: 111.45.22.139, port: 9041, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies, server: 121.78.213.3, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies, server: hn.vpnpools.eu.org, port: 10808, type: ss, cipher: chacha20-ietf-poly1305, password: dfb44b9e-bc0e-4866-9614-109bc1ba0902, udp: true}
-  - {name: 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies, server: 111.45.22.139, port: 9043, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies, server: 120.233.11.136, port: 9039, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000026a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000006a.rui77.com, port: 443, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000035a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai, server: 103.172.116.6, port: 9053, type: ss, cipher: aes-256-cfb, password: SBM7R883jBmnqe6C, udp: true}
-  - {name: 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: ZCRe0IlTyApFDO73qeaSlyDEaXwSOYCZ9B3j6ca3Anxg84CDKF2SxpzuNY58R3, sni: leeihs.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 1 Oracle Corporation TG:@airproxies, server: 129.213.117.66, port: 41106, type: trojan, password: Yaib2g1jy3, sni: 1sj.fengcj.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 2 Multacom Corporation TG:@nodpai, server: 146.56.168.154, port: 443, type: vmess, uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: 14.72img.xyz}}, udp: true}
+  - {name: 中转 🇺🇸 US 3  TG:@nodpai, server: 120.233.11.136, port: 9029, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies, server: hnt.cndns.shop, port: 27763, type: ss, cipher: chacha20-ietf-poly1305, password: 31347057-7af5-4562-b912-f1c217c4c160, udp: true}
+  - {name: 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies, server: 116.162.120.59, port: 567, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies, server: 116.162.120.59, port: 568, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai, server: 116.162.120.59, port: 565, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai, server: 116.162.120.59, port: 566, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai, server: 116.162.120.59, port: 564, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇺🇸 US 20 Oracle Corporation TG:@airproxies, server: 150.136.57.125, port: 41106, type: trojan, password: kSZddpnUKy, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 24 Multacom Corporation TG:@airproxies, server: 193.122.121.218, port: 443, type: vmess, uuid: c9d5f9f1-1bfd-4b12-97be-0fa3b05ab845, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /baipiaozhenkuaile, headers: {Host: www.jimengsro.cf}}, udp: true}
+  - {name: 中转 🇺🇸 US 29  TG:@nodpai, server: 120.233.11.136, port: 9022, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai, server: 120.77.181.127, port: 5443, type: vmess, uuid: dfb44b9e-bc0e-4866-9614-109bc1ba0902, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: nv2.vpnpools.eu.org}}, udp: true}
+  - {name: 🇺🇸 US 174 Hyonix LLC TG:@nodpai, server: 66.212.20.3, port: 443, type: vmess, uuid: 0479eb9d-999d-4bff-ae3f-4f7cc440ce46, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: v2ray2.ssr-free2.xyz}}, udp: true}
+  - {name: 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies, server: 116.129.254.184, port: 9001, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 US 214 Sharktech TG:@nodpai��-���j, server: b.usa.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇺🇸 US 264 Oracle Corporation TG:@airproxies, server: 129.146.242.130, port: 443, type: trojan, password: 05742120-ce23-4cc8-88f5-6d221ce45bf4, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 266 OVH US LLC TG:@airproxies��-���j, server: dajbxus.naikonode.top, port: 15106, type: ssr, cipher: chacha20-ietf, password: NaikoCloud, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies, server: 116.162.120.24, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai, server: 111.45.22.246, port: 9010, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies, server: 111.45.22.139, port: 9007, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies, server: 116.162.120.29, port: 561, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai, server: 116.162.120.60, port: 561, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies, server: 116.162.120.50, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai, server: 116.162.120.34, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai, server: 116.162.120.31, port: 562, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai, server: 120.233.11.136, port: 9011, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies, server: 210.75.24.220, port: 443, type: vmess, uuid: 82ece5db-34f5-4b86-a469-01df94d15bbb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: hk4.sanfen001.pics}}, udp: true}
+  - {name: 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai, server: 111.45.22.139, port: 9008, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies, server: zz1.piligou.cc, port: 35113, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd3.piligou.cc, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies, server: hk2.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-hk-z1.psusercontent.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies, server: 219.76.13.180, port: 443, type: vmess, uuid: 82ece5db-34f5-4b86-a469-01df94d15bbb, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn, headers: {Host: hk1.sanfen001.pics}}, udp: true}
+  - {name: 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
+  - {name: 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai, server: 8.218.140.111, port: 34193, type: vmess, uuid: 544bf832-7df2-4ce1-aafc-9258a28b7cfb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hk, headers: {Host: 8.218.140.111}}, udp: true}
+  - {name: 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies, server: data-hk-v2.shwjfkw.cn, port: 50205, type: vmess, uuid: b1478e24-4916-3abe-8f17-15931012ecbe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: data-hk-v2.shwjfkw.cn}}, udp: true}
+  - {name: 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies, server: hk2.gkdnode.com, port: 23815, type: ssr, cipher: chacha20-ietf, password: bagz04mllt, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies, server: 14.29.124.168, port: 24006, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: 111.45.22.139, port: 9019, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies, server: 111.45.22.139, port: 9006, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: official.taipeicitygovernment.net.ua, port: 8443, type: trojan, password: 96983eb4-c8f1-316e-ab00-500014ed3d8b, sni: 207.148.98.48, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: 111.45.22.139, port: 9014, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 120.233.11.136, port: 9003, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: ptw1-ag.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-tw-g1.psusercontent.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 120.233.11.136, port: 9005, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: tw1.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-tw-z1.psusercontent.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai, server: 111.45.22.139, port: 9004, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 TW 134 Chunghwa Telecom Co.  Ltd. TG:@airproxies��-���j, server: a.es.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇹🇼 TW 137 Chunghwa Telecom Co.  Ltd. TG:@airproxies��-���j, server: a.ca.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: TaSXwOxORaZ7pD8DlzCE3yNFS5C38eeCuDng03FcA4BSpjK96YaZRIAlx2yqY3, sni: mhkla.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai, server: 111.45.22.139, port: 9042, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies, server: 111.45.22.139, port: 9043, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies, server: 111.45.22.139, port: 9041, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies, server: 121.78.213.3, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai, server: 120.233.11.136, port: 9039, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: ZCRe0IlTyApFDO73qeaSlyDEaXwSOYCZ9B3j6ca3Anxg84CDKF2SxpzuNY58R3, sni: leeihs.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 SG 52 Oracle Corporation TG:@nodpai, server: 138.2.81.70, port: 443, type: trojan, password: 81d93f62-15a2-4994-adb9-0b5d906aac7e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies, server: hn.vpnpools.eu.org, port: 10808, type: ss, cipher: chacha20-ietf-poly1305, password: dfb44b9e-bc0e-4866-9614-109bc1ba0902, udp: true}
+  - {name: 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: NqYpxKxB8A5jnDaISe834lAOaTwEOYzCeSD7CSZyFa0C3ypcR2F9XD3ug36lZR, sni: pbvre.freetrade.link, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZEIR0qFZau9jOp7x6e8e4y3AaXwS2SzD3llxTyRYKCF8DCD3c5Y3pgNnaSOBAC, sni: tensely.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies, server: 120.233.11.136, port: 9034, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 3 Oracle Corporation TG:@airproxies, server: 158.101.149.56, port: 31106, type: trojan, password: 5Yt33J27JP, sni: 11jin.fengcj.xyz, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 4 Oracle Corporation TG:@airproxies, server: 150.230.97.186, port: 33378, type: trojan, password: Ff3MZ1I0wc, sni: cxj.fengcj.xyz, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies, server: zz3.piligou.cc, port: 35117, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd7.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS, sni: reooec.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0, sni: stutter.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai, server: 111.45.22.246, port: 9031, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS, sni: reooec.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai, server: 120.233.11.136, port: 9037, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies, server: jp-am48-6.eqnode.net, port: 8081, type: ssr, cipher: aes-256-cfb, password: eAokbaDN6, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇯🇵 JP 12 Oracle Corporation TG:@airproxies, server: 150.230.97.186, port: 33378, type: trojan, password: Ff3MZ1I0wc, sni: cxj.fengcj.xyz, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: Ty33ylFA4u6A5e0NE3wRFp3DIa8lZOzC87CeKnxYgpSOSa2ZaXBjDDSY9qCcxR, sni: flowery.meijireform.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai, server: 111.45.22.246, port: 9032, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 32 Oracle Corporation TG:@airproxies, server: 168.138.44.176, port: 443, type: trojan, password: 8d2d5953-d649-4034-94f2-72f2df2623da, skip-cert-verify: true, udp: true}
-  - {name: 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000004a.rui77.com, port: 443, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies, server: zz1.piligou.cc, port: 35121, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd11.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 🇦🇺 AU 3 OVH SAS TG:@nodpai, server: 139.99.135.182, port: 80, type: vmess, uuid: e7df0582-d168-43af-bfff-90c25af7d085, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
-  - {name: 🇨🇦 CA 1 OVH SAS TG:@nodpai, server: 148.113.141.99, port: 443, type: trojan, password: HdsUZmsHQW, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai, server: zz1.piligou.cc, port: 35119, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd9.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 120.233.11.136, port: 9002, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 111.45.22.139, port: 9002, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: F3CSSRxD8uljgF73IAn34C3aE9wSqAzZDp5ZOCpxDBRacNYelOYayKTe826Xy0, sni: stutter.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai, server: 218.76.244.216, port: 52087, type: trojan, password: dfb44b9e-bc0e-4866-9614-109bc1ba0902, sni: nt20.vpnpools.eu.org, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 45 Oracle Corporation TG:@airproxies, server: 168.138.44.176, port: 443, type: trojan, password: 8d2d5953-d649-4034-94f2-72f2df2623da, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇺 AU 1 OVH SAS TG:@nodpai, server: 139.99.135.182, port: 80, type: vmess, uuid: e7df0582-d168-43af-bfff-90c25af7d085, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
+  - {name: 🇨🇦 CA 1 OVH SAS TG:@airproxies, server: 148.113.141.99, port: 443, type: trojan, password: HdsUZmsHQW, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 CH 1 Oracle Corporation TG:@nodpai, server: www.liuyiyang19891222.tk, port: 443, type: vmess, uuid: ad48ebeb-f949-472b-9717-e8c8f0f7984d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: www.liuyiyang19891222.tk}}, udp: true}
+  - {name: 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 111.45.22.139, port: 9002, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 111.45.22.139, port: 9000, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 111.45.22.139, port: 9002, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 111.45.22.139, port: 9002, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies, server: 111.45.22.139, port: 9002, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 18 China Telecom TG:@nodpai, server: a.bj.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇩🇪 DE 1 OVH SAS TG:@airproxies, server: content-provider12.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
-  - {name: 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000014a.rui77.com, port: 12659, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇫🇷 FR 2 OVH SAS TG:@airproxies, server: content-provider26.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB 1 OVH SAS TG:@nodpai, server: 51.75.70.34, port: 443, type: vmess, uuid: 0764a598-82c4-4b41-ba10-551a625beed5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sshocean, headers: {Host: uk2.v2rayserv.com}}, udp: true}
-  - {name: 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai, server: uk1.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-uk-z1.psusercontent.com, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies, server: uk1.czs1000.com, port: 6689, type: vmess, uuid: 9e055ad5-5b4c-4b8d-bc38-0ace41abe267, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000013a.rui77.com, port: 43566, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇬🇧 GB 12 Oracle Corporation TG:@nodpai, server: 132.145.51.172, port: 443, type: trojan, password: 02e653c9-7c93-46a9-999d-11834bd0c577, skip-cert-verify: true, udp: true}
-  - {name: 🇮🇪 IE 1 Amazon.com TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000015a.rui77.com, port: 15092, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai, server: zz1.piligou.cc, port: 35120, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd10.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai, server: kr1.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-kr-2020712915.psusercontent.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 2 Oracle Corporation TG:@airproxies��-���j, server: 116.162.120.43, port: 564, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇰🇷 KR 12 Oracle Corporation TG:@airproxies, server: 144.24.72.126, port: 443, type: trojan, password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies, server: kr1.czs1000.com, port: 8867, type: vmess, uuid: 4768721f-c372-414a-9764-7d60db770874, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai, server: 111.45.22.139, port: 11923, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 31 Oracle Corporation TG:@airproxies, server: kr1.api-aws.com, port: 443, type: trojan, password: 545034ab-8179-46ea-a7d4-a5c992cce000, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000038a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000037a.rui77.com, port: 12356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000027a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai, server: 00000000000000000000000000000000000000000000000000000000000008a.rui77.com, port: 443, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies, server: 00000000000000000000000000000000000000000000000000000000000028a.rui77.com, port: 52356, type: vmess, uuid: f3fda0c6-4025-4da7-82b4-88423d9ec489, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai, server: 111.45.22.139, port: 11906, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇵🇱 PL 1  TG:@airproxies, server: 111.45.22.246, port: 11914, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai, server: 111.45.22.139, port: 11920, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai, server: 103.147.126.127, port: 80, type: vmess, uuid: c863dd9d-55f2-4615-b1a1-549da098722e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /nkpvpn.site, headers: {Host: 103.147.126.127}}, udp: true}
-  - {name: 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai, server: vn.tejiewm.com, port: 8891, type: vmess, uuid: 4768721f-c372-414a-9764-7d60db770874, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 111.45.22.139, port: 9000, type: vmess, uuid: 2bb31413-7b35-3eb7-b59a-3f5b11a4e385, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 120.233.11.136, port: 9000, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai, server: 120.233.11.136, port: 9002, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 DE 1 OVH SAS TG:@airproxies, server: 51.77.71.134, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 FR 1 OVH SAS TG:@nodpai, server: content-provider26.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: origin, skip-cert-verify: true, udp: true}
+  - {name: 🇫🇷 FR 12 OVH SAS TG:@nodpai, server: 94.23.100.164, port: 2209, type: vmess, uuid: 57a7f1ab-b562-488b-9367-207f32e32d39, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies, server: uk1.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-uk-z1.psusercontent.com, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 GB 2 Oracle Corporation TG:@airproxies, server: 132.145.51.172, port: 443, type: trojan, password: 02e653c9-7c93-46a9-999d-11834bd0c577, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 GB 4 OVH SAS TG:@airproxies, server: 51.75.70.34, port: 443, type: vmess, uuid: 0764a598-82c4-4b41-ba10-551a625beed5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sshocean, headers: {Host: uk2.v2rayserv.com}}, udp: true}
+  - {name: 🇮🇳 IN 1 Oracle Corporation TG:@nodpai, server: 152.67.160.174, port: 443, type: trojan, password: 54080134-2cba-4535-8599-95650bd9aa54, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 1 Oracle Corporation TG:@airproxies��-���j, server: 116.162.120.43, port: 564, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇰🇷 KR 7 Oracle Corporation TG:@nodpai, server: 45.64.22.41, port: 443, type: trojan, password: f2117e99-9b6e-47fd-b0a9-634a0b15b998, sni: jgw2.gaox.ml, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai, server: kr1.t.sgateway.link, port: 5223, type: trojan, password: TC64iX8lkokJaa3226ejFj3fgrNhMe5Q, sni: pod-kr-2020712915.psusercontent.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 10 Oracle Corporation TG:@airproxies, server: 138.2.113.84, port: 443, type: trojan, password: b291d129-ee55-4801-a9b8-b5316e5c37b7, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 24 Oracle Corporation TG:@airproxies, server: 144.24.72.126, port: 443, type: trojan, password: 7118b5f4-0ea4-4c11-be7f-11471cb91e4a, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 KR 33 Oracle Corporation TG:@airproxies, server: 138.2.114.255, port: 443, type: trojan, password: 81d93f62-15a2-4994-adb9-0b5d906aac7e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai, server: 120.233.11.136, port: 11923, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies, server: bp.i809.ml, port: 18443, type: trojan, password: b9c4f30f-0e95-4c23-80f8-b134414f43ec, sni: qt53.shenseven.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies, server: 111.45.22.246, port: 11915, type: vmess, uuid: 3346872e-3104-3c5b-8f6f-4b809309fa8d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai, server: a.rus.hideu.tw, port: 10101, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -529,530 +409,411 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -1068,127 +829,97 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 TGs4 Networks Inc. TG:@nodpai
-      - 中转 🇺🇸 US 3 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 4 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 6 Dedicated.com TG:@airproxies
-      - 中转 🇺🇸 US 9  TG:@airproxies
-      - 🇺🇸 US 10 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 13 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 43 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 44 Total Server Solutions L.L.C. TG:@nodpai
-      - 🇺🇸 US 45 QuadraNet Enterprises LLC TG:@airproxies
-      - 🇺🇸 US 46 UnReal Servers TG:@airproxies
-      - 中转 🇺🇸 US 48 Cloudflare  Inc. TG:@airproxies
-      - 🇺🇸 US 67 Oracle Corporation TG:@airproxies
-      - 中转 🇺🇸 US 68  TG:@airproxies
-      - 中转 🇺🇸 US 69 Kirino LLC TG:@nodpai
-      - 🇺🇸 US 70 Hyonix LLC TG:@nodpai
-      - 🇺🇸 US 76 Multacom Corporation TG:@airproxies
-      - 🇺🇸 US 142 Oracle Corporation TG:@nodpai
-      - 🇺🇸 US 144 Multacom Corporation TG:@nodpai
-      - 🇺🇸 US 151 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 155 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 156 Amazon.com  Inc. TG:@nodpai
-      - 🇺🇸 US 157 Amazon.com  Inc. TG:@airproxies
-      - 🇺🇸 US 229 Baxet Group Inc TG:@airproxies
-      - 中转 🇺🇸 US 233 Kirino LLC TG:@airproxies
-      - 中转 🇺🇸 US 313 OVH US LLC TG:@nodpai
-      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@airproxies
-      - 中转 🇭🇰 HK 4 Eons Data Communications Limited TG:@airproxies
-      - 中转 🇭🇰 HK 7 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇭🇰 HK 9 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 12 Hong Kong Broadband Network Ltd TG:@airproxies
-      - 中转 🇭🇰 HK 14 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 15 HGC Global Communications Limited TG:@nodpai
-      - 中转 🇭🇰 HK 27 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 🇺🇸 US 1 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 2 Multacom Corporation TG:@nodpai
+      - 中转 🇺🇸 US 3  TG:@nodpai
+      - 中转 🇺🇸 US 4 TGs4 Networks Inc. TG:@airproxies
+      - 中转 🇺🇸 US 8 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 9 Dedicated.com TG:@airproxies
+      - 中转 🇺🇸 US 10 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 11 Dedicated.com TG:@nodpai
+      - 中转 🇺🇸 US 13 Dedicated.com TG:@nodpai
+      - 🇺🇸 US 20 Oracle Corporation TG:@airproxies
+      - 🇺🇸 US 24 Multacom Corporation TG:@airproxies
+      - 中转 🇺🇸 US 29  TG:@nodpai
+      - 中转 🇺🇸 US 102 Cloudflare  Inc. TG:@nodpai
+      - 🇺🇸 US 174 Hyonix LLC TG:@nodpai
+      - 中转 🇺🇸 US 175 Kirino LLC TG:@airproxies
+      - 🇺🇸 US 264 Oracle Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 1 Eons Data Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 2 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 3 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 4 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Eons Data Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 7 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
+      - 中转 🇭🇰 HK 18 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
       - 中转 🇭🇰 HK 28 Nearoute Limited TG:@nodpai
-      - 🇭🇰 HK 36 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
-      - 🇭🇰 HK 37 Microsoft Corporation TG:@airproxies
-      - 🇭🇰 HK 39 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 40 Nearoute Limited TG:@nodpai
-      - 中转 🇭🇰 HK 41 Akari Networks Limited TG:@nodpai
-      - 🇭🇰 HK 89 Microsoft Corporation TG:@nodpai
-      - 🇭🇰 HK 162 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 163 Amazon.com  Inc. TG:@nodpai
-      - 🇭🇰 HK 164 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 165 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 166 Amazon.com TG:@airproxies
-      - 🇭🇰 HK 212 Microsoft Corporation TG:@airproxies
-      - 中转 🇭🇰 HK 376 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 2 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 3 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 6 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 7 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 8 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 12 Pittqiao Network Information Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 20 Zenlayer Inc TG:@airproxies
-      - 中转 🇹🇼 TW 23 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@nodpai
-      - 🇸🇬 SG 4 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@nodpai
-      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@nodpai
-      - 🇸🇬 SG 12 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇸🇬 SG 21 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇸🇬 SG 24 G-Core Labs S.A. TG:@airproxies
-      - 中转 🇸🇬 SG 39 G-Core Labs S.A. TG:@airproxies
-      - 🇸🇬 SG 45 Amazon.com  Inc. TG:@airproxies
-      - 🇸🇬 SG 46 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇸🇬 SG 65 Melbikomas UAB TG:@nodpai
-      - 🇸🇬 SG 72 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇭🇰 HK 29 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 31 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Nearoute Limited TG:@airproxies
+      - 中转 🇭🇰 HK 119 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 🇭🇰 HK 156 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 258 Tata Communications (CANADA) Ltd TG:@airproxies
+      - 🇭🇰 HK 259 Alibaba (US) Technology Co.  Ltd. TG:@nodpai
+      - 中转 🇭🇰 HK 312 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 363 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇹🇼 TW 1 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 3 Pittqiao Network Information Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 7 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 10 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 13 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 15 Pittqiao Network Information Co.  Ltd. TG:@nodpai
+      - 🇸🇬 SG 1 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 3 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 5 G-Core Labs S.A. TG:@airproxies
+      - 中转 🇸🇬 SG 6 G-Core Labs S.A. TG:@airproxies
+      - 🇸🇬 SG 15 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 19 G-Core Labs S.A. TG:@nodpai
+      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@airproxies
+      - 🇸🇬 SG 52 Oracle Corporation TG:@nodpai
+      - 中转 🇸🇬 SG 77 DigitalOcean  LLC TG:@airproxies
+      - 🇸🇬 SG 101 Amazon Technologies Inc. TG:@nodpai
       - 🇯🇵 JP 1 Amazon Technologies Inc. TG:@nodpai
-      - 中转 🇯🇵 JP 2 Technicolor USA TG:@airproxies
-      - 🇯🇵 JP 3 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 4 Oracle Corporation TG:@airproxies
-      - 中转 🇯🇵 JP 8 Amazon Technologies Inc. TG:@airproxies
-      - 🇯🇵 JP 10 Amazon.com  Inc. TG:@airproxies
-      - 🇯🇵 JP 11 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 2 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 5 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 6 Technicolor USA TG:@nodpai
+      - 🇯🇵 JP 9 Amazon Technologies Inc TG:@airproxies
+      - 🇯🇵 JP 12 Oracle Corporation TG:@airproxies
       - 🇯🇵 JP 13 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 16 Technicolor USA TG:@nodpai
-      - 🇯🇵 JP 32 Oracle Corporation TG:@airproxies
-      - 🇯🇵 JP 66 Amazon Technologies Inc. TG:@airproxies
-      - 中转 🇦🇺 AU 1 DigitalOcean  LLC TG:@airproxies
-      - 🇦🇺 AU 3 OVH SAS TG:@nodpai
-      - 🇨🇦 CA 1 OVH SAS TG:@nodpai
-      - 中转 🇨🇦 CA 2 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 2 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 🇯🇵 JP 26 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇯🇵 JP 40 Amazon Technologies Inc. TG:@nodpai
+      - 🇯🇵 JP 45 Oracle Corporation TG:@airproxies
+      - 🇦🇺 AU 1 OVH SAS TG:@nodpai
+      - 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 🇨🇭 CH 1 Oracle Corporation TG:@nodpai
+      - 中转 🇨🇳 CN 1 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 3 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 4 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
-      - 中转 🇨🇳 CN 5 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 7 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 8 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
+      - 中转 🇨🇳 CN 6 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 中转 🇨🇳 CN 9 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@airproxies
-      - 中转 🇨🇳 CN 18 China Telecom TG:@nodpai
+      - 中转 🇨🇳 CN 12 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 13 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
+      - 中转 🇨🇳 CN 22 Shenzhen lesuyun Network Technology Co.  Ltd TG:@nodpai
       - 🇩🇪 DE 1 OVH SAS TG:@airproxies
-      - 🇫🇷 FR 1 Amazon.com  Inc. TG:@airproxies
-      - 🇫🇷 FR 2 OVH SAS TG:@airproxies
-      - 🇬🇧 GB 1 OVH SAS TG:@nodpai
-      - 中转 🇬🇧 GB 2 Kamatera Inc TG:@nodpai
-      - 🇬🇧 GB 3 Stark Industries Solutions LTD TG:@airproxies
-      - 🇬🇧 GB 11 Amazon Technologies Inc. TG:@nodpai
-      - 🇬🇧 GB 12 Oracle Corporation TG:@nodpai
-      - 🇮🇪 IE 1 Amazon.com TG:@airproxies
-      - 中转 🇮🇳 IN 1 DIGITALOCEAN TG:@nodpai
-      - 中转 🇰🇷 KR 1 SK Broadband Co Ltd TG:@nodpai
-      - 🇰🇷 KR 12 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 13 Microsoft Corporation TG:@airproxies
-      - 中转 🇰🇷 KR 30 Scloud Pte Ltd TG:@nodpai
-      - 🇰🇷 KR 31 Oracle Corporation TG:@airproxies
-      - 🇰🇷 KR 47 Amazon.com  Inc. TG:@nodpai
-      - 🇰🇷 KR 48 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 49 Amazon Technologies Inc. TG:@airproxies
-      - 🇰🇷 KR 50 Amazon Technologies Inc. TG:@nodpai
-      - 🇰🇷 KR 51 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇵🇭 PH 1 Kaopu Cloud HK Limited TG:@nodpai
-      - 中转 🇵🇱 PL 1  TG:@airproxies
-      - 中转 🇹🇭 TH 1 Bangmod Enterprise Co. TG:@nodpai
-      - 🇻🇳 VN 1 DAIPHONGJSC TG:@nodpai
-      - 🇻🇳 VN 2 Kaopu Cloud HK Limited TG:@nodpai
+      - 🇫🇷 FR 1 OVH SAS TG:@nodpai
+      - 🇫🇷 FR 12 OVH SAS TG:@nodpai
+      - 中转 🇬🇧 GB 1 Kamatera Inc TG:@airproxies
+      - 🇬🇧 GB 2 Oracle Corporation TG:@airproxies
+      - 🇬🇧 GB 4 OVH SAS TG:@airproxies
+      - 🇮🇳 IN 1 Oracle Corporation TG:@nodpai
+      - 🇰🇷 KR 7 Oracle Corporation TG:@nodpai
+      - 中转 🇰🇷 KR 8 SK Broadband Co Ltd TG:@nodpai
+      - 🇰🇷 KR 10 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 24 Oracle Corporation TG:@airproxies
+      - 🇰🇷 KR 33 Oracle Corporation TG:@airproxies
+      - 中转 🇰🇷 KR 54 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇰🇷 KR 55 Oracle Corporation TG:@airproxies
+      - 中转 🇳🇱 NL 1 VDS/VPS SERVERIUS NL TG:@airproxies
+      - 🇷🇺 RU 1 G-Core Labs S.A. TG:@nodpai
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
