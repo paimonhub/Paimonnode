@@ -5,198 +5,746 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai, server: yd-03.paofunlink.com, port: 1055, type: ssr, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai, server: xi.kanao.xyz, port: 58832, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇺🇸 US 4 OVH US LLC TG:@nodpai��-���j, server: bs3.jymzffbquawl.com, port: 5502, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies, server: do-1.heicloud.cf, port: 7771, type: vmess, uuid: b9c76bfb-2a78-4442-b40a-9faf19a99541, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /m1, headers: {Host: do-1.heicloud.cf}}, udp: true}
-  - {name: 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies, server: pr3.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 1 Akari Networks Limited TG:@nodpai��-���j, server: pr1.jymzffbquawl.com, port: 3502, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇭🇰 HK 2 US-DMITINC TG:@nodpai, server: 103.117.102.199, port: 34022, type: vmess, uuid: 8537b282-e91e-444a-ce6b-f36ef326f368, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai, server: 157.119.101.149, port: 53776, type: vmess, uuid: e516d5cc-bb85-45db-a49a-401979fff8e0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
-  - {name: 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai, server: hzlt.817777.xyz, port: 41104, type: ssr, cipher: aes-256-cfb, password: zxOmdD, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies, server: da.kanao.xyz, port: 58803, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai, server: 1cnrelay.initcloud.pro, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai, server: xi.kanao.xyz, port: 58802, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai, server: pr2.jymzffbquawl.com, port: 3506, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies, server: da.kanao.xyz, port: 58801, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai, server: pr1.jymzffbquawl.com, port: 3504, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies, server: pr2.jymzffbquawl.com, port: 3508, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai, server: asdmnioqw21dom.nekodafu.xyz, port: 49837, type: vmess, uuid: 92829369-91e1-4a05-8ebb-dfc8a502df6f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: pr3.jymzffbquawl.com, port: 3035, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: pr3.jymzffbquawl.com, port: 3025, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: da.kanao.xyz, port: 58821, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: b.hk.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 11 Chunghwa Telecom Co.  Ltd. TG:@airproxies��-���j, server: pr3.jymzffbquawl.com, port: 3025, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: bs4.jymzffbquawl.com, port: 3035, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai, server: 14.29.124.168, port: 24006, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies, server: pr3.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 2 OVH US LLC TG:@nodpai��-���j, server: bs3.jymzffbquawl.com, port: 5502, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai, server: do-1.heicloud.cf, port: 7771, type: vmess, uuid: b9c76bfb-2a78-4442-b40a-9faf19a99541, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /m1, headers: {Host: do-1.heicloud.cf}}, udp: true}
+  - {name: 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies, server: yd-03.paofunlink.com, port: 1055, type: ssr, cipher: chacha20-ietf, password: bxsnucrgk6hfish, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 6 OVH US LLC TG:@nodpai��-���j, server: pr4.jymzffbquawl.com, port: 5500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 8 OVH US LLC TG:@nodpai��-���j, server: bs4.jymzffbquawl.com, port: 5502, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 9 OVH US LLC TG:@nodpai��-���j, server: pr4.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai, server: bs3.jymzffbquawl.com, port: 5503, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai, server: da.kanao.xyz, port: 58816, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai, server: pr3.jymzffbquawl.com, port: 5500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies, server: pr3.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai, server: us-gia.tencent.cfd, port: 65529, type: vmess, uuid: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us-gia.tencent.cfd}}, udp: true}
+  - {name: 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai, server: pr3.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies, server: bs3.jymzffbquawl.com, port: 5503, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies, server: cn-su.tencent.cfd, port: 22656, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai, server: pr4.jymzffbquawl.com, port: 5501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 26 DediPath TG:@airproxies, server: yes.iamagoodman.net, port: 16648, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 🇺🇸 US 27 Atlantic.net TG:@nodpai, server: us-atl.tencent.cfd, port: 65529, type: vmess, uuid: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us-atl.tencent.cfd}}, udp: true}
+  - {name: 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai, server: bb29cs.cdn.node.a.ddns-ounk.com, port: 13663, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: bb29cs.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇺🇸 US 29 Psychz Networks TG:@airproxies, server: usla.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies, server: pr4.jymzffbquawl.com, port: 5500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies, server: m.lwvzmdu.cn, port: 16648, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m.lwvzmdu.cn}}, udp: true}
+  - {name: 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies, server: v1.cdn.node02.ddns-ounk.com, port: 13647, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /9974f731e8cb457b17143895.v1.live.m3u8, headers: {Host: v1.cdn.node02.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies, server: bb29cs.cdn.node.a.ddns-ounk.com, port: 13654, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: bb29cs.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai, server: v1.cdn.node02.ddns-ounk.com, port: 13646, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /9974f731e8cb457b17143895.v1.live.m3u8, headers: {Host: v1.cdn.node02.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai, server: bb29cs.cdn.node.a.ddns-ounk.com, port: 13656, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: bb29cs.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai, server: bb29cs.cdn.node.a.ddns-ounk.com, port: 13660, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: bb29cs.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies, server: 1cnrelay.initcloud.pro, port: 560, type: ssr, cipher: chacha20-ietf, password: mblank1port, protocol: auth_aes128_md5, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai, server: cu.kapoknode.com, port: 25898, type: vmess, uuid: 095ebde3-074b-4b6e-9d97-7a9d10a0ffe2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: cu.kapoknode.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 4 Akari Networks Limited TG:@nodpai��-���j, server: pr2.jymzffbquawl.com, port: 3508, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies, server: pr2.jymzffbquawl.com, port: 3506, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies, server: pr1.jymzffbquawl.com, port: 3505, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇭🇰 HK 7 US-DMITINC TG:@nodpai, server: 103.117.102.199, port: 34022, type: vmess, uuid: 8537b282-e91e-444a-ce6b-f36ef326f368, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai, server: 157.119.101.149, port: 53776, type: vmess, uuid: e516d5cc-bb85-45db-a49a-401979fff8e0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /}, udp: true}
+  - {name: 中转 🇭🇰 HK 11 Microsoft Corporation TG:@nodpai��-���j, server: hzlt.817777.xyz, port: 14003, type: ssr, cipher: aes-256-cfb, password: zxOmdD, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies, server: pr1.jymzffbquawl.com, port: 3504, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai, server: pr2.jymzffbquawl.com, port: 3502, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai, server: pr2.jymzffbquawl.com, port: 3501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai, server: xi.kanao.xyz, port: 58820, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai, server: xi.kanao.xyz, port: 58804, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai, server: da.kanao.xyz, port: 58803, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies, server: pr2.jymzffbquawl.com, port: 3507, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies, server: pr2.jymzffbquawl.com, port: 3504, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies, server: pr1.jymzffbquawl.com, port: 3507, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai, server: 19204tj.matrixxx888.com, port: 19204, type: trojan, password: 089c4166-e466-35cf-ba65-7ebcdfb71ee5, sni: eplcgame.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies, server: ge.45g.mapow.link, port: 10184, type: vmess, uuid: ed42e716-46d0-3620-b6ac-dcb8f97c4352, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /wmsxwd, headers: {Host: hk31.ddns.566366.xyz}}, udp: true}
+  - {name: 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai, server: pr2.jymzffbquawl.com, port: 3506, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies, server: hk-cmi.tencent.cfd, port: 65529, type: vmess, uuid: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: hk-cmi.tencent.cfd}}, udp: true}
+  - {name: 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai, server: z5sa6is.cdn.node.a.ddns-ounk.com, port: 13684, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: z5sa6is.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies, server: 20.187.92.51, port: 80, type: vmess, uuid: 3eba7064-837a-4919-a9d3-1db9ffd8593a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: a.189.cn}}, udp: true}
+  - {name: 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies, server: cn-su.tencent.cfd, port: 47832, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai, server: m.lwvzmdu.cn, port: 16627, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m.lwvzmdu.cn}}, udp: true}
+  - {name: 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai, server: yes.iamagoodman.net, port: 16627, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai, server: asdmnioqw21dom.nekodafu.xyz, port: 49837, type: vmess, uuid: 92829369-91e1-4a05-8ebb-dfc8a502df6f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai, server: cd69.cdn.node.a.ddns-ounk.com, port: 13345, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: cd69.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai, server: gonggao05.niuniucloud.xyz, port: 53008, type: trojan, password: ae54202f-6e78-4362-b24f-528d18e79674, sni: niuniucloud.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai, server: fuj.cmcc.wiki, port: 10295, type: vmess, uuid: 56e39642-dc12-4918-a717-ca004970d926, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /images, headers: {Host: shoutingtoutiao3.10010.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai, server: t.cccao.cyou, port: 16627, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t.cccao.cyou}}, udp: true}
+  - {name: 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai, server: t.cccao.cyou, port: 16620, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t.cccao.cyou}}, udp: true}
+  - {name: 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai, server: z5is.cdn.node.a.ddns-ounk.com, port: 13182, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: z5is.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies, server: bbq886.cdn.node.a.ddns-ounk.com, port: 13269, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: bbq886.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai, server: z5sa6is.cdn.node.a.ddns-ounk.com, port: 13687, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6d22-4232-9e87-9670c18b4a60.v1..live04.m3u8, headers: {Host: z5sa6is.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies, server: x321.cdn.node.a.ddns-ounk.com, port: 13471, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: x321.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies, server: nff96.cdn.node01.ddns-ounk.com, port: 10942, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /80080f42e36c6478a808050e.v1.live.m3u8, headers: {Host: nff96.cdn.node01.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: pr3.jymzffbquawl.com, port: 3025, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: pr4.jymzffbquawl.com, port: 3025, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: bs4.jymzffbquawl.com, port: 3045, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies��-���j, server: pr4.jymzffbquawl.com, port: 3035, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies, server: 14.29.124.168, port: 24003, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: xi.kanao.xyz, port: 58827, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: 19215tj.matrixxx888.com, port: 19215, type: trojan, password: 089c4166-e466-35cf-ba65-7ebcdfb71ee5, sni: eplcgame.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13309, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13311, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13312, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13313, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13308, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: hinet.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: hinet.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: z65d.cdn.node.a.ddns-ounk.com, port: 13712, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6d22-4232-9e87-9670c18b4a60.v1..live04.m3u8, headers: {Host: z65d.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: mjk6.cdn.node.a.ddns-ounk.com, port: 13307, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: mjk6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: d.usa.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: lld9k6.cdn.node.a.ddns-ounk.com, port: 13320, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: lld9k6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: dr64.cdn.node.a.ddns-ounk.com, port: 13527, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: dr64.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: lld9k6.cdn.node.a.ddns-ounk.com, port: 13319, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: lld9k6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: dr64.cdn.node.a.ddns-ounk.com, port: 13393, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: dr64.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: lld9k6.cdn.node.a.ddns-ounk.com, port: 13321, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: lld9k6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies, server: bzdss9z1.cdn.node04.ddns-ounk.com, port: 13709, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6d22-4232-9e87-9670c18b4a60.v1..live04.m3u8, headers: {Host: bzdss9z1.cdn.node04.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai, server: z65d.cdn.node.a.ddns-ounk.com, port: 13689, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6d22-4232-9e87-9670c18b4a60.v1..live04.m3u8, headers: {Host: z65d.cdn.node.a.ddns-ounk.com}}, udp: true}
   - {name: 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai, server: sg-am3.eqsunshine.com, port: 32001, type: ssr, cipher: aes-256-cfb, password: 3g0dHlKME, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 2 OVH SAS TG:@nodpai��-���j, server: pr3.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies, server: pr3.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies, server: pr3.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 6 OVH SAS TG:@nodpai��-���j, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies, server: da.kanao.xyz, port: 58807, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai, server: pr4.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai, server: pr3.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies, server: 27.letitbe.ink, port: 443, type: vmess, uuid: 3c266fd3-5f9f-4132-90ac-c33a2a316cb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /pokocatvws, headers: {Host: 27.letitbe.ink}}, udp: true}
-  - {name: 中转 🇯🇵 JP 2 Datacamp Limited TG:@nodpai��-���j, server: pr3.jymzffbquawl.com, port: 4500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai, server: da.kanao.xyz, port: 58805, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai, server: zz1.piligou.cc, port: 35119, type: trojan, password: bbab60b8-779f-31e2-916e-571f7d7023c4, sni: jd9.piligou.cc, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇨🇳 CN 1 China Telecom TG:@airproxies, server: a.sh.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇨🇳 CN 2 China Telecom TG:@nodpai��-���j, server: a.bj.hideu.tw, port: 10629, type: ssr, cipher: dummy, password: .hideu0430., protocol: auth_chain_a, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies, server: xi.kanao.xyz, port: 58812, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai, server: hnlt.817777.xyz, port: 41107, type: ssr, cipher: aes-256-cfb, password: zxOmdD, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies, server: xi.kanao.xyz, port: 58810, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai, server: tj2.dalazhi.cyou, port: 443, type: trojan, password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies, server: xi.kanao.xyz, port: 58813, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies, server: xi.kanao.xyz, port: 58830, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
-  - {name: 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai, server: xi.kanao.xyz, port: 58831, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies, server: pr3.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 6 OVH SAS TG:@nodpai��-���j, server: bs4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 7 OVH SAS TG:@nodpai��-���j, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 8 OVH SAS TG:@nodpai��-���j, server: pr4.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai, server: pr4.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies, server: pr3.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai, server: pr3.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies, server: pr4.jymzffbquawl.com, port: 6501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai, server: da.kanao.xyz, port: 58807, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai, server: dfjhn.cx.33.mclqp.link, port: 901, type: vmess, uuid: ed42e716-46d0-3620-b6ac-dcb8f97c4352, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /wmsxwd, headers: {Host: sgld.ddns.566366.xyz}}, udp: true}
+  - {name: 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies, server: pr4.jymzffbquawl.com, port: 6500, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies, server: sg2-aws.tencent.cfd, port: 443, type: vmess, uuid: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dzpma7xucexw6.cloudfront.net}}, udp: true}
+  - {name: 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai, server: cn-su.tencent.cfd, port: 49364, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies, server: qgd6.cdn.node.a.ddns-ounk.com, port: 13056, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai, server: ngs9.cdn.node.a.ddns-ounk.com, port: 13048, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: ngs9.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies, server: qgd6.cdn.node.a.ddns-ounk.com, port: 12936, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai, server: ngs9.cdn.node.a.ddns-ounk.com, port: 13465, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: ngs9.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies, server: qgd6.cdn.node.a.ddns-ounk.com, port: 13588, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai, server: ngs9.cdn.node.a.ddns-ounk.com, port: 13466, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: ngs9.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai, server: yyds08.cdn.node02.ddns-ounk.com, port: 13427, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /80080f42e36c6478a808050e.v1.live.m3u8, headers: {Host: yyds08.cdn.node02.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 13567, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇸🇬 SG 51 OVH SAS TG:@nodpai, server: sg.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: sg.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 13365, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 12991, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies, server: r97q.cdn.node.a.ddns-ounk.com, port: 13561, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 51198, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 51200, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies, server: r97q.cdn.node.a.ddns-ounk.com, port: 12919, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 13368, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies, server: 45.64.22.55, port: 443, type: trojan, password: ZRYSly2IRuFlgpZCaep3Ey3DDXqTDczO04aeC8F36OjaYSCABnA573wN8xxK9S, sni: httah.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies, server: t.cccao.cyou, port: 16618, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t.cccao.cyou}}, udp: true}
+  - {name: 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 13361, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai, server: s-g02.niuniucloud.xyz, port: 53038, type: trojan, password: ae54202f-6e78-4362-b24f-528d18e79674, sni: niuniucloud.xyz, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai, server: yyds08.cdn.node02.ddns-ounk.com, port: 13454, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /80080f42e36c6478a808050e.v1.live.m3u8, headers: {Host: yyds08.cdn.node02.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies, server: yes.iamagoodman.net, port: 16618, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai, server: ngs9.cdn.node.a.ddns-ounk.com, port: 13046, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: ngs9.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai, server: ngs9.cdn.node.a.ddns-ounk.com, port: 13047, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: ngs9.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai, server: qgd6.cdn.node.a.ddns-ounk.com, port: 13060, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies, server: qgd6.cdn.node.a.ddns-ounk.com, port: 12942, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai, server: wegm63.cdn.node.a.ddns-ounk.com, port: 13678, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6d22-4232-9e87-9670c18b4a60.v1..live04.m3u8, headers: {Host: wegm63.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai, server: wegm63.cdn.node.a.ddns-ounk.com, port: 13585, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: wegm63.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai, server: qgd6.cdn.node.a.ddns-ounk.com, port: 12941, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: qgd6.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies, server: r97q.cdn.node.a.ddns-ounk.com, port: 13367, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai, server: r97q.cdn.node.a.ddns-ounk.com, port: 12989, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies, server: r97q.cdn.node.a.ddns-ounk.com, port: 12988, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: r97q.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies, server: bs3.jymzffbquawl.com, port: 4501, type: ssr, cipher: chacha20-ietf, password: renzhecloud, protocol: auth_aes128_sha1, obfs: plain, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai, server: 27.letitbe.ink, port: 443, type: vmess, uuid: 3c266fd3-5f9f-4132-90ac-c33a2a316cb5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /pokocatvws, headers: {Host: 27.letitbe.ink}}, udp: true}
+  - {name: 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies, server: xi.kanao.xyz, port: 58806, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai, server: m9.003.wdpdk.link, port: 10207, type: vmess, uuid: ed42e716-46d0-3620-b6ac-dcb8f97c4352, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /wmsxwd, headers: {Host: jp52zz.ddns.566366.xyz}}, udp: true}
+  - {name: 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai, server: yes.iamagoodman.net, port: 16617, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13093, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇯🇵 JP 32 Linode  LLC TG:@nodpai, server: jp.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: jp.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13074, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇯🇵 JP 34 Linode  LLC TG:@airproxies, server: jp.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: jp.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13599, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13096, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies, server: cn-su.tencent.cfd, port: 27968, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 12999, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai, server: t.cccao.cyou, port: 16617, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t.cccao.cyou}}, udp: true}
+  - {name: 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13001, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /4900-495a-aa20-da0626e0e87d.v2..live03.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai, server: m.lwvzmdu.cn, port: 16617, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m.lwvzmdu.cn}}, udp: true}
+  - {name: 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13607, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai, server: 45.64.22.55, port: 443, type: trojan, password: Z3YS0KxB8u5jgp736e834y3DaXwSOYzxlFDFqpNCaalDA9CEIRceZOCAnR2yTS, sni: reooec.freetrade.link, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai, server: j-p01.niuniucloud.xyz, port: 53044, type: trojan, password: ae54202f-6e78-4362-b24f-528d18e79674, sni: niuniucloud.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 JP 77 Linode  LLC TG:@nodpai, server: jp.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: jp.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai, server: yes.iamagoodman.net, port: 16617, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13609, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /2294-44e2-a528-d9fb1adaa35f.v4..live01.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies, server: q8eq.cdn.node.a.ddns-ounk.com, port: 13605, type: vmess, uuid: 00c902b5-5fce-3845-bc55-e7517d30fcc1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /6f8e-4a63-8f5f-1bd99437b151.v3..live02.m3u8, headers: {Host: q8eq.cdn.node.a.ddns-ounk.com}}, udp: true}
+  - {name: 🇦🇷 AR 1 FDCservers.net TG:@nodpai, server: ar.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: ar.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies, server: m.lwvzmdu.cn, port: 16638, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /mjp, headers: {Host: pull.free.video.10010.com}}, udp: true}
+  - {name: 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai, server: m.lwvzmdu.cn, port: 16635, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m.lwvzmdu.cn}}, udp: true}
+  - {name: 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies, server: yes.iamagoodman.net, port: 16641, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies, server: yes.iamagoodman.net, port: 16633, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai, server: yes.iamagoodman.net, port: 23309, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai, server: 159.69.21.87, port: 80, type: vmess, uuid: 2aac77de-b3e4-4017-845c-ca1380f2e8d0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /telegram-id-@privatevpns}, udp: true}
+  - {name: 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies, server: yes.iamagoodman.net, port: 16645, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai, server: kr.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies, server: cn-su.tencent.cfd, port: 19720, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 🇬🇧 GB 3 OVH SAS TG:@airproxies, server: uk.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: uk.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies, server: da.kanao.xyz, port: 58811, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies, server: cn-su.tencent.cfd, port: 60558, type: ss, cipher: chacha20-ietf-poly1305, password: 7261d7eb-e4ac-4c13-84d7-40a575ee6c61, udp: true}
+  - {name: 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies, server: yes.iamagoodman.net, port: 16626, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 🇰🇭 KH 1 BUCT TG:@nodpai, server: kh.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 1 Microsoft Corporation TG:@airproxies��-���j, server: hnlt.817777.xyz, port: 41107, type: ssr, cipher: aes-256-cfb, password: zxOmdD, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
+  - {name: 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai, server: da.kanao.xyz, port: 58809, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai, server: k-r03.niuniucloud.xyz, port: 53024, type: trojan, password: ae54202f-6e78-4362-b24f-528d18e79674, sni: niuniucloud.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies, server: kz.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 🇱🇺 LU 1 FranTech Solutions TG:@nodpai, server: lux.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies, server: yes.iamagoodman.net, port: 16636, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies, server: m.lwvzmdu.cn, port: 26623, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: m.lwvzmdu.cn}}, udp: true}
+  - {name: 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai, server: yes.iamagoodman.net, port: 16642, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: yes.iamagoodman.net}}, udp: true}
+  - {name: 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai, server: tj2.dalazhi.cyou, port: 443, type: trojan, password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies, server: t.cccao.cyou, port: 16624, type: vmess, uuid: b2119912-55bb-4e69-a002-b1d2ae75e47e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: t.cccao.cyou}}, udp: true}
+  - {name: 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai, server: xi.kanao.xyz, port: 58813, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 🇷🇺 RU 3 Webhost LLC TG:@airproxies, server: ru.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: ru.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai, server: da.kanao.xyz, port: 58825, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai, server: tr.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, sni: tr.iamnotagoodman.com, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies, server: da.kanao.xyz, port: 58814, type: trojan, password: 8708ec3c-56b4-4c76-a43b-0f4c5bab80c7, sni: soolos.com, skip-cert-verify: true, udp: true}
+  - {name: 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai, server: vn.iamnotagoodman.com, port: 443, type: trojan, password: b2119912-55bb-4e69-a002-b1d2ae75e47e, skip-cert-verify: true, udp: true}
+  - {name: 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies, server: 20007.purefast2.com, port: 20007, type: trojan, password: 357827e5-a45d-3f09-9b73-ef4431dfb323, sni: purefast1.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -215,199 +763,762 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -423,48 +1534,184 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 中转 🇺🇸 US 1 Enzu Inc TG:@nodpai
-      - 中转 🇺🇸 US 2 Dynu Systems Incorporated TG:@nodpai
-      - 🇺🇸 US 5 DigitalOcean  LLC TG:@airproxies
-      - 中转 🇺🇸 US 8 OVH US LLC TG:@airproxies
-      - 🇭🇰 HK 2 US-DMITINC TG:@nodpai
-      - 🇭🇰 HK 4 xTom Hong Kong Limited TG:@nodpai
-      - 中转 🇭🇰 HK 7 Microsoft Corporation TG:@nodpai
-      - 中转 🇭🇰 HK 9 ASSN-AKRN TG:@airproxies
-      - 中转 🇭🇰 HK 10 Hong Kong Broadband Network Ltd TG:@nodpai
-      - 中转 🇭🇰 HK 11 ASSN-AKRN TG:@nodpai
-      - 中转 🇭🇰 HK 12 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 13 ASSN-AKRN TG:@airproxies
+      - 中转 🇺🇸 US 1 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 3 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇺🇸 US 4 Enzu Inc TG:@airproxies
+      - 中转 🇺🇸 US 10 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 11 Dynu Systems Incorporated TG:@nodpai
+      - 中转 🇺🇸 US 13 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 15 OVH US LLC TG:@airproxies
+      - 🇺🇸 US 18 AS-FOR-SALE-CONTACT-ME TG:@nodpai
+      - 中转 🇺🇸 US 19 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 22 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 23 Linode  LLC TG:@airproxies
+      - 中转 🇺🇸 US 24 OVH US LLC TG:@nodpai
+      - 中转 🇺🇸 US 26 DediPath TG:@airproxies
+      - 🇺🇸 US 27 Atlantic.net TG:@nodpai
+      - 中转 🇺🇸 US 28 Baxet Group Inc. TG:@nodpai
+      - 🇺🇸 US 29 Psychz Networks TG:@airproxies
+      - 中转 🇺🇸 US 42 OVH US LLC TG:@airproxies
+      - 中转 🇺🇸 US 48 ReliableSite.Net LLC TG:@airproxies
+      - 中转 🇺🇸 US 49 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 50 Baxet Group Inc. TG:@airproxies
+      - 中转 🇺🇸 US 51 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 53 Baxet Group Inc. TG:@nodpai
+      - 中转 🇺🇸 US 54 Baxet Group Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 1 Hong Kong Broadband Network Ltd TG:@airproxies
+      - 中转 🇭🇰 HK 2 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 5 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 6 Akari Networks Limited TG:@airproxies
+      - 🇭🇰 HK 7 US-DMITINC TG:@nodpai
+      - 🇭🇰 HK 9 xTom Hong Kong Limited TG:@nodpai
+      - 中转 🇭🇰 HK 14 Akari Networks Limited TG:@airproxies
       - 中转 🇭🇰 HK 15 Akari Networks Limited TG:@nodpai
-      - 中转 🇭🇰 HK 18 Akari Networks Limited TG:@airproxies
-      - 中转 🇭🇰 HK 30 Nearoute Limited TG:@nodpai
-      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇭🇰 HK 16 Akari Networks Limited TG:@nodpai
+      - 中转 🇭🇰 HK 19 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 20 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 21 ASSN-AKRN TG:@nodpai
+      - 中转 🇭🇰 HK 22 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 27 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 29 Akari Networks Limited TG:@airproxies
+      - 中转 🇭🇰 HK 34 Hong Kong Cable Television Limited TG:@nodpai
+      - 中转 🇭🇰 HK 35 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 36 Akari Networks Limited TG:@nodpai
+      - 🇭🇰 HK 49 DMIT Cloud Services TG:@airproxies
+      - 中转 🇭🇰 HK 51 HGC Global Communications Limited TG:@nodpai
+      - 🇭🇰 HK 56 Microsoft Corporation TG:@airproxies
+      - 中转 🇭🇰 HK 63 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@airproxies
+      - 中转 🇭🇰 HK 64 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 75 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 76 Nearoute Limited TG:@nodpai
+      - 中转 🇭🇰 HK 78 PCCW IMS Limited TG:@nodpai
+      - 中转 🇭🇰 HK 83 Amazon Technologies Inc. TG:@nodpai
+      - 中转 🇭🇰 HK 108 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 118 Microsoft Corporation TG:@nodpai
+      - 中转 🇭🇰 HK 121 Hong Kong Telecommunications (HKT) Limited Mass Internet TG:@nodpai
+      - 中转 🇭🇰 HK 125 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 126 HGC Global Communications Limited TG:@airproxies
+      - 中转 🇭🇰 HK 127 HGC Global Communications Limited TG:@nodpai
+      - 中转 🇭🇰 HK 128 PCCW IMS Limited TG:@airproxies
+      - 中转 🇭🇰 HK 129 PCCW IMS Limited TG:@airproxies
+      - 中转 🇹🇼 TW 1 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 2 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 中转 🇹🇼 TW 4 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 5 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 🇹🇼 TW 10 Chunghwa Telecom Co.  Ltd. TG:@airproxies
-      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@nodpai
-      - 中转 🇹🇼 TW 18 Zenlayer Inc TG:@nodpai
+      - 中转 🇹🇼 TW 12 Zenlayer Inc TG:@airproxies
+      - 中转 🇹🇼 TW 14 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 22 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 31 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 32 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 33 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 34 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 35 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 🇹🇼 TW 39 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 40 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 42 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 🇹🇼 TW 44 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 66 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 67 Chunghwa Telecom Co.  Ltd. TG:@nodpai
+      - 中转 🇹🇼 TW 68 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 69 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 72 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 77 Chunghwa Telecom Co.  Ltd. TG:@airproxies
+      - 中转 🇹🇼 TW 78 Chunghwa Telecom Co.  Ltd. TG:@nodpai
       - 🇸🇬 SG 1 Amazon Technologies Inc. TG:@nodpai
       - 中转 🇸🇬 SG 4 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 5 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 7 DigitalOcean  LLC TG:@airproxies
       - 中转 🇸🇬 SG 10 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 12 OVH SAS TG:@nodpai
-      - 🇸🇬 SG 21 Amazon.com  Inc. TG:@nodpai
-      - 中转 🇸🇬 SG 24 OVH SAS TG:@nodpai
-      - 中转 🇸🇬 SG 25 OVH SAS TG:@airproxies
-      - 中转 🇸🇬 SG 26 OVH SAS TG:@nodpai
-      - 🇯🇵 JP 1 Amazon.com  Inc. TG:@airproxies
-      - 中转 🇯🇵 JP 7 Linode  LLC TG:@nodpai
-      - 中转 🇨🇦 CA 1 DigitalOcean  LLC TG:@nodpai
-      - 中转 🇨🇳 CN 1 China Telecom TG:@airproxies
+      - 中转 🇸🇬 SG 11 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 12 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 13 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 17 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 20 DigitalOcean  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 28 G-Core Labs S.A. TG:@nodpai
+      - 中转 🇸🇬 SG 30 OVH SAS TG:@airproxies
+      - 🇸🇬 SG 38 Amazon Technologies Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 39 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 40 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 41 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 43 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 44 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 45 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 46 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 48 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 50 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 51 OVH SAS TG:@nodpai
+      - 中转 🇸🇬 SG 52 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 53 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 54 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 55 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 56 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 59 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 62 Linode  LLC TG:@nodpai
+      - 🇸🇬 SG 64 Amazon.com  Inc. TG:@airproxies
+      - 中转 🇸🇬 SG 68 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 69 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 81 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 110 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 114 OVH SAS TG:@airproxies
+      - 中转 🇸🇬 SG 116 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 117 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 120 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 121 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 124 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 125 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 126 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 131 Linode  LLC TG:@airproxies
+      - 中转 🇸🇬 SG 134 Linode  LLC TG:@nodpai
+      - 中转 🇸🇬 SG 139 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 1 Datacamp Limited TG:@airproxies
+      - 🇯🇵 JP 4 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 11 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 23 GMO GlobalSign Holdings K.K. TG:@nodpai
+      - 中转 🇯🇵 JP 30 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 31 M247 Europe SRL TG:@airproxies
+      - 🇯🇵 JP 32 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 33 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 34 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 37 M247 Europe SRL TG:@nodpai
+      - 中转 🇯🇵 JP 39 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 40 Linode  LLC TG:@airproxies
+      - 中转 🇯🇵 JP 43 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 44 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 45 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 47 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 50 M247 Europe SRL TG:@nodpai
+      - 🇯🇵 JP 51 Amazon.com  Inc. TG:@nodpai
+      - 中转 🇯🇵 JP 58 Linode  LLC TG:@nodpai
+      - 🇯🇵 JP 77 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 78 Linode  LLC TG:@nodpai
+      - 中转 🇯🇵 JP 83 M247 Europe SRL TG:@airproxies
+      - 中转 🇯🇵 JP 86 M247 Europe SRL TG:@airproxies
+      - 🇦🇷 AR 1 FDCservers.net TG:@nodpai
+      - 中转 🇦🇺 AU 1 Linode  LLC TG:@airproxies
+      - 中转 🇧🇷 BR 1 The Constant Company TG:@nodpai
+      - 中转 🇨🇦 CA 1 OVH SAS TG:@airproxies
+      - 中转 🇨🇭 CH 1 Datasource AG TG:@airproxies
+      - 中转 🇩🇪 DE 1 OVH SAS TG:@nodpai
+      - 🇩🇪 DE 2 Hetzner Online GmbH TG:@nodpai
+      - 中转 🇫🇷 FR 1 Online S.A.S. TG:@airproxies
+      - 🇬🇧 GB 1 Scloud Pte Ltd TG:@nodpai
+      - 中转 🇬🇧 GB 2 Linode  LLC TG:@airproxies
+      - 🇬🇧 GB 3 OVH SAS TG:@airproxies
       - 中转 🇮🇳 IN 1 The Constant Company TG:@airproxies
-      - 中转 🇰🇷 KR 1 Microsoft Corporation TG:@nodpai
-      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@airproxies
-      - 🇳🇱 NL 1 Alibaba.com LLC TG:@nodpai
-      - 中转 🇷🇺 RU 1 LLC Baxet TG:@airproxies
-      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@airproxies
-      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@nodpai
+      - 中转 🇮🇳 IN 2 Linode  LLC TG:@airproxies
+      - 中转 🇮🇳 IN 4 Linode  LLC TG:@airproxies
+      - 🇰🇭 KH 1 BUCT TG:@nodpai
+      - 中转 🇰🇷 KR 2 The Constant Company  LLC TG:@nodpai
+      - 中转 🇰🇷 KR 7 Amazon.com  Inc. TG:@nodpai
+      - 🇰🇿 KZ 1 Stark Industries Solutions LTD TG:@airproxies
+      - 🇱🇺 LU 1 FranTech Solutions TG:@nodpai
+      - 中转 🇲🇽 MX 1 The Constant Company TG:@airproxies
+      - 中转 🇲🇾 MY 1 Tmnet  Telekom Malaysia Bhd. TG:@airproxies
+      - 中转 🇳🇱 NL 1 Online SAS NL TG:@nodpai
+      - 🇳🇱 NL 2 Alibaba.com LLC TG:@nodpai
+      - 中转 🇵🇹 PT 1 Nuno Felgueiras TG:@airproxies
+      - 中转 🇷🇺 RU 1 LLC Baxet TG:@nodpai
+      - 🇷🇺 RU 3 Webhost LLC TG:@airproxies
+      - 中转 🇹🇭 TH 1 Siamdata Communication Co.  ltd. TG:@nodpai
+      - 🇹🇷 TR 1 Kadir Huseyin Tezcan Nosspeed Internet Teknolojileri TG:@nodpai
+      - 中转 🇻🇳 VN 1 Thien Quang Digital technology joint stock company TG:@airproxies
+      - 🇻🇳 VN 4 Bach KIM HNT Company Limited TG:@nodpai
+      - 中转 🇻🇳 VN 5 Scloud Pte Ltd TG:@airproxies
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
