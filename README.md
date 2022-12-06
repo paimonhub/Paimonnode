@@ -1,23 +1,18 @@
+>**非常抱歉。
+由于不可抗力原因，Paimon Node免费订阅将暂停(或永久)停止更新，在接下来的两周，如果没有另行通知，我们将会彻底停止服务。**
+
+>**感恩有你，Paimon Node有缘再见。**
+
 <div align="center"><img align=center src="https://github.com/paimonhub/Paimonnode/raw/main/images/logo.png" width=250></div>
 
 <div align="center">
 <h1>Paimon Node</h1>
-<h4 align="center">Free,fast subcribe for everyone</h4>
-<h4 align="center">官网：https://paimon.gq/</h4>
 
  [![Telegram Channel][tg-svg]][tg-chan]<br>
 </div>
 
 
 
-
-## 订阅链接：
-
-**Base64(通用)：**
-```https://pre.paimon.gq/base64```
-
-**Clash：**
-```https://pre.paimon.gq/clash.yaml```
 
 
 [tg-chan]: https://t.me/nodpai
