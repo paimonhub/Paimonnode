@@ -14,7 +14,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16.0
-    - run: git config pull.rebase false && git config --local user.name "yu-steven" && git config --local user.email "78414278+yu-steven@users.noreply.github.com" && rm ./nodefetcher/out.txt && git status -s && git add . && git commit -m "del"
+    - run: git config pull.rebase false && git config --local user.name "GitHub Actions" && git config --local user.email "actions@github.com" && rm ./nodefetcher/out.txt && git status -s && git add . && git commit -m "del"
     - name: fetch
       env: 
         PAIMONNODE_DB_URI: ${{ secrets.PAIMONNODE_DB_URI }}
