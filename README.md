@@ -16,3 +16,6 @@
 [tg-chan]: https://t.me/nodpai
 [tg-svg]: https://img.shields.io/badge/Telegram-@nodpai-blue.svg?style=plastic
 
+Base64(通用)：https://sub.pmsub.me/base64
+
+Clash：https://sub.pmsub.me/clash.yaml
