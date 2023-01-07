@@ -5,62 +5,137 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇺🇸 United States 01, server: 51.81.220.34, port: 80, type: vmess, uuid: 0842be25-d718-491a-bca8-5e9d080150e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
-  - {name: 🇺🇸 United States 02, server: tr8.tgcunzhang.xyz, port: 54896, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr8.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 United States 03, server: tr7.tgcunzhang.xyz, port: 54326, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr7.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
-  - {name: 🇺🇸 United States 04, server: tr6.tgcunzhang.xyz, port: 54178, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr6.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
-  - {name: 🇭🇰 Hong Kong 01, server: gcorehkk.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcorehkknode, headers: {Host: gcorehkk.sylu.cyou}}, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 02, server: 211.99.96.118, port: 23653, type: ss, cipher: chacha20-ietf, password: HCUO70, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 03, server: hk80.sanfen001.pics, port: 80, type: vmess, uuid: 38aefb1f-cf0d-4d10-8061-280fda1626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/, headers: {Host: www.baidu.com}}, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 04, server: hk80-2.sanfen001.pics, port: 80, type: vmess, uuid: 38aefb1f-cf0d-4d10-8061-280fda1626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/, headers: {Host: www.baidu.com}}, udp: true}
-  - {name: 🇭🇰 Hong Kong 05, server: ah.emoooo.club, port: 21601, type: ss, cipher: chacha20-ietf-poly1305, password: 97239aa5-913f-44b6-bad1-1d88e9a605b9, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 06, server: j.v4.2.kiki789.com, port: 39999, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: host=live.bilibili.com}}, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 07, server: gb1.v2.zz.cn.fuckword.club, port: 47836, type: vmess, uuid: 000f47ab-2900-3ae8-b2c8-fa8d062be3c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 08, server: data-hk-v2.shwjfkw.cn, port: 50205, type: vmess, uuid: b1478e24-4916-3abe-8f17-15931012ecbe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: data-hk-v2.shwjfkw.cn}}, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 09, server: 14.18.127.30, port: 52232, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 10, server: 114.80.32.244, port: 11204, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 11, server: g.j.v4.1.kiki789.com, port: 29705, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-azhk21.bilibili.com}}, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 12, server: 36.156.222.6, port: 52231, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇭🇰 Hong Kong 13, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
+  - {name: 🇺🇸 United States 01, server: http.download.yunzhongzhuan.com, port: 8080, type: vmess, uuid: 930eaab6-5a04-48fb-9c15-7545ab3ec0bd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ovh.asuka.buzz}}, udp: true}
+  - {name: 🇺🇸 United States 02, server: gtm-cn-j67317hnw0k.gtm-a5b5.com, port: 443, type: vmess, uuid: 97239aa5-913f-44b6-bad1-1d88e9a605b9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: us1-cdn.emoooo.cloud}}, udp: true}
+  - {name: 🇺🇸 United States 03, server: 172.67.199.34, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: lvryzenkvm1gb.sharecentre.online}}, udp: true}
+  - {name: 🇺🇸 United States 04, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: lu.sharecentre.online}}, udp: true}
+  - {name: 🇺🇸 United States 05, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: us-dp.sharecentre.online}}, udp: true}
+  - {name: 🇺🇸 United States 06, server: 135.148.148.4, port: 80, type: trojan, password: ee2bccd3-0f30-42d4-86d6-3d393ad230bd, sni: us3.trojanvh.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 07, server: 51.81.220.34, port: 80, type: vmess, uuid: 0842be25-d718-491a-bca8-5e9d080150e6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
+  - {name: 🇺🇸 United States 08, server: 172.67.199.34, port: 443, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sshkit/fdfadsfa/63848bfe228fd/, headers: {Host: us-lb.sshkit.org}}, udp: true}
+  - {name: 🇺🇸 United States 09, server: http.download.yunzhongzhuan.com, port: 8080, type: vmess, uuid: 930eaab6-5a04-48fb-9c15-7545ab3ec0bd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v01.asuka.buzz}}, udp: true}
+  - {name: 🇺🇸 United States 10, server: cf.515188.xyz, port: 80, type: vmess, uuid: 930eaab6-5a04-48fb-9c15-7545ab3ec0bd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /api/v3/download.getFile, headers: {Host: ssrsub.v03.asuka.buzz}}, udp: true}
+  - {name: 🇺🇸 United States 11, server: tr8.tgcunzhang.xyz, port: 54896, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr8.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 12, server: tr4.tgcunzhang.xyz, port: 54346, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr4.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 13, server: tr6.tgcunzhang.xyz, port: 54275, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr6.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 14, server: tr5.tgcunzhang.xyz, port: 54745, type: trojan, password: 2a9ba60d-10ce-4f79-97e7-817334456195, sni: tr5.tgcunzhang.xyz, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 15, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: us-dp.sharecentre.online}}, udp: true}
+  - {name: 🇺🇸 United States 16, server: 190.93.244.2, port: 443, type: vmess, uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /ECTCJ0DF, headers: {Host: lg1.trump2023.us}}, udp: true}
+  - {name: 🇺🇸 United States 17, server: 172.67.199.34, port: 80, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /sshkit/fdfadsfa/63848bfe228fd/, headers: {Host: us-lb.sshkit.org}}, udp: true}
+  - {name: 🇺🇸 United States 18, server: 172.67.199.34, port: 443, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /sshkit/fdfadsfa/63848bfe228fd/, headers: {Host: us-lb.sshkit.org}}, udp: true}
+  - {name: 🇺🇸 United States 19, server: dl-us2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-us.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇺🇸 United States 20, server: dl-us4.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-us.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 01, server: gb1.v2.zz.cn.fuckword.club, port: 47836, type: vmess, uuid: 000f47ab-2900-3ae8-b2c8-fa8d062be3c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 02, server: ah.emoooo.club, port: 21601, type: ss, cipher: chacha20-ietf-poly1305, password: 97239aa5-913f-44b6-bad1-1d88e9a605b9, udp: true}
+  - {name: 🇭🇰 Hong Kong 03, server: twdns.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcorehknode, headers: {Host: gcorehk.sylu.cyou}}, udp: true}
+  - {name: 🇭🇰 Hong Kong 04, server: gcorehkk.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcorehkknode, headers: {Host: gcorehkk.sylu.cyou}}, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 05, server: 211.99.96.118, port: 23653, type: ss, cipher: chacha20-ietf, password: HCUO70, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 06, server: 183.47.127.36, port: 52232, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 07, server: hk80-2.sanfen001.pics, port: 80, type: vmess, uuid: 38aefb1f-cf0d-4d10-8061-280fda1626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/, headers: {Host: www.baidu.com}}, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 08, server: hk80.sanfen001.pics, port: 80, type: vmess, uuid: 38aefb1f-cf0d-4d10-8061-280fda1626f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /zh-cn/, headers: {Host: www.baidu.com}}, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 09, server: 36.156.222.6, port: 52231, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 10, server: 180.101.193.226, port: 10068, type: ss, cipher: aes-256-cfb, password: RsDk3peCSuo76B68, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 11, server: j.v4.2.kiki789.com, port: 39999, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: host=live.bilibili.com}}, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 12, server: data-hk-v2.shwjfkw.cn, port: 50205, type: vmess, uuid: b1478e24-4916-3abe-8f17-15931012ecbe, alterId: 1, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: data-hk-v2.shwjfkw.cn}}, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 13, server: 114.80.32.244, port: 11203, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 14, server: 114.80.32.11, port: 11204, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇭🇰 Hong Kong 15, server: g.j.v4.1.kiki789.com, port: 29705, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-azhk21.bilibili.com}}, udp: true}
+  - {name: 🇭🇰 Hong Kong 16, server: dl-hk2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 17, server: dl-hk6.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 18, server: dl-hk4.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 19, server: dl-hk3.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 20, server: dl-hk1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇭🇰 Hong Kong 21, server: 219.78.227.27, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-hk.efyunpan.com, skip-cert-verify: true, udp: true}
   - {name: Relay 🇹🇼 Taiwan 01, server: 14.29.124.168, port: 24009, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
-  - {name: Relay 🇹🇼 Taiwan 02, server: 124.225.24.151, port: 52229, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇹🇼 Taiwan 03, server: g.j.v4.1.kiki789.com, port: 39201, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: host=live.bilibili.com}}, udp: true}
-  - {name: Relay 🇹🇼 Taiwan 04, server: 124.225.24.151, port: 52230, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇹🇼 Taiwan 05, server: 124.225.24.151, port: 52224, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇸🇬 Singapore 01, server: gcsssg.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcsssgnode, headers: {Host: gcsssg.sylu.cyou}}, udp: true}
-  - {name: 🇸🇬 Singapore 02, server: gcoresg.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcoresgnode, headers: {Host: gcoresg.sylu.cyou}}, udp: true}
+  - {name: Relay 🇹🇼 Taiwan 02, server: 124.225.24.151, port: 52230, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇼 Taiwan 03, server: dl-tw4.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-tw.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 Singapore 01, server: 13.215.173.114, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇸🇬 Singapore 02, server: sg1.c8898496-adb6-4073-9ee4-ff4e4984415b.polycdn.com, port: 80, type: vmess, uuid: 982e8d64-b1e6-473f-a830-c9bac41eba8f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: dl.delivery.mp.microsoft.com}}, udp: true}
   - {name: 🇸🇬 Singapore 03, server: gcoresgg.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcoresggnode, headers: {Host: gcoresgg.sylu.cyou}}, udp: true}
-  - {name: 🇸🇬 Singapore 04, server: 13.215.173.114, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
-  - {name: Relay 🇸🇬 Singapore 05, server: v.ovhsg.v4.kiki789.com, port: 39569, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-linode10.bilibili.com}}, udp: true}
-  - {name: Relay 🇸🇬 Singapore 06, server: 124.225.24.151, port: 52220, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇸🇬 Singapore 07, server: v.ovhsg.v4.kiki789.com, port: 29851, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-giasg01.bilibili.com}}, udp: true}
-  - {name: Relay 🇸🇬 Singapore 08, server: v.ovhsg.v4.kiki789.com, port: 31871, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-sgovh01.bilibili.com}}, udp: true}
-  - {name: Relay 🇸🇬 Singapore 09, server: v.ovhsg.v4.kiki789.com, port: 38551, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-linode01.bilibili.com}}, udp: true}
-  - {name: Relay 🇯🇵 Japan 01, server: 140.179.136.12, port: 52215, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇯🇵 Japan 02, server: 140.179.136.12, port: 52218, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 Singapore 04, server: gcsssg.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcsssgnode, headers: {Host: gcsssg.sylu.cyou}}, udp: true}
+  - {name: 🇸🇬 Singapore 05, server: 13.214.210.171, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇸🇬 Singapore 06, server: 13.215.163.54, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇸🇬 Singapore 07, server: 13.215.159.84, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: Relay 🇸🇬 Singapore 08, server: 9bdc7f3764a60fb0.sanfen001.pics, port: 17525, type: ss, cipher: chacha20-ietf-poly1305, password: 38aefb1f-cf0d-4d10-8061-280fda1626f5, udp: true}
+  - {name: Relay 🇸🇬 Singapore 09, server: v.ovhsg.v4.kiki789.com, port: 29851, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-giasg01.bilibili.com}}, udp: true}
+  - {name: 🇸🇬 Singapore 10, server: 162.159.128.7, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: sg-gcore.sharecentre.online}}, udp: true}
+  - {name: 🇸🇬 Singapore 11, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: sg-gcore-2.sharecentre.online}}, udp: true}
+  - {name: Relay 🇸🇬 Singapore 12, server: v.ovhsg.v4.kiki789.com, port: 38551, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-linode01.bilibili.com}}, udp: true}
+  - {name: Relay 🇸🇬 Singapore 13, server: v.ovhsg.v4.kiki789.com, port: 39569, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-linode10.bilibili.com}}, udp: true}
+  - {name: 🇸🇬 Singapore 14, server: dl-sg1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-sg.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 Singapore 15, server: dl-sg4.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-sg.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 Singapore 16, server: dl-sg3.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-sg.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇬 Singapore 17, server: dl-sg2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-sg.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 Japan 01, server: ah.emoooo.club, port: 46559, type: ss, cipher: chacha20-ietf-poly1305, password: 97239aa5-913f-44b6-bad1-1d88e9a605b9, udp: true}
+  - {name: Relay 🇯🇵 Japan 02, server: 140.179.136.12, port: 52215, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 🇯🇵 Japan 03, server: dong1.htvviru.top, port: 1209, type: vmess, uuid: 3d81e6fb-c7f0-4791-af2e-82c93d149483, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /cctv13/hd.m3u8, headers: {Host: dong1.htvviru.top}}, udp: true}
-  - {name: Relay 🇯🇵 Japan 04, server: 223.111.202.178, port: 52211, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇯🇵 Japan 05, server: 140.179.110.44, port: 52217, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇯🇵 Japan 06, server: 140.179.75.37, port: 52221, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇯🇵 Japan 07, server: 223.111.202.178, port: 52212, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇯🇵 Japan 08, server: jp.j.v4.2.kiki789.com, port: 39401, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-azjp01.bilibili.com}}, udp: true}
-  - {name: Relay 🇯🇵 Japan 09, server: 124.225.24.151, port: 52216, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇨🇳 China 01, server: 117.164.185.221, port: 16112, type: vmess, uuid: 4a0d81b8-a04a-382b-a3cb-84d1d4b9d6aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇩🇪 Germany 01, server: 141.95.61.209, port: 1145, type: trojan, password: 23a044ef-1f8e-44ec-92be-78395a09f15c, sni: wx.qq.com, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇩🇪 Germany 02, server: r001.baipiaoxd.com, port: 22132, type: ss, cipher: aes-256-gcm, password: Mm9lWnREcEdxUFNISUVudVNmN3RLVlc4ZUJ3NktHTlQ=, udp: true}
-  - {name: 🇩🇪 Germany 03, server: gcsde.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcsdenode, headers: {Host: gcsde.sylu.cyou}}, udp: true}
-  - {name: 🇩🇪 Germany 04, server: 162.19.224.176, port: 80, type: vmess, uuid: 38386869-c04b-44fa-a3ce-477faa36639e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: 162.19.224.176}}, udp: true}
+  - {name: Relay 🇯🇵 Japan 04, server: 140.179.110.44, port: 52217, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 05, server: 223.111.202.178, port: 52211, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 06, server: 223.111.202.178, port: 52212, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 07, server: 140.179.136.12, port: 52218, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 08, server: jp.j.v4.2.kiki789.com, port: 39409, type: vmess, uuid: 6ff56f44-0658-3b93-80d4-e59d7a14cc2f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /04235e8c-cea8-4f16-8934-b704a89b40cb.live238.m3u8, headers: {Host: jike1-azjp05.bilibili.com}}, udp: true}
+  - {name: 🇯🇵 Japan 09, server: vfly3.win, port: 443, type: vmess, uuid: f4ef14c4-d811-455c-a4c3-c63dfeffb0a6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /myblog, headers: {Host: vfly3.win}}, udp: true}
+  - {name: Relay 🇯🇵 Japan 10, server: 124.225.24.151, port: 52214, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 11, server: 124.225.88.38, port: 52222, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇯🇵 Japan 12, server: 140.179.75.37, port: 52221, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 Japan 13, server: dl-jp1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-jp.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 Japan 14, server: dl-jp3.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-jp.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 Japan 15, server: dl-jp4.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-jp.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇯🇵 Japan 16, server: dl-jp2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-jp.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇪 United Arab Emirates 01, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ae.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇪 United Arab Emirates 02, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ae2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇷 Argentina 01, server: dl-am2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ar.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇺 Australia 01, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-au.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇦🇺 Australia 02, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-au2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇧🇷 Brazil 01, server: dl-am2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-br2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇧🇷 Brazil 02, server: dl-am1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-br.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 Canada 01, server: 159.203.18.119, port: 80, type: vmess, uuid: 7118fddb-3e01-4932-a01d-6fb6799d2876, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: 159.203.18.119}}, udp: true}
+  - {name: 🇨🇦 Canada 02, server: dl-am1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ca.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇦 Canada 03, server: dl-am2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ca2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇭 Switzerland 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ch.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇨🇱 Chile 01, server: dl-am2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-cl.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇩🇪 Germany 01, server: 162.19.224.176, port: 80, type: vmess, uuid: 38386869-c04b-44fa-a3ce-477faa36639e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: 162.19.224.176}}, udp: true}
+  - {name: 🇩🇪 Germany 02, server: 141.95.61.209, port: 1145, type: trojan, password: 4f2c305b-9a03-4493-b3e4-2dff2f1af8c9, sni: wx.qq.com, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇩🇪 Germany 03, server: r001.baipiaoxd.com, port: 22132, type: ss, cipher: aes-256-gcm, password: Mm9lWnREcEdxUFNISUVudVNmN3RLVlc4ZUJ3NktHTlQ=, udp: true}
+  - {name: 🇩🇪 Germany 04, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-de.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇪🇸 Spain 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-es.efyunpan.com, skip-cert-verify: true, udp: true}
   - {name: 🇫🇷 France 01, server: 193.70.85.191, port: 80, type: vmess, uuid: ed579687-5171-46ad-a89a-bd06af52705d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess, headers: {Host: Irancell.ir}}, udp: true}
   - {name: 🇫🇷 France 02, server: 51.77.212.145, port: 80, type: vmess, uuid: 3e9cec54-c121-4584-b758-787388e2f792, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /vmess}, udp: true}
-  - {name: 🇫🇷 France 03, server: 45.136.244.181, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fr-unlimitxxx, headers: {Host: 45.136.244.181}}, udp: true}
-  - {name: Relay 🇰🇷 South Korea 01, server: 223.111.202.178, port: 52234, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇰🇷 South Korea 02, server: 223.111.202.178, port: 52233, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: Relay 🇰🇷 South Korea 03, server: 140.179.136.12, port: 52213, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 Netherlands 01, server: tj2.dalazhi.cyou, port: 443, type: trojan, password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1, skip-cert-verify: true, udp: true}
-  - {name: 🇳🇱 Netherlands 02, server: v12a.toddns.tk, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /nl-unlimitxxx, headers: {Host: v12a.toddns.tk}}, udp: true}
+  - {name: 🇫🇷 France 03, server: hohm.microsoft.com, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}, udp: true}
+  - {name: 🇫🇷 France 04, server: 141.193.213.20, port: 443, type: vmess, uuid: 2b214122-1906-428a-bbb7-a039cbb7cd5c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /9JZFDTKE, headers: {Host: fr1.trump2023.org}}, udp: true}
+  - {name: 🇫🇷 France 05, server: 141.101.114.32, port: 443, type: vmess, uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /A2DJOPFT, headers: {Host: lg10.cfcdn1.xyz}}, udp: true}
+  - {name: 🇫🇷 France 06, server: v10a.toddns.tk, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fr-unlimitxxx, headers: {Host: v10a.toddns.tk}}, udp: true}
+  - {name: 🇫🇷 France 07, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-fr.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 United Kingdom 01, server: content-provider4.cdn-delivery.akamaicd.com, port: 443, type: trojan, password: shefelnak, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 United Kingdom 02, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-uk.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇬🇧 United Kingdom 03, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-uk2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇱 Israel 01, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-il.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇳 India 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-in2.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇳 India 02, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-in.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇮🇹 Italy 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-it.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 South Korea 01, server: 43.201.103.37, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true}
+  - {name: 🇰🇷 South Korea 02, server: cf-lt.sharecentre.online, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /shirker, headers: {Host: kr.sharecentre.online}}, udp: true}
+  - {name: Relay 🇰🇷 South Korea 03, server: 223.111.202.178, port: 52234, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇰🇷 South Korea 04, server: 223.111.202.178, port: 52233, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Relay 🇰🇷 South Korea 05, server: 140.179.136.12, port: 52213, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 South Korea 06, server: surongwei.eu.org, port: 443, type: vmess, uuid: 6093eefb-7ab6-41df-aba0-d5fa58147e10, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /reffs7y26g0ua, headers: {Host: surongwei.eu.org}}, udp: true}
+  - {name: 🇰🇷 South Korea 07, server: juzi3.82a.xyz, port: 443, type: vmess, uuid: 3d6bb1ca-0ec5-4c7c-a54b-50c72aadb8a0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /, headers: {Host: juzi3.82a.xyz}}, udp: true}
+  - {name: Relay 🇰🇷 South Korea 08, server: 124.225.24.151, port: 52223, type: vmess, uuid: b2932c4f-88f0-3bbb-aa38-e2cd1dbdbc9a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 South Korea 09, server: dl-kr2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ockrcc.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇰🇷 South Korea 10, server: dl-kr1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ockrsl.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇲🇳 Mongolia 01, server: 103.168.56.77, port: 443, type: trojan, password: 23a044ef-1f8e-44ec-92be-78395a09f15c, sni: wx.qq.com, skip-cert-verify: true, udp: true}
+  - {name: 🇲🇾 Malaysia 01, server: ah.emoooo.club, port: 10545, type: ss, cipher: chacha20-ietf-poly1305, password: 97239aa5-913f-44b6-bad1-1d88e9a605b9, udp: true}
+  - {name: 🇳🇱 Netherlands 01, server: v12a.toddns.tk, port: 80, type: vmess, uuid: a25881f3-967f-3265-bc7f-9e66857b016b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /nl-unlimitxxx, headers: {Host: v12a.toddns.tk}}, udp: true}
+  - {name: 🇳🇱 Netherlands 02, server: tj2.dalazhi.cyou, port: 443, type: trojan, password: 8f70fde3-a04c-4f6a-b705-aef7406f6ac1, skip-cert-verify: true, udp: true}
+  - {name: 🇳🇱 Netherlands 03, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-nl.efyunpan.com, skip-cert-verify: true, udp: true}
   - {name: 🇵🇱 Poland 01, server: gcorepl.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcoreplnode, headers: {Host: gcorepl.sylu.cyou}}, udp: true}
   - {name: 🇵🇱 Poland 02, server: gcspl.sylu.cyou, port: 443, type: vmess, uuid: 12e08256-da5d-4b1c-aeca-8c973ccceef8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /Falling42gcsplnode, headers: {Host: gcspl.sylu.cyou}}, udp: true}
   - {name: 🇷🇺 Russia 01, server: 45.8.158.51, port: 443, type: trojan, password: 9KogHwaY7hVD, sni: eu-east-ruo.openssl3.com, skip-cert-verify: true, udp: true}
+  - {name: 🇷🇺 Russia 02, server: core2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-ru.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇦 Saudi Arabia 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-sa.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇸🇪 Sweden 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-se.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇹🇷 Turkey 01, server: dl-eu2.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-tr.efyunpan.com, skip-cert-verify: true, udp: true}
+  - {name: 🇿🇦 South Africa 01, server: dl-eu1.efyunpan.com, port: 443, type: trojan, password: 90c35546-a6bb-4217-bb6a-274f4e250ca2, sni: data-za.efyunpan.com, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -71,11 +146,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -84,21 +175,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -106,23 +211,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -132,11 +282,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -145,21 +311,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -167,23 +347,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -194,11 +419,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -207,21 +448,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -229,23 +484,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -268,11 +568,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -281,21 +597,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -303,23 +633,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -334,11 +709,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -347,21 +738,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -369,23 +774,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: 📲 电报信息
     type: select
     proxies:
@@ -395,11 +845,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -408,21 +874,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -430,23 +910,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -457,11 +982,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -470,21 +1011,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -492,23 +1047,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -528,11 +1128,27 @@ proxy-groups:
       - 🇺🇸 United States 02
       - 🇺🇸 United States 03
       - 🇺🇸 United States 04
-      - 🇭🇰 Hong Kong 01
-      - Relay 🇭🇰 Hong Kong 02
-      - Relay 🇭🇰 Hong Kong 03
-      - Relay 🇭🇰 Hong Kong 04
-      - 🇭🇰 Hong Kong 05
+      - 🇺🇸 United States 05
+      - 🇺🇸 United States 06
+      - 🇺🇸 United States 07
+      - 🇺🇸 United States 08
+      - 🇺🇸 United States 09
+      - 🇺🇸 United States 10
+      - 🇺🇸 United States 11
+      - 🇺🇸 United States 12
+      - 🇺🇸 United States 13
+      - 🇺🇸 United States 14
+      - 🇺🇸 United States 15
+      - 🇺🇸 United States 16
+      - 🇺🇸 United States 17
+      - 🇺🇸 United States 18
+      - 🇺🇸 United States 19
+      - 🇺🇸 United States 20
+      - Relay 🇭🇰 Hong Kong 01
+      - 🇭🇰 Hong Kong 02
+      - 🇭🇰 Hong Kong 03
+      - 🇭🇰 Hong Kong 04
+      - Relay 🇭🇰 Hong Kong 05
       - Relay 🇭🇰 Hong Kong 06
       - Relay 🇭🇰 Hong Kong 07
       - Relay 🇭🇰 Hong Kong 08
@@ -541,21 +1157,35 @@ proxy-groups:
       - Relay 🇭🇰 Hong Kong 11
       - Relay 🇭🇰 Hong Kong 12
       - Relay 🇭🇰 Hong Kong 13
+      - Relay 🇭🇰 Hong Kong 14
+      - Relay 🇭🇰 Hong Kong 15
+      - 🇭🇰 Hong Kong 16
+      - 🇭🇰 Hong Kong 17
+      - 🇭🇰 Hong Kong 18
+      - 🇭🇰 Hong Kong 19
+      - 🇭🇰 Hong Kong 20
+      - 🇭🇰 Hong Kong 21
       - Relay 🇹🇼 Taiwan 01
       - Relay 🇹🇼 Taiwan 02
-      - Relay 🇹🇼 Taiwan 03
-      - Relay 🇹🇼 Taiwan 04
-      - Relay 🇹🇼 Taiwan 05
+      - 🇹🇼 Taiwan 03
       - 🇸🇬 Singapore 01
       - 🇸🇬 Singapore 02
       - 🇸🇬 Singapore 03
       - 🇸🇬 Singapore 04
-      - Relay 🇸🇬 Singapore 05
-      - Relay 🇸🇬 Singapore 06
-      - Relay 🇸🇬 Singapore 07
+      - 🇸🇬 Singapore 05
+      - 🇸🇬 Singapore 06
+      - 🇸🇬 Singapore 07
       - Relay 🇸🇬 Singapore 08
       - Relay 🇸🇬 Singapore 09
-      - Relay 🇯🇵 Japan 01
+      - 🇸🇬 Singapore 10
+      - 🇸🇬 Singapore 11
+      - Relay 🇸🇬 Singapore 12
+      - Relay 🇸🇬 Singapore 13
+      - 🇸🇬 Singapore 14
+      - 🇸🇬 Singapore 15
+      - 🇸🇬 Singapore 16
+      - 🇸🇬 Singapore 17
+      - 🇯🇵 Japan 01
       - Relay 🇯🇵 Japan 02
       - 🇯🇵 Japan 03
       - Relay 🇯🇵 Japan 04
@@ -563,23 +1193,68 @@ proxy-groups:
       - Relay 🇯🇵 Japan 06
       - Relay 🇯🇵 Japan 07
       - Relay 🇯🇵 Japan 08
-      - Relay 🇯🇵 Japan 09
-      - Relay 🇨🇳 China 01
+      - 🇯🇵 Japan 09
+      - Relay 🇯🇵 Japan 10
+      - Relay 🇯🇵 Japan 11
+      - Relay 🇯🇵 Japan 12
+      - 🇯🇵 Japan 13
+      - 🇯🇵 Japan 14
+      - 🇯🇵 Japan 15
+      - 🇯🇵 Japan 16
+      - 🇦🇪 United Arab Emirates 01
+      - 🇦🇪 United Arab Emirates 02
+      - 🇦🇷 Argentina 01
+      - 🇦🇺 Australia 01
+      - 🇦🇺 Australia 02
+      - 🇧🇷 Brazil 01
+      - 🇧🇷 Brazil 02
+      - 🇨🇦 Canada 01
+      - 🇨🇦 Canada 02
+      - 🇨🇦 Canada 03
+      - 🇨🇭 Switzerland 01
+      - 🇨🇱 Chile 01
       - 🇩🇪 Germany 01
-      - Relay 🇩🇪 Germany 02
-      - 🇩🇪 Germany 03
+      - 🇩🇪 Germany 02
+      - Relay 🇩🇪 Germany 03
       - 🇩🇪 Germany 04
+      - 🇪🇸 Spain 01
       - 🇫🇷 France 01
       - 🇫🇷 France 02
       - 🇫🇷 France 03
-      - Relay 🇰🇷 South Korea 01
-      - Relay 🇰🇷 South Korea 02
+      - 🇫🇷 France 04
+      - 🇫🇷 France 05
+      - 🇫🇷 France 06
+      - 🇫🇷 France 07
+      - 🇬🇧 United Kingdom 01
+      - 🇬🇧 United Kingdom 02
+      - 🇬🇧 United Kingdom 03
+      - 🇮🇱 Israel 01
+      - 🇮🇳 India 01
+      - 🇮🇳 India 02
+      - 🇮🇹 Italy 01
+      - 🇰🇷 South Korea 01
+      - 🇰🇷 South Korea 02
       - Relay 🇰🇷 South Korea 03
+      - Relay 🇰🇷 South Korea 04
+      - Relay 🇰🇷 South Korea 05
+      - 🇰🇷 South Korea 06
+      - 🇰🇷 South Korea 07
+      - Relay 🇰🇷 South Korea 08
+      - 🇰🇷 South Korea 09
+      - 🇰🇷 South Korea 10
+      - 🇲🇳 Mongolia 01
+      - 🇲🇾 Malaysia 01
       - 🇳🇱 Netherlands 01
       - 🇳🇱 Netherlands 02
+      - 🇳🇱 Netherlands 03
       - 🇵🇱 Poland 01
       - 🇵🇱 Poland 02
       - 🇷🇺 Russia 01
+      - 🇷🇺 Russia 02
+      - 🇸🇦 Saudi Arabia 01
+      - 🇸🇪 Sweden 01
+      - 🇹🇷 Turkey 01
+      - 🇿🇦 South Africa 01
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
